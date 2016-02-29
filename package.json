@@ -1,0 +1,24 @@
+{
+  "name": "130968-sedona",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Личный проект «Седона» от HTML Academy",
+  "author": "Илья Меньшиков",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/htmlacademy-adaptive/130968-sedona.git"
+  },
+  "bugs": {
+    "url": "https://github.com/htmlacademy-adaptive/130968-sedona/issues"
+  },
+  "homepage": "https://github.com/htmlacademy-adaptive/130968-sedona",
+  "devDependencies": {
+    "editorconfig-tools": "0.1.1"
+  },
+  "scripts": {
+    "test": "editorconfig-tools check *"
+  },
+  "engines": {
+    "node": "^5.0.0"
+  }
+}
