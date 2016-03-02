@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Илья Меньшиков](https://up.htmlacademy.ru/adaptive/6/user/130968).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Мохов](https://htmlacademy.ru/profile/id44563).
 
 ---
 
