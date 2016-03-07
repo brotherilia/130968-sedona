@@ -6,17 +6,26 @@
   "author": "Илья Меньшиков",
   "repository": {
     "type": "git",
-    "url": "git://github.com/htmlacademy-adaptive/130968-sedona.git"
+    "url": "git@github.com:htmlacademy-adaptive/130968-sedona.git"
   },
   "bugs": {
     "url": "https://github.com/htmlacademy-adaptive/130968-sedona/issues"
   },
   "homepage": "https://github.com/htmlacademy-adaptive/130968-sedona",
   "devDependencies": {
-    "editorconfig-tools": "0.1.1"
+    "autoprefixer": "6.3.3",
+    "editorconfig-tools": "0.1.1",
+    "grunt": "0.4.5",
+    "grunt-contrib-less": "1.2.0",
+    "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-postcss": "0.7.2",
+    "load-grunt-tasks": "3.4.1"
   },
   "scripts": {
-    "test": "editorconfig-tools check *"
+    "test": "editorconfig-tools check *",
+    "build": "grunt less && grunt postcss",
+    "start": "npm run build && grunt serve"
   },
   "engines": {
     "node": "^5.0.0"
