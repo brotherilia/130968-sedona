@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>HTML Academy: Седона - Фото и видео</title>
   </head>
   <body>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -20,14 +20,14 @@
         </div>
         <ul class="main-nav__items">
           <li class="main-nav__item">
-            <span class="main-nav__link main-nav__link--active">
+            <a class="main-nav__link" href="index.html">
               Главная
-            </span>
+            </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="photo.html">
+            <span class="main-nav__link main-nav__link--active">
               Фото и видео
-            </a>
+            </span>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">
@@ -52,7 +52,7 @@
           <a class="intro__user-nav intro__user-nav--closed" href="#">
             Для пользователей
           </a>
-          <div class="intro__jumbotron intro__jumbotron--first-page">
+          <div class="intro__jumbotron">
             <div class="intro__slogan">
               <img src="img/htmlacademy.svg" width="10" height="10" alt="">
             </div>
@@ -70,10 +70,10 @@
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <div class="common-section">
       <div class="common-section__headline">
-        Седона — небольшой городок в аризоне, заслуживающий большего!
+        Фото и видео
       </div>
       <p>
-        Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!
+        Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
       </p>
       <div class="common-section__bottom">
         <img src="img/htmlacademy.svg" width="10" height="10" alt="">
@@ -81,122 +81,94 @@
     </div>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
-    <!--                     SECTION ADVANTAGES                       -->
+    <!--                          POSTS LIST                          -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <section class="advantages">
-      <div class="advantages__item advantages__item--extended">
-        <h2 class="advantages__title">
-          Настоящий городок
-        </h2>
-        <p class="advantages__number">
-          №1
-        </p>
-        <p>
-          Седона не атракцион для туристов, там течет своя жизнь
-        </p>
-        <div class="advantages__photo">
-          <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+    <ul class="posts">
+      <li class="posts__item">
+        <figure class="posts__photo">
+          <img src="img/htmlacademy.svg" width="280" height="280" alt="">
+          <figcaption class="posts__description">
+            Неродные просторы
+          </figcaption>
+        </figure>
+        <span class="posts__author">
+          Автор фото: <span>Борис</span>
+        </span>
+        <div class="posts__likes">
+          <i class="posts__likes-icon"></i>
+          <span class="posts__likes-count">
+            1350
+          </span>
         </div>
-        <ul class="subadvantages">
-          <li class="subadvantages__item">
-            <div class="subadvantages__title">
-              Жилье
-            </div>
-            <p>
-              Рекомендуем пожить в настоящем мотеле, все как в кино!
-            </p>
-          </li>
-          <li class="subadvantages__item">
-            <div class="subadvantages__title">
-              Сувениры
-            </div>
-            <p>
-              Не только китайского, но и местного производства!
-            </p>
-          </li>
-          <li class="subadvantages__item">
-            <div class="subadvantages__title">
-              Еда
-            </div>
-            <p>
-              Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="advantages__item advantages__item--extended">
-        <h2 class="advantages__title">
-          Там есть Мост Дьявола
-        </h2>
-        <p class="advantages__number">
-          №2
-        </p>
-        <p>
-          Да, по нему можно пройти! Если конечно вы осмелитесь
-        </p>
-        <div class="advantages__photo">
-          <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+      </li>
+      <li class="posts__item">
+        <figure class="posts__photo">
+          <img src="img/htmlacademy.svg" width="280" height="280" alt="">
+          <figcaption class="posts__description">
+            Местная растительность
+          </figcaption>
+        </figure>
+        <span class="posts__author">
+          Автор фото: <span>Сергей</span>
+        </span>
+        <div class="posts__likes">
+          <i class="posts__likes-icon"></i>
+          <span class="posts__likes-count">
+            143
+          </span>
         </div>
-      </div>
-      <div class="advantages__item">
-        <h2 class="advantages__title">
-          Небольшая площадь
-        </h2>
-        <p class="advantages__number">
-          №3
-        </p>
-        <p>
-          Все достопримечательности находятся очень близко
-        </p>
-      </div>
-      <div class="advantages__item">
-        <h2 class="advantages__title">
-          Красивая дорога
-        </h2>
-        <p class="advantages__number">
-          №4
-        </p>
-        <p>
-          Ехать в Седону из Лас-Вегаса совсем не скучно!
-        </p>
-      </div>
-      <div class="advantages__item">
-        <h2 class="advantages__title">
-          Мало туристов
-        </h2>
-        <p class="advantages__number">
-          №5
-        </p>
-        <p>
-          Большинство едет в Гранд Каньон и толпится там
-        </p>
-      </div>
-    </section>
+      </li>
+      <li class="posts__item">
+        <figure class="posts__photo">
+          <img src="img/htmlacademy.svg" width="280" height="280" alt="">
+          <figcaption class="posts__description">
+            Дорога на север
+          </figcaption>
+        </figure>
+        <span class="posts__author">
+          Автор фото: <span>Петр</span>
+        </span>
+        <div class="posts__likes">
+          <i class="posts__likes-icon"></i>
+          <span class="posts__likes-count">
+            96
+          </span>
+        </div>
+      </li>
+      <li class="posts__item">
+        <figure class="posts__photo">
+          <img src="img/htmlacademy.svg" width="280" height="280" alt="">
+          <figcaption class="posts__description">
+            Мост дьявола
+          </figcaption>
+        </figure>
+        <span class="posts__author">
+          Автор фото: <span>Антон</span>
+        </span>
+        <div class="posts__likes">
+          <i class="posts__likes-icon"></i>
+          <span class="posts__likes-count">
+            254
+          </span>
+        </div>
+      </li>
+    </ul>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
-    <!--                       SECTION BOOKING                        -->
+    <!--                    SECTION PRESENTATION                      -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <div class="common-section">
-      <div class="common-section__headline">
-        Заинтересовались?
-      </div>
+    <section class="presentation">
+      <h2 class="presentation__title">
+        Все еще сомневаетесь?
+      </h2>
       <p>
-        Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне
+        Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
       </p>
-      <a class="btn" href="#">
-        Найти гостиницу
-      </a>
-    </div>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <!--                                                              -->
-    <!--                       INTERACTIVE MAP                        -->
-    <!--                                                              -->
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <a class="map" href="#">
-      <img src="img/htmlacademy.svg" width="10" height="10" alt="">
-    </a>
+      <video class="presentation__video" src="img/htmlacademy.svg" poster="img/htmlacademy.svg" width="320" height="200" controls></video>
+      <div class="presentation__video-controls"></div>
+    </section>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
     <!--                        PAGE FOOTER                           -->
