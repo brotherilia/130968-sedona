@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>HTML Academy: Седона - Форма отзыва</title>
   </head>
   <body>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -20,22 +20,22 @@
         </div>
         <ul class="main-nav__items">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
+            <a class="main-nav__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
+            <a class="main-nav__link" href="photo.html">
               Фото и видео
             </a>
           </li>
           <li class="main-nav__item main-nav__item--active">
-            <span class="main-nav__text">
+            <span class="main-nav__link main-nav__link--active">
               Форма отзыва
             </span>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
+            <a class="main-nav__link" href="https://htmlacademy.ru">
               HTML Academy
             </a>
           </li>
@@ -68,17 +68,17 @@
     <!--                     SECTION PAGE TITLE                       -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <section class="page-title">
-      <h1 class="page-title__h1">
+    <div class="page-title">
+      <div class="page-title__headline">
         Оставьте свой отзыв
-      </h1>
+      </div>
       <p>
         Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях.
       </p>
-      <div class="page-title__footer">
+      <div class="page-title__bottom">
         <img src="img/htmlacademy.svg" width="10" height="10" alt="">
       </div>
-    </section>
+    </div>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
     <!--                     SECTION FEEDBACK                         -->
@@ -112,18 +112,21 @@
         <label class="feedback__label feedback__label--contacts">
           Электронная почта:<input class="feedback__input feedback__input--email" type="email" name="email" id="email" placeholder="Введите e-mail">
         </label>
+        <span class="feedback__warning">
+          Ошибка, перепроверьте адрес
+        </span>
       </fieldset>
       <fieldset class="feedback__section">
         <legend class="feedback__title">
           Ваше общее впечатление:
         </legend>
-        <label class="feedback__label feedback__label--radio">
+        <label class="feedback__label feedback__label--rating">
           <input class="feedback__flag" type="radio" name="rating" id="value1" checked>Скорее положительное
         </label>
-        <label class="feedback__label feedback__label--radio">
+        <label class="feedback__label feedback__label--rating">
           <input class="feedback__flag" type="radio" name="rating" id="value2">Скорее отрицательное
         </label>
-        <label class="feedback__label feedback__label--radio">
+        <label class="feedback__label feedback__label--rating">
           <input class="feedback__flag" type="radio" name="rating" id="value3">Затрудняюсь ответить
         </label>
       </fieldset>
@@ -131,16 +134,16 @@
         <legend class="feedback__title">
           Посещенные достопримечательности:
         </legend>
-        <label class="feedback__label feedback__label--checkbox">
+        <label class="feedback__label feedback__label--sight">
           <input class="feedback__flag" type="checkbox" name="check1" id="check1" checked>Мост Дьявола
         </label>
-        <label class="feedback__label feedback__label--checkbox">
+        <label class="feedback__label feedback__label--sight">
           <input class="feedback__flag" type="checkbox" name="check2" id="check2" checked>Слайд-парк
         </label>
-        <label class="feedback__label feedback__label--checkbox">
+        <label class="feedback__label feedback__label--sight">
           <input class="feedback__flag" type="checkbox" name="check3" id="check3">Гора-Колокол
         </label>
-        <label class="feedback__label feedback__label--checkbox">
+        <label class="feedback__label feedback__label--sight">
           <input class="feedback__flag" type="checkbox" name="check4" id="check4" checked>Красные скалы
         </label>
       </fieldset>
@@ -150,7 +153,7 @@
         </legend>
         <textarea class="feedback__input feedback__input--area" name="overview" id="overview" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
       </fieldset>
-      <input class="btn" type="submit" value="Отправить отзыв">
+      <input class="feedback__submit btn" type="submit" value="Отправить отзыв">
     </form>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
@@ -164,17 +167,17 @@
       <div class="page-footer__social">
         <ul class="social-list">
           <li class="social-list__item">
-            <a class="social-link" href="#">
+            <a class="social-link social-link--twitter" href="#">
               Twitter
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-link" href="#">
+            <a class="social-link social-link--facebook" href="#">
               Facebook
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-link" href="#">
+            <a class="social-link social-link--youtube" href="#">
               Youtube
             </a>
           </li>
