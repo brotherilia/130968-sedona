@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона - Фото и видео</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -15,8 +16,8 @@
       <!--                     MAIN NAVIGATION                          -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <nav class="main-nav">
-        <div class="main-nav__close">
-          <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+        <div class="main-nav__toggle">
+          <!-- bg-img: img/icon-cross.svg; mod 'closed' - bg-img: img/icon-menu.svg -->
         </div>
         <ul class="main-nav__items">
           <li class="main-nav__item">
@@ -42,30 +43,26 @@
         </ul>
       </nav>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <!--                         INTRO BLOCK                          -->
+      <!--                            INTRO                             -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <div class="intro">
         <div class="intro__header">
           <div class="intro__logo">
-            <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+            <a href="index.html"> <!-- посмотреть потом, нужен ли класс -->
+              <img src="img/logo-sedona-mobile.svg" alt="">
+            </a>
           </div>
-          <a class="intro__user-nav intro__user-nav--closed" href="#">
-            Для пользователей
-          </a>
-          <div class="intro__jumbotron">
-            <div class="intro__slogan">
-              <img src="img/htmlacademy.svg" width="10" height="10" alt="">
-            </div>
-            <div class="intro__footer">
-              <img src="img/htmlacademy.svg" width="10" height="10" alt="">
-            </div>
-          </div>
+        </div>
+        <div class="intro__jumbotron">
+          <img src="img/text-sedona.svg" alt="">
+          <!-- bg1-img: bg-back-mobile.jpg -->
+          <!-- bg2-img: bg-intro-triangle-mobile.svg -->
         </div>
       </div>
     </header>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
-    <!--                     SECTION PAGE TITLE                       -->
+    <!--                         PAGE TITLE                           -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <div class="common-section">
@@ -75,9 +72,6 @@
       <p>
         Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
       </p>
-      <div class="common-section__bottom">
-        <img src="img/htmlacademy.svg" width="10" height="10" alt="">
-      </div>
     </div>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
@@ -87,7 +81,9 @@
     <ul class="posts">
       <li class="posts__item">
         <figure class="posts__photo">
-          <img src="img/htmlacademy.svg" width="280" height="280" alt="">
+          <a href="#"> <!-- посмотреть потом, нужен ли класс -->
+            <img src="img/photo-1-mobile.jpg" alt="">
+          </a>
           <figcaption class="posts__description">
             Неродные просторы
           </figcaption>
@@ -96,7 +92,7 @@
           Автор фото: <span>Борис</span>
         </span>
         <div class="posts__likes">
-          <i class="posts__likes-icon"></i>
+          <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
           <span class="posts__likes-count">
             1350
           </span>
@@ -104,7 +100,9 @@
       </li>
       <li class="posts__item">
         <figure class="posts__photo">
-          <img src="img/htmlacademy.svg" width="280" height="280" alt="">
+          <a href="#"> <!-- посмотреть потом, нужен ли класс -->
+            <img src="img/photo-2-mobile.jpg" alt="">
+          </a>
           <figcaption class="posts__description">
             Местная растительность
           </figcaption>
@@ -113,7 +111,7 @@
           Автор фото: <span>Сергей</span>
         </span>
         <div class="posts__likes">
-          <i class="posts__likes-icon"></i>
+          <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
           <span class="posts__likes-count">
             143
           </span>
@@ -121,7 +119,9 @@
       </li>
       <li class="posts__item">
         <figure class="posts__photo">
-          <img src="img/htmlacademy.svg" width="280" height="280" alt="">
+          <a href="#"> <!-- посмотреть потом, нужен ли класс -->
+            <img src="img/photo-3-mobile.jpg" alt="">
+          </a>
           <figcaption class="posts__description">
             Дорога на север
           </figcaption>
@@ -130,7 +130,7 @@
           Автор фото: <span>Петр</span>
         </span>
         <div class="posts__likes">
-          <i class="posts__likes-icon"></i>
+          <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
           <span class="posts__likes-count">
             96
           </span>
@@ -138,7 +138,9 @@
       </li>
       <li class="posts__item">
         <figure class="posts__photo">
-          <img src="img/htmlacademy.svg" width="280" height="280" alt="">
+          <a href="#"> <!-- посмотреть потом, нужен ли класс -->
+            <img src="img/photo-4-mobile.jpg" alt="">
+          </a>
           <figcaption class="posts__description">
             Мост дьявола
           </figcaption>
@@ -147,7 +149,7 @@
           Автор фото: <span>Антон</span>
         </span>
         <div class="posts__likes">
-          <i class="posts__likes-icon"></i>
+          <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
           <span class="posts__likes-count">
             254
           </span>
@@ -156,19 +158,28 @@
     </ul>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
-    <!--                    SECTION PRESENTATION                      -->
+    <!--                         player                         -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <section class="presentation">
-      <h2 class="presentation__title">
+    <div class="common-section">
+      <div class="common-section__headline">
         Все еще сомневаетесь?
-      </h2>
+      </div>
       <p>
         Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
       </p>
-      <video class="presentation__video" src="img/htmlacademy.svg" poster="img/htmlacademy.svg" width="320" height="200" controls></video>
-      <div class="presentation__video-controls"></div>
-    </section>
+      <div class="player">
+        <video class="player__screen" src="img/video-mobile.jpg" poster="img/video-mobile.jpg" controls></video>
+        <div class="player__controls">
+          <div class="player__progress-bar"></div>
+          <div class="player__buttons">
+            <span class="player__replay"><!-- bg-img: icon-video-replay.svg --></span>
+            <span class="player__subtitles"><!-- bg-img: icon-video-subtitles.svg --></span>
+            <span class="player__fullscreen"><!-- bg-img: icon-video-fullscreen.svg --></span>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
     <!--                        PAGE FOOTER                           -->
@@ -182,16 +193,19 @@
         <ul class="social-list">
           <li class="social-list__item">
             <a class="social-link social-link--twitter" href="#">
+              <!-- bg-img: icon-twitter.svg -->
               Twitter
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-link social-link--facebook" href="#">
+              <!-- bg-img: icon-facebook.svg -->
               Facebook
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-link social-link--youtube" href="#">
+              <!-- bg-img: icon-youtube.svg -->
               Youtube
             </a>
           </li>
@@ -201,7 +215,8 @@
         <span class="page-footer__copyright-text">
           Разработано
         </span>
-        <a class="page-footer__copyright-link" href="#">
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
+          <!-- bg-img: logo-htmlacademy.svg -->
           HTML Academy
         </a>
       </div>

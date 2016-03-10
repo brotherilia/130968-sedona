@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона - Форма отзыва</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -15,8 +16,8 @@
       <!--                     MAIN NAVIGATION                          -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <nav class="main-nav">
-        <div class="main-nav__close">
-          <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+        <div class="main-nav__toggle">
+          <!-- bg-img: img/icon-cross.svg; mod 'closed' - bg-img: img/icon-menu.svg -->
         </div>
         <ul class="main-nav__items">
           <li class="main-nav__item">
@@ -42,46 +43,39 @@
         </ul>
       </nav>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <!--                         INTRO BLOCK                          -->
+      <!--                            INTRO                             -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <div class="intro">
         <div class="intro__header">
           <div class="intro__logo">
-            <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+            <a href="index.html"> <!-- посмотреть потом, нужен ли класс -->
+              <img src="img/logo-sedona-mobile.svg" alt="">
+            </a>
           </div>
-          <a class="intro__user-nav intro__user-nav--closed" href="#">
-            Для пользователей
-          </a>
-          <div class="intro__jumbotron">
-            <div class="intro__slogan">
-              <img src="img/htmlacademy.svg" width="10" height="10" alt="">
-            </div>
-            <div class="intro__footer">
-              <img src="img/htmlacademy.svg" width="10" height="10" alt="">
-            </div>
-          </div>
+        </div>
+        <div class="intro__jumbotron">
+          <img src="img/text-sedona.svg" alt="">
+          <!-- bg1-img: bg-back-mobile.jpg -->
+          <!-- bg2-img: bg-intro-triangle-mobile.svg -->
         </div>
       </div>
     </header>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
-    <!--                     SECTION PAGE TITLE                       -->
+    <!--                         PAGE TITLE                           -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <div class="page-title">
-      <div class="page-title__headline">
+    <div class="common-section">
+      <div class="common-section__headline">
         Оставьте свой отзыв
       </div>
       <p>
         Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях.
       </p>
-      <div class="page-title__bottom">
-        <img src="img/htmlacademy.svg" width="10" height="10" alt="">
-      </div>
     </div>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
-    <!--                     SECTION FEEDBACK                         -->
+    <!--                      FEEDBACK FORM                           -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <form class="feedback" action="/echo" method="post">
@@ -104,13 +98,13 @@
           Контактная информация:
         </legend>
         <label class="feedback__item feedback__item--contacts">
-          Контактный телефон:<input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон">
+          Контактный телефон:<input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон"><!-- bg-img: icon-phone.svg -->
         </label>
         <span class="feedback__warning">
           Ошибка, перепроверьте номер
         </span>
         <label class="feedback__item feedback__item--contacts">
-          Электронная почта:<input class="feedback__input feedback__input--email" type="email" name="email" id="email" placeholder="Введите e-mail">
+          Электронная почта:<input class="feedback__input feedback__input--email" type="email" name="email" id="email" placeholder="Введите e-mail"><!-- bg-img: icon-mail.svg -->
         </label>
         <span class="feedback__warning">
           Ошибка, перепроверьте адрес
@@ -135,16 +129,16 @@
           Посещенные достопримечательности:
         </legend>
         <label class="feedback__item feedback__item--sight">
-          <input class="feedback__flag" type="checkbox" name="check1" id="check1" checked>Мост Дьявола
+          <input class="feedback__flag" type="checkbox" name="check1" id="check1" checked>Мост Дьявола<!-- bg-img: icon-tick.svg -->
         </label>
         <label class="feedback__item feedback__item--sight">
-          <input class="feedback__flag" type="checkbox" name="check2" id="check2" checked>Слайд-парк
+          <input class="feedback__flag" type="checkbox" name="check2" id="check2" checked>Слайд-парк<!-- bg-img: icon-tick.svg -->
         </label>
         <label class="feedback__item feedback__item--sight">
           <input class="feedback__flag" type="checkbox" name="check3" id="check3">Гора-Колокол
         </label>
         <label class="feedback__item feedback__item--sight">
-          <input class="feedback__flag" type="checkbox" name="check4" id="check4" checked>Красные скалы
+          <input class="feedback__flag" type="checkbox" name="check4" id="check4" checked>Красные скалы<!-- bg-img: icon-tick.svg -->
         </label>
       </fieldset>
       <fieldset class="feedback__section">
@@ -168,16 +162,19 @@
         <ul class="social-list">
           <li class="social-list__item">
             <a class="social-link social-link--twitter" href="#">
+              <!-- bg-img: icon-twitter.svg -->
               Twitter
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-link social-link--facebook" href="#">
+              <!-- bg-img: icon-facebook.svg -->
               Facebook
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-link social-link--youtube" href="#">
+              <!-- bg-img: icon-youtube.svg -->
               Youtube
             </a>
           </li>
@@ -187,7 +184,8 @@
         <span class="page-footer__copyright-text">
           Разработано
         </span>
-        <a class="page-footer__copyright-link" href="#">
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
+          <!-- bg-img: logo-htmlacademy.svg -->
           HTML Academy
         </a>
       </div>
