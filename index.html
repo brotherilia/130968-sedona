@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -15,8 +16,8 @@
       <!--                     MAIN NAVIGATION                          -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <nav class="main-nav">
-        <div class="main-nav__close">
-          <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+        <div class="main-nav__toggle">
+          <!-- bg-img: img/icon-cross.svg; mod 'closed' - bg-img: img/icon-menu.svg -->
         </div>
         <ul class="main-nav__items">
           <li class="main-nav__item">
@@ -42,46 +43,42 @@
         </ul>
       </nav>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <!--                         INTRO BLOCK                          -->
+      <!--                            INTRO                             -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <div class="intro">
         <div class="intro__header">
           <div class="intro__logo">
-            <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+            <a href="index.html"> <!-- посмотреть потом, нужен ли класс -->
+              <img src="img/logo-sedona-mobile.svg" alt="">
+            </a>
           </div>
-          <a class="intro__user-nav intro__user-nav--closed" href="#">
-            Для пользователей
-          </a>
-          <div class="intro__jumbotron intro__jumbotron--first-page">
-            <div class="intro__slogan">
-              <img src="img/htmlacademy.svg" width="10" height="10" alt="">
-            </div>
-            <div class="intro__footer">
-              <img src="img/htmlacademy.svg" width="10" height="10" alt="">
-            </div>
-          </div>
+        </div>
+        <div class="intro__jumbotron intro__jumbotron--main-page">
+          <img src="img/text-sedona-index.svg" alt="">
+          <!-- bg1-img: bg-back-mobile.jpg -->
+          <!-- bg2-img: bg-intro-triangle-mobile.svg -->
         </div>
       </div>
     </header>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
-    <!--                     SECTION PAGE TITLE                       -->
+    <!--                         PAGE TITLE                           -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <div class="common-section">
       <div class="common-section__headline">
-        Седона — небольшой городок в аризоне, заслуживающий большего!
+        Седона — небольшой городок в Аризоне, заслуживающий большего!
       </div>
       <p>
         Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!
       </p>
       <div class="common-section__bottom">
-        <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+        <!-- bg-img: bg-triangle.svg -->
       </div>
     </div>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
-    <!--                     SECTION ADVANTAGES                       -->
+    <!--                          ADVANTAGES                          -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <section class="advantages">
@@ -96,11 +93,12 @@
           Седона не атракцион для туристов, там течет своя жизнь
         </p>
         <div class="advantages__photo">
-          <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+          <img src="img/photo-city.jpg" alt="">
         </div>
         <ul class="subadvantages">
           <li class="subadvantages__item">
-            <div class="subadvantages__title">
+            <div class="subadvantages__title subadvantages__title--house">
+              <!-- bg-img: icon-house.svg -->
               Жилье
             </div>
             <p>
@@ -108,7 +106,8 @@
             </p>
           </li>
           <li class="subadvantages__item">
-            <div class="subadvantages__title">
+            <div class="subadvantages__title subadvantages__title--gift">
+              <!-- bg-img: icon-gift.svg -->
               Сувениры
             </div>
             <p>
@@ -116,7 +115,8 @@
             </p>
           </li>
           <li class="subadvantages__item">
-            <div class="subadvantages__title">
+            <div class="subadvantages__title subadvantages__title--food">
+              <!-- bg-img: icon-burger.svg -->
               Еда
             </div>
             <p>
@@ -136,7 +136,7 @@
           Да, по нему можно пройти! Если конечно вы осмелитесь
         </p>
         <div class="advantages__photo">
-          <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+          <img src="img/photo-bridge.jpg" alt="">
         </div>
       </div>
       <div class="advantages__item">
@@ -175,11 +175,11 @@
     </section>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
-    <!--                       SECTION BOOKING                        -->
+    <!--                            BOOKING                           -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <div class="common-section">
-      <div class="common-section__headline">
+      <div class="common-section__headline common-section__headline--bigger">
         Заинтересовались?
       </div>
       <p>
@@ -195,7 +195,8 @@
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <a class="map" href="#">
-      <img src="img/htmlacademy.svg" width="10" height="10" alt="">
+      <!-- bg1-img: bg-map-mobile.jpg -->
+      <!-- bg2-img: icon-map-marker.svg -->
     </a>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
@@ -210,16 +211,19 @@
         <ul class="social-list">
           <li class="social-list__item">
             <a class="social-link social-link--twitter" href="#">
+              <!-- bg-img: icon-twitter.svg -->
               Twitter
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-link social-link--facebook" href="#">
+              <!-- bg-img: icon-facebook.svg -->
               Facebook
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-link social-link--youtube" href="#">
+              <!-- bg-img: icon-youtube.svg -->
               Youtube
             </a>
           </li>
@@ -229,7 +233,8 @@
         <span class="page-footer__copyright-text">
           Разработано
         </span>
-        <a class="page-footer__copyright-link" href="#">
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
+          <!-- bg-img: logo-htmlacademy.svg -->
           HTML Academy
         </a>
       </div>
