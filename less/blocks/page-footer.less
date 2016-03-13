@@ -1,12 +1,36 @@
 .page-footer {
+  .reset-block();
+  .container();
   &__hashtag {
-
+    text-align: center;
+    @media @tablet-widths {
+      float: left;
+      width: 256px;
+    }
+    @media @desktop-widths {
+      width: 400px;
+    }
   }
   &__social {
-
+    text-align: center;
+    @media @tablet-widths {
+      float: left;
+      width: 256px;
+    }
+    @media @desktop-widths {
+      width: 400px;
+    }
   }
   &__copyright {
-
+    text-align: center;
+    @media @tablet-widths {
+      float: right;
+      width: 256px;
+      text-align: right;
+    }
+    @media @desktop-widths {
+      width: 400px;
+    }
   }
   &__copyright-link {
 

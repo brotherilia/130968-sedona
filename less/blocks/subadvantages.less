@@ -1,6 +1,18 @@
 .subadvantages {
+  .reset-list();
+  font-size: 0;
   &__item {
-
+    font-size: @base-font-size;
+    text-align: left;
+    @media @tablet-widths {
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      width: 256px;
+    }
+    @media @desktop-widths {
+      width: 400px;
+    }
   }
   &__title {
 

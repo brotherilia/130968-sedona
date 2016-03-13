@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона - Фото и видео</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -26,9 +27,9 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <span class="main-nav__link main-nav__link--active">
+            <a class="main-nav__link main-nav__link--active">
               Фото и видео
-            </span>
+            </a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">
@@ -41,23 +42,19 @@
             </a>
           </li>
         </ul>
+        <div class="main-nav__logo">
+          <a href="index.html"> <!-- посмотреть потом, нужен ли класс -->
+            <!-- <img src="img/logo-sedona-mobile.svg" alt=""> -->
+          </a>
+        </div>
       </nav>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <!--                            INTRO                             -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <div class="intro">
-        <div class="intro__header">
-          <div class="intro__logo">
-            <a href="index.html"> <!-- посмотреть потом, нужен ли класс -->
-              <img src="img/logo-sedona-mobile.svg" alt="">
-            </a>
-          </div>
-        </div>
-        <div class="intro__jumbotron">
-          <img src="img/text-sedona.svg" alt="">
-          <!-- bg1-img: bg-back-mobile.jpg -->
-          <!-- bg2-img: bg-intro-triangle-mobile.svg -->
-        </div>
+        <!-- <img src="img/text-sedona-index.svg" alt=""> -->
+        <!-- bg1-img: bg-back-mobile.jpg -->
+        <!-- bg2-img: bg-intro-triangle-mobile.svg -->
       </div>
     </header>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -65,7 +62,7 @@
     <!--                         PAGE TITLE                           -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <div class="common-section">
+    <div class="common-section common-section--photo"> <!-- common-section--photo потом убрать -->
       <div class="common-section__headline">
         Фото и видео
       </div>
@@ -80,88 +77,104 @@
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <ul class="posts">
       <li class="posts__item">
-        <figure class="posts__photo">
-          <a href="#"> <!-- посмотреть потом, нужен ли класс -->
-            <img src="img/photo-1-mobile.jpg" alt="">
+        <figure class="posts__content">
+          <a class="posts__photo" href="#"> <!-- посмотреть потом, нужен ли класс -->
+            <!-- <img src="img/photo-1-mobile.jpg" alt=""> -->
           </a>
-          <figcaption class="posts__description">
-            Неродные просторы
+          <figcaption class="posts__text">
+            <div class="posts__description">
+              <div class="posts__title">
+                Неродные просторы
+              </div>
+              <div class="posts__author">
+                Автор фото: <span>Борис</span>
+              </div>
+            </div>
+            <div class="posts__likes">
+              <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+              <span class="posts__likes-count">
+                1350
+              </span>
+            </div>
           </figcaption>
         </figure>
-        <span class="posts__author">
-          Автор фото: <span>Борис</span>
-        </span>
-        <div class="posts__likes">
-          <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
-          <span class="posts__likes-count">
-            1350
-          </span>
-        </div>
       </li>
       <li class="posts__item">
-        <figure class="posts__photo">
-          <a href="#"> <!-- посмотреть потом, нужен ли класс -->
-            <img src="img/photo-2-mobile.jpg" alt="">
+        <figure class="posts__content">
+          <a class="posts__photo" href="#"> <!-- посмотреть потом, нужен ли класс -->
+            <!-- <img src="img/photo-2-mobile.jpg" alt=""> -->
           </a>
-          <figcaption class="posts__description">
-            Местная растительность
+          <figcaption class="posts__text">
+            <div class="posts__description">
+              <div class="posts__title">
+                Местная растительность
+              </div>
+              <div class="posts__author">
+                Автор фото: <span>Сергей</span>
+              </div>
+            </div>
+            <div class="posts__likes">
+              <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+              <span class="posts__likes-count">
+                143
+              </span>
+            </div>
           </figcaption>
         </figure>
-        <span class="posts__author">
-          Автор фото: <span>Сергей</span>
-        </span>
-        <div class="posts__likes">
-          <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
-          <span class="posts__likes-count">
-            143
-          </span>
-        </div>
       </li>
       <li class="posts__item">
-        <figure class="posts__photo">
-          <a href="#"> <!-- посмотреть потом, нужен ли класс -->
-            <img src="img/photo-3-mobile.jpg" alt="">
+        <figure class="posts__content">
+          <a class="posts__photo" href="#"> <!-- посмотреть потом, нужен ли класс -->
+            <!-- <img src="img/photo-3-mobile.jpg" alt=""> -->
           </a>
-          <figcaption class="posts__description">
-            Дорога на север
+          <figcaption class="posts__text">
+            <div class="posts__description">
+              <div class="posts__title">
+                Дорога на север
+              </div>
+              <div class="posts__author">
+                Автор фото: <span>Петр</span>
+              </div>
+            </div>
+            <div class="posts__likes">
+              <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+              <span class="posts__likes-count">
+                96
+              </span>
+            </div>
           </figcaption>
         </figure>
-        <span class="posts__author">
-          Автор фото: <span>Петр</span>
-        </span>
-        <div class="posts__likes">
-          <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
-          <span class="posts__likes-count">
-            96
-          </span>
-        </div>
       </li>
       <li class="posts__item">
-        <figure class="posts__photo">
-          <a href="#"> <!-- посмотреть потом, нужен ли класс -->
-            <img src="img/photo-4-mobile.jpg" alt="">
+        <figure class="posts__content">
+          <a class="posts__photo" href="#"> <!-- посмотреть потом, нужен ли класс -->
+            <!-- <img src="img/photo-4-mobile.jpg" alt=""> -->
           </a>
-          <figcaption class="posts__description">
-            Мост дьявола
+          <figcaption class="posts__text">
+            <div class="posts__description">
+              <div class="posts__title">
+                Мост дьявола
+              </div>
+              <div class="posts__author">
+                Автор фото: <span>Антон</span>
+              </div>
+            </div>
+            <div class="posts__likes">
+              <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+              <span class="posts__likes-count">
+                254
+              </span>
+            </div>
           </figcaption>
         </figure>
-        <span class="posts__author">
-          Автор фото: <span>Антон</span>
-        </span>
-        <div class="posts__likes">
-          <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
-          <span class="posts__likes-count">
-            254
-          </span>
-        </div>
       </li>
     </ul>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--                                                              -->
-    <!--                         player                         -->
+    <!--                       PRESENTATION                           -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <div class="common-section">
+    <div class="common-section common-section--presentation"> <!-- common-section--presentation потом убрать -->
       <div class="common-section__headline">
         Все еще сомневаетесь?
       </div>
@@ -169,7 +182,7 @@
         Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
       </p>
       <div class="player">
-        <video class="player__screen" src="img/video-mobile.jpg" poster="img/video-mobile.jpg" controls></video>
+        <!-- <video class="player__screen" src="img/video-mobile.jpg" poster="img/video-mobile.jpg" controls></video> -->
         <div class="player__controls">
           <div class="player__progress-bar"></div>
           <div class="player__buttons">

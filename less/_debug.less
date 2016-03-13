@@ -1,0 +1,172 @@
+/* Потом этот файл отключить, перенести нужные min-height в основные стили, разобраться с absolute и relative */
+
+/* Переключение фона-подложки */
+//@page: "index";
+//@page: "photo";
+@page: "form";
+
+.body-dummy-bg(@page) {
+  background: url("@{img-path}/_debug/sedona-@{page}-mobile.jpg") no-repeat center top;
+  min-height: 3650px;
+  @media @tablet-widths {
+    background: url("@{img-path}/_debug/sedona-@{page}-tablet.jpg") no-repeat center top;
+    min-height: 2680px;
+  }
+  @media @desktop-widths {
+    background: url("@{img-path}/_debug/sedona-@{page}-desktop.jpg") no-repeat center top;
+    min-height: 2700px;
+  }
+}
+
+body {
+  .body-dummy-bg(@page);
+}
+
+.block(@content, @color, @minheight, @t-minheight, @d-minheight, @title-hor-pos, @title-vert-pos)
+ {
+  outline: 2px solid @color;
+  background-color: fade(@color,10%);
+  min-height: e("@{minheight}px");
+  @media @tablet-widths {
+    min-height: e("@{t-minheight}px");
+  }
+  @media @desktop-widths {
+    min-height: e("@{d-minheight}px");
+  }
+  position: relative;
+  &::after {
+    content: @content;
+    display: block;
+    position: absolute;
+    @{title-vert-pos}: 0;
+    @{title-hor-pos}: 0;
+    height: 15px;
+    background-color: @color;
+    font-size: 10px;
+    color: #fff;
+    padding: 0 5px;
+  }
+}
+.page-header {
+  .block("page-header", #f00, 437, 347, 357, left, top);
+}
+.page-header--main-page {
+  .block("page-header", #f00, 667, 573, 573, left, top);
+}
+.main-nav {
+  .block("main-nav", #090, 280, 56, 56, right, top);
+}
+.main-nav__items {
+  .block("main-nav__items", #cc0, 223, 56, 56, right, bottom);
+}
+.main-nav__item {
+  .block("main-nav__item", #999, 1, 1, 1, left, bottom);
+  &::after {
+    line-height: 15px;
+  }
+}
+.main-nav__logo {
+  .block("main-nav__logo", #f00, 83, 83, 83, left, top);
+  @media @tablet-widths {
+    position: absolute;
+  }
+}
+.intro {
+  .block("intro", #00f, 155, 290, 300, left, top);
+}
+.intro--main-page {
+  .block("intro", #00f, 387, 517, 517, left, top);
+}
+.common-section {
+  .block("common-section", #f00, 1, 1, 1, left, top);
+}
+.common-section--main-page-title {
+  .block("common-section", #f00, 240, 207, 207, left, top);
+}
+.common-section--booking {
+  .block("common-section", #f00, 287, 318, 332, left, top);
+}
+.common-section--photo {
+  .block("common-section", #f00, 190, 247, 287, left, top);
+}
+.common-section--presentation{
+  .block("common-section", #f00, 500, 780, 830, left, top);
+}
+.common-section--form {
+  .block("common-section", #f00, 204, 257, 270, left, top);
+}
+.advantages {
+  .block("advantages", #f00, 1, 1, 1, left, top);
+}
+.advantages__item {
+  .block("advantages__item", #090, 168, 256, 256, right, top);
+}
+.advantages__item--1st {
+  .block("advantages__item", #090, 870, 586, 586, right, top);
+}
+.advantages__text--left {
+  .block("advantages__text", #cc0, 192, 256, 256, right, bottom);
+}
+.advantages__text--right {
+  .block("advantages__text", #cc0, 192, 256, 256, right, bottom);
+}
+.advantages__photo {
+  .block("advantages__photo", #cc0, 260, 256, 256, right, bottom);
+}
+.advantages__item--2nd {
+  .block("advantages__item", #090, 450, 256, 256, right, top);
+}
+.subadvantages {
+  .block("subadvantages", #00f, 414, 330, 330, left, top);
+}
+.subadvantages__item {
+  .block("subadvantages__item", #f00, 138, 330, 330, right, bottom);
+}
+.map {
+  .block("map", #f00, 350, 350, 350, left, top);
+}
+.page-footer {
+  .block("page-footer", #f00, 245, 120, 120, left, top);
+}
+.posts {
+  .block("posts", #f00, 1660, 1174, 667, left, top);
+}
+.posts__item {
+  .block("posts__item", #090, 370, 348, 268, right, top);
+}
+.posts__item:first-child {
+  .block("posts__item", #090, 370, 480, 400, right, top);
+}
+.posts__content {
+  .block("posts__content", #cc0, 370, 348, 268, left, bottom);
+}
+.posts__item:first-child .posts__content {
+  .block("posts__content", #cc0, 370, 480, 400, left, bottom);
+}
+.posts__text {
+  .block("posts__text", #00f, 90, 80, 80, left, top);
+}
+.posts__photo {
+  .block("posts__photo", #f00, 280, 267, 267, right, bottom);
+}
+.posts__item:first-child .posts__photo {
+  .block("posts__photo", #f00, 280, 400, 400, right, bottom);
+}
+.feedback {
+  .block("feedback", #f00, 1695, 1395, 1220, left, top);
+}
+.feedback__section--1 {
+  .block("feedback__section", #090, 306, 360, 370, right, top);
+}
+.feedback__section--2 {
+  .block("feedback__section", #090, 318, 310, 215, right, top);
+}
+.feedback__section--3 {
+  .block("feedback__section", #090, 290, 360, 370, right, top);
+}
+.feedback__section--4 {
+  .block("feedback__section", #090, 410, 305, 203, right, top);
+}
+.feedback__section--5 {
+  .block("feedback__section", #090, 222, 290, 290, right, top);
+}

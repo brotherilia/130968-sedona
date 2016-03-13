@@ -1,17 +1,48 @@
 .main-nav {
+  .reset-block();
+  .container();
   &__toggle {
 
   }
   &__items {
-
+    .reset-list();
   }
   &__item {
-
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    @media @tablet-widths {
+      float: left;
+      width: 144px;
+    }
+    @media @desktop-widths {
+      width: 230px;
+    }
+  }
+  &__item:nth-child(2),
+  &__item:nth-child(3) {
+    @media @tablet-widths {
+      width: 240px;
+    }
+    @media @desktop-widths {
+      width: 370px;
+    }
   }
   &__link {
 
   }
   &__link--active {
 
+  }
+  &__logo {
+    width: 102px;
+    height: 83;
+    margin: 0 auto;
+    @media @tablet-widths {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
   }
 }

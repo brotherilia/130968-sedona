@@ -1,0 +1,40 @@
+.reset-block() {
+  margin: 0;
+  padding: 0;
+}
+
+.reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container() {
+  margin: 0 auto;
+  width: 320px;
+  @media @tablet-widths {
+    width: 768px;
+  }
+  @media @desktop-widths {
+    width: 1200px;
+  }
+}
+
+.container-form() {
+  margin: 0 auto;
+  width: 320px;
+  @media @tablet-widths {
+    width: 648px;
+  }
+  @media @desktop-widths {
+    width: 960px;
+  }
+}
+
+.clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
