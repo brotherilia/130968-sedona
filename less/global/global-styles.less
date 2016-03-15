@@ -4,11 +4,13 @@ html {
 
 html,
 body {
-  .reset-block();
+  .reset-spaces();
   min-width: 320px;
-  color: @base-color;
+  color: @base-text-color;
+  background-color: @light-bg-color;
   font-family: @base-font-family;
   font-size: @base-font-size;
+  line-height: @base-line-height;
   text-transform: uppercase;
 }
 
@@ -16,5 +18,10 @@ p,
 h1,
 h2,
 h3 {
-  .reset-block();
+  .reset-spaces();
+  .reset-font();
+}
+
+a {
+  text-decoration: none;
 }

@@ -1,17 +1,26 @@
-.reset-block() {
+.reset-spaces() {
   margin: 0;
   padding: 0;
 }
 
 .reset-list() {
-  margin: 0;
-  padding: 0;
+  .reset-spaces();
   list-style: none;
 }
 
-.container() {
+.reset-font() {
+  font-size: @base-font-size;
+  font-weight: normal;
+}
+
+.container-mobile() {
   margin: 0 auto;
   width: 320px;
+  text-align: center;
+}
+
+.container() {
+  .container-mobile();
   @media @tablet-widths {
     width: 768px;
   }
@@ -21,8 +30,7 @@
 }
 
 .container-form() {
-  margin: 0 auto;
-  width: 320px;
+  .container-mobile();
   @media @tablet-widths {
     width: 648px;
   }
@@ -36,5 +44,70 @@
     content: "";
     display: table;
     clear: both;
+  }
+}
+
+.pseudo-common() {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.set-colors(@clr: @dark-color, @bgclr: @light-color) {
+  color: @clr;
+  background-color: @bgclr;
+}
+
+.headline(@fsz: @headline-font-size) {
+  font-size: @fsz;
+  font-weight: bold;
+}
+
+.main-menu-colors() {
+  color: @btn-color;
+  background-color: @btn-bg-color;
+  &:hover {
+    color: @btn-hvr-color;
+    background-color: @btn-bg-hvr-color;
+  }
+  &:active {
+    color: @btn-dwn-color;
+    background-color: @btn-bg-dwn-from-color;
+  }
+  @media @tablet-widths {
+    font-size: @base-font-size;
+    color: @main-menu-color;
+    background-color: @light-bg-color;
+    &:hover {
+      background-color: @light-bg-color;
+      color: @main-menu-hvr-color;
+    }
+    &:active {
+      background-color: @light-bg-color;
+      color: @main-menu-dwn-color;
+    }
+  }
+}
+
+.main-menu-active-colors() {
+  &:hover {
+    color: @btn-color;
+    background-color: @btn-bg-hvr-color;
+  }
+  &:active {
+    color: @btn-color;
+    background-color: @btn-bg-hvr-color;
+  }
+  @media @tablet-widths {
+    color: @main-menu-act-color;
+    background-color: @light-bg-color;
+    &:hover {
+      background-color: @light-bg-color;
+      color: @main-menu-act-hvr-color;
+    }
+    &:active {
+      background-color: @light-bg-color;
+      color: @main-menu-act-dwn-color;
+    }
   }
 }

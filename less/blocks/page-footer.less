@@ -1,8 +1,8 @@
 .page-footer {
-  .reset-block();
+  .reset-spaces();
   .container();
   &__hashtag {
-    text-align: center;
+    .headline(@headline-bigger-font-size);
     @media @tablet-widths {
       float: left;
       width: 256px;
@@ -12,7 +12,6 @@
     }
   }
   &__social {
-    text-align: center;
     @media @tablet-widths {
       float: left;
       width: 256px;
@@ -22,11 +21,9 @@
     }
   }
   &__copyright {
-    text-align: center;
     @media @tablet-widths {
       float: right;
       width: 256px;
-      text-align: right;
     }
     @media @desktop-widths {
       width: 400px;

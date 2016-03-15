@@ -17,10 +17,10 @@
       <!--                     MAIN NAVIGATION                          -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <nav class="main-nav">
-        <div class="main-nav__toggle">
+        <button class="main-nav__toggle main-nav__toggle--opened">
           <!-- bg-img: img/icon-cross.svg; mod 'closed' - bg-img: img/icon-menu.svg -->
-        </div>
-        <ul class="main-nav__items">
+        </button>
+        <ul class="main-nav__items main-nav__items--opened">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">
               Главная
@@ -43,7 +43,7 @@
           </li>
         </ul>
         <div class="main-nav__logo">
-          <a href="index.html"> <!-- посмотреть потом, нужен ли класс -->
+          <a href="index.html"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
             <!-- <img src="img/logo-sedona-mobile.svg" alt=""> -->
           </a>
         </div>
@@ -62,7 +62,7 @@
     <!--                         PAGE TITLE                           -->
     <!--                                                              -->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <div class="common-section common-section--form"> <!-- common-section--form потом убрать -->
+    <div class="common-section common-section--form"> <!-- *FIXME*: common-section--form потом убрать -->
       <div class="common-section__headline">
         Оставьте свой отзыв
       </div>
@@ -77,7 +77,7 @@
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <div class="feedback">
       <form class="feedback__form" action="/echo" method="post">
-        <fieldset class="feedback__section feedback__section--1"> <!-- feedback__section--1 потом убрать -->
+        <fieldset class="feedback__section feedback__section--1"> <!-- *FIXME*: feedback__section--1 потом убрать -->
           <legend class="feedback__title">
             Представьтесь, пожалуйста:
           </legend>
@@ -91,7 +91,7 @@
             Отчество:<input class="feedback__input" type="text" name="midname" id="midname" placeholder="Александрович">
           </label>
         </fieldset>
-        <fieldset class="feedback__section feedback__section--2"> <!-- feedback__section--2 потом убрать -->
+        <fieldset class="feedback__section feedback__section--2"> <!-- *FIXME*: feedback__section--2 потом убрать -->
           <legend class="feedback__title">
             Контактная информация:
           </legend>
@@ -108,7 +108,7 @@
             </span>
           </label>
         </fieldset>
-        <fieldset class="feedback__section feedback__section--3"> <!-- feedback__section--3 потом убрать -->
+        <fieldset class="feedback__section feedback__section--3"> <!-- *FIXME*: feedback__section--3 потом убрать -->
           <legend class="feedback__title">
             Ваше общее впечатление:
           </legend>
@@ -122,7 +122,7 @@
             <input class="feedback__flag" type="radio" name="rating" id="value3">Затрудняюсь ответить
           </label>
         </fieldset>
-        <fieldset class="feedback__section feedback__section--4"> <!-- feedback__section--4 потом убрать -->
+        <fieldset class="feedback__section feedback__section--4"> <!-- *FIXME*: feedback__section--4 потом убрать -->
           <legend class="feedback__title">
             Посещенные достопримечательности:
           </legend>
@@ -139,7 +139,7 @@
             <input class="feedback__flag" type="checkbox" name="check4" id="check4" checked>Красные скалы<!-- bg-img: icon-tick.svg -->
           </label>
         </fieldset>
-        <fieldset class="feedback__section feedback__section--5"> <!-- feedback__section--5 потом убрать -->
+        <fieldset class="feedback__section feedback__section--5"> <!-- *FIXME*: feedback__section--5 потом убрать -->
           <legend class="feedback__title">
             Опишите свои эмоции:
           </legend>

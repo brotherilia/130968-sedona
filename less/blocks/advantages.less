@@ -1,17 +1,24 @@
 .advantages {
-  .reset-block();
+  .reset-spaces();
   .container();
-  font-size: 0;
-  text-align: center;
+  @media @tablet-widths {
+    font-size: 0;
+  }
   &__item {
-    .reset-block();
-    font-size: @base-font-size;
+    .reset-spaces();
+    & {
+      .set-colors(@light-color, @alt-color);
+    }
   }
   &__item--brief {
+    & {
+      .set-colors(@base-text-color, @dark-bg-color);
+    }
     @media @tablet-widths {
       display: inline-block;
       vertical-align: top;
       width: 256px;
+      font-size: @base-font-size;
     }
     @media @desktop-widths {
       width: 400px;
@@ -21,6 +28,7 @@
     .clearfix();
   }
   &__text {
+    line-height: @dense-line-height;
     @media @tablet-widths {
       width: 256px;
     }
@@ -56,11 +64,8 @@
       float: right;
     }
   }
-
-
-
   &__title {
-
+    .headline();
   }
   &__number {
 

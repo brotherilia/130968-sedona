@@ -1,9 +1,9 @@
-/* Потом этот файл отключить, перенести нужные min-height в основные стили, разобраться с absolute и relative */
+/*  *FIXME*: Потом этот файл отключить, перенести нужные min-height в основные стили, разобраться с absolute и relative */
 
 /* Переключение фона-подложки */
-//@page: "index";
+@page: "index";
 //@page: "photo";
-@page: "form";
+//@page: "form";
 
 .body-dummy-bg(@page) {
   background: url("@{img-path}/_debug/sedona-@{page}-mobile.jpg") no-repeat center top;
@@ -18,14 +18,14 @@
   }
 }
 
-body {
+/* body {
   .body-dummy-bg(@page);
-}
+} */
 
 .block(@content, @color, @minheight, @t-minheight, @d-minheight, @title-hor-pos, @title-vert-pos)
  {
-  outline: 2px solid @color;
-  background-color: fade(@color,10%);
+  //outline: 2px solid @color;
+  //background-color: fade(@color,10%);
   min-height: e("@{minheight}px");
   @media @tablet-widths {
     min-height: e("@{t-minheight}px");
@@ -34,7 +34,7 @@ body {
     min-height: e("@{d-minheight}px");
   }
   position: relative;
-  &::after {
+  /* &::after {
     content: @content;
     display: block;
     position: absolute;
@@ -45,7 +45,7 @@ body {
     font-size: 10px;
     color: #fff;
     padding: 0 5px;
-  }
+  } */
 }
 .page-header {
   .block("page-header", #f00, 437, 347, 357, left, top);
@@ -67,9 +67,6 @@ body {
 }
 .main-nav__logo {
   .block("main-nav__logo", #f00, 83, 83, 83, left, top);
-  @media @tablet-widths {
-    position: absolute;
-  }
 }
 .intro {
   .block("intro", #00f, 155, 290, 300, left, top);
@@ -89,7 +86,7 @@ body {
 .common-section--photo {
   .block("common-section", #f00, 190, 247, 287, left, top);
 }
-.common-section--presentation{
+.common-section--presentation {
   .block("common-section", #f00, 500, 780, 830, left, top);
 }
 .common-section--form {
@@ -170,3 +167,33 @@ body {
 .feedback__section--5 {
   .block("feedback__section", #090, 222, 290, 290, right, top);
 }
+
+// testing of colors
+
+/* .dark-color {color: @dark-color;}
+.light-color {color: @light-color;}
+.alt-color {color: @alt-color;}
+
+.light-bg-color {color: @light-bg-color;}
+.dark-bg-color {color: @dark-bg-color;}
+.alt-bg-color {color: @alt-bg-color;}
+
+.base-text-color {color: @base-text-color;}
+.alt-text-color {color: @alt-text-color;}
+
+.main-menu-color {color: @main-menu-color;}
+.main-menu-hvr-color {color: @main-menu-hvr-color;}
+.main-menu-dwn-color {color: @main-menu-dwn-color;}
+
+.main-menu-act-color {color: @main-menu-act-color;}
+.main-menu-act-hvr-color {color: @main-menu-act-hvr-color;}
+.main-menu-act-dwn-color {color: @main-menu-act-dwn-color;}
+
+
+.test {
+  // color: hsl(hsvhue(#81b3d2), hsvsaturation(#81b3d2), hsvvalue(#81b3d2));
+  hue: hsvhue(#766357);
+  sat: hsvsaturation(#766357);
+  val: hsvvalue(#766357);
+}
+*/

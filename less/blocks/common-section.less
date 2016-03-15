@@ -1,9 +1,11 @@
 .common-section {
-  .reset-block();
+  .reset-spaces();
   .container();
-  text-align: center;
   &__headline {
-
+    .headline();
+  }
+  &__headline--bigger {
+    .headline(@headline-bigger-font-size);
   }
   &__bottom {
 
