@@ -2,6 +2,7 @@
   .reset-list();
   font-size: 0;
   &__item {
+    .set-colors();
     font-size: @base-font-size;
     line-height: @dense-line-height;
     @media @tablet-widths {
@@ -14,7 +15,10 @@
     }
   }
   &__title {
-
+    .title();
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger2);
+    }
   }
   &__title--house {
 

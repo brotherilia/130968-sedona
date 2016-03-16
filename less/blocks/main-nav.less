@@ -1,6 +1,5 @@
 .main-nav {
   .reset-spaces();
-  .container();
   &__toggle {
     display: none; // *FIXME*: это временно
   }
@@ -9,12 +8,16 @@
   }
   &__items {
     .reset-list();
+    @media @tablet-widths {
+      .clearfix();
+    }
   }
   &__items--opened {
 
   }
   &__item {
-    .headline();
+    font-size: @font-size-bigger1;
+    font-weight: bold;
     height: 55px;
     line-height: 55px;
     border-top: 1px solid @btn-border-top-color;
@@ -24,6 +27,7 @@
     }
     &:last-child {
       border-bottom: none;
+      position: relative;
       &::after {
         .pseudo-common();
         bottom: 0;

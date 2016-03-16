@@ -1,7 +1,7 @@
 .posts {
   .reset-list();
-  .container();
   font-size: 0;
+  text-align: left;
   @media @tablet-widths {
     width: 648px;
   }
@@ -74,6 +74,13 @@
   }
   &__text {
     .clearfix();
+    text-align: left;
+    @media @tablet-widths {
+      .set-colors(@bgclr: @darker1-bg-color);
+    }
+    @media @desktop-widths {
+      .set-colors(@light-color, @transparent-bg-color);
+    }
   }
   &__description {
     @media @tablet-widths {
@@ -81,9 +88,13 @@
     }
   }
   &__title {
-
+    .title(@fsz: @base-font-size);
+    @media @desktop-widths {
+      color: @light-color;
+    }
   }
   &__author {
+    text-transform: none;
 
   }
   &__likes {
@@ -95,6 +106,9 @@
 
   }
   &__likes-count {
-
+    .title(@fsz: @base-font-size);
+    @media @desktop-widths {
+      color: @light-color;
+    }
   }
 }

@@ -1,8 +1,10 @@
 .page-footer {
   .reset-spaces();
-  .container();
+  @media @tablet-widths {
+    .clearfix();
+  }
   &__hashtag {
-    .headline(@headline-bigger-font-size);
+    .title(@fsz: @font-size-bigger2);
     @media @tablet-widths {
       float: left;
       width: 256px;

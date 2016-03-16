@@ -7,232 +7,234 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <!--                                                              -->
-    <!--                        PAGE HEADER                           -->
-    <!--                                                              -->
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <header class="page-header">
+    <div class="wrapper">
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <!--                     MAIN NAVIGATION                          -->
+      <!--                                                              -->
+      <!--                        PAGE HEADER                           -->
+      <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--opened">
-          <!-- bg-img: img/icon-cross.svg; mod 'closed' - bg-img: img/icon-menu.svg -->
-        </button>
-        <ul class="main-nav__items main-nav__items--opened">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">
-              Главная
+      <header class="page-header">
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                     MAIN NAVIGATION                          -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <nav class="main-nav">
+          <button class="main-nav__toggle main-nav__toggle--opened">
+            <!-- bg-img: img/icon-cross.svg; mod 'closed' - bg-img: img/icon-menu.svg -->
+          </button>
+          <ul class="main-nav__items main-nav__items--opened">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active">
+                Фото и видео
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">
+                Форма отзыва
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+          <div class="main-nav__logo">
+            <a href="index.html"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
+              <!-- <img src="img/logo-sedona-mobile.svg" alt=""> -->
             </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">
-              Фото и видео
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">
-              Форма отзыва
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="https://htmlacademy.ru">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
-        <div class="main-nav__logo">
-          <a href="index.html"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-            <!-- <img src="img/logo-sedona-mobile.svg" alt=""> -->
-          </a>
+          </div>
+        </nav>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                            INTRO                             -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="intro">
+          <!-- <img src="img/text-sedona-index.svg" alt=""> -->
+          <!-- bg1-img: bg-back-mobile.jpg -->
+          <!-- bg2-img: bg-intro-triangle-mobile.svg -->
         </div>
-      </nav>
+      </header>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <!--                            INTRO                             -->
+      <!--                                                              -->
+      <!--                         PAGE TITLE                           -->
+      <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <div class="intro">
-        <!-- <img src="img/text-sedona-index.svg" alt=""> -->
-        <!-- bg1-img: bg-back-mobile.jpg -->
-        <!-- bg2-img: bg-intro-triangle-mobile.svg -->
+      <div class="common-section">
+        <h1 class="common-section__headline common-section__headline--bigger">
+          Фото и видео
+        </h1>
+        <p>
+          Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+        </p>
       </div>
-    </header>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <!--                                                              -->
-    <!--                         PAGE TITLE                           -->
-    <!--                                                              -->
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <div class="common-section common-section--photo"> <!-- *FIXME*: common-section--photo потом убрать -->
-      <div class="common-section__headline">
-        Фото и видео
-      </div>
-      <p>
-        Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
-      </p>
-    </div>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <!--                                                              -->
-    <!--                          POSTS LIST                          -->
-    <!--                                                              -->
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <ul class="posts">
-      <li class="posts__item">
-        <figure class="posts__content">
-          <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-            <!-- <img src="img/photo-1-mobile.jpg" alt=""> -->
-          </a>
-          <figcaption class="posts__text">
-            <div class="posts__description">
-              <div class="posts__title">
-                Неродные просторы
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                          POSTS LIST                          -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <ul class="posts">
+        <li class="posts__item">
+          <figure class="posts__content">
+            <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
+              <!-- <img src="img/photo-1-mobile.jpg" alt=""> -->
+            </a>
+            <figcaption class="posts__text">
+              <div class="posts__description">
+                <div class="posts__title">
+                  Неродные просторы
+                </div>
+                <div class="posts__author">
+                  Автор фото: <span>Борис</span>
+                </div>
               </div>
-              <div class="posts__author">
-                Автор фото: <span>Борис</span>
+              <div class="posts__likes">
+                <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+                <span class="posts__likes-count">
+                  1350
+                </span>
               </div>
-            </div>
-            <div class="posts__likes">
-              <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
-              <span class="posts__likes-count">
-                1350
-              </span>
-            </div>
-          </figcaption>
-        </figure>
-      </li>
-      <li class="posts__item">
-        <figure class="posts__content">
-          <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-            <!-- <img src="img/photo-2-mobile.jpg" alt=""> -->
-          </a>
-          <figcaption class="posts__text">
-            <div class="posts__description">
-              <div class="posts__title">
-                Местная растительность
+            </figcaption>
+          </figure>
+        </li>
+        <li class="posts__item">
+          <figure class="posts__content">
+            <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
+              <!-- <img src="img/photo-2-mobile.jpg" alt=""> -->
+            </a>
+            <figcaption class="posts__text">
+              <div class="posts__description">
+                <div class="posts__title">
+                  Местная растительность
+                </div>
+                <div class="posts__author">
+                  Автор фото: <span>Сергей</span>
+                </div>
               </div>
-              <div class="posts__author">
-                Автор фото: <span>Сергей</span>
+              <div class="posts__likes">
+                <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+                <span class="posts__likes-count">
+                  143
+                </span>
               </div>
-            </div>
-            <div class="posts__likes">
-              <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
-              <span class="posts__likes-count">
-                143
-              </span>
-            </div>
-          </figcaption>
-        </figure>
-      </li>
-      <li class="posts__item">
-        <figure class="posts__content">
-          <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-            <!-- <img src="img/photo-3-mobile.jpg" alt=""> -->
-          </a>
-          <figcaption class="posts__text">
-            <div class="posts__description">
-              <div class="posts__title">
-                Дорога на север
+            </figcaption>
+          </figure>
+        </li>
+        <li class="posts__item">
+          <figure class="posts__content">
+            <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
+              <!-- <img src="img/photo-3-mobile.jpg" alt=""> -->
+            </a>
+            <figcaption class="posts__text">
+              <div class="posts__description">
+                <div class="posts__title">
+                  Дорога на север
+                </div>
+                <div class="posts__author">
+                  Автор фото: <span>Петр</span>
+                </div>
               </div>
-              <div class="posts__author">
-                Автор фото: <span>Петр</span>
+              <div class="posts__likes">
+                <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+                <span class="posts__likes-count">
+                  96
+                </span>
               </div>
-            </div>
-            <div class="posts__likes">
-              <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
-              <span class="posts__likes-count">
-                96
-              </span>
-            </div>
-          </figcaption>
-        </figure>
-      </li>
-      <li class="posts__item">
-        <figure class="posts__content">
-          <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-            <!-- <img src="img/photo-4-mobile.jpg" alt=""> -->
-          </a>
-          <figcaption class="posts__text">
-            <div class="posts__description">
-              <div class="posts__title">
-                Мост дьявола
+            </figcaption>
+          </figure>
+        </li>
+        <li class="posts__item">
+          <figure class="posts__content">
+            <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
+              <!-- <img src="img/photo-4-mobile.jpg" alt=""> -->
+            </a>
+            <figcaption class="posts__text">
+              <div class="posts__description">
+                <div class="posts__title">
+                  Мост дьявола
+                </div>
+                <div class="posts__author">
+                  Автор фото: <span>Антон</span>
+                </div>
               </div>
-              <div class="posts__author">
-                Автор фото: <span>Антон</span>
+              <div class="posts__likes">
+                <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+                <span class="posts__likes-count">
+                  254
+                </span>
               </div>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                       PRESENTATION                           -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div class="common-section">
+        <div class="common-section__headline common-section__headline--bigger">
+          Все еще сомневаетесь?
+        </div>
+        <p>
+          Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+        </p>
+        <div class="player">
+          <!-- <video class="player__screen" src="img/video-mobile.jpg" poster="img/video-mobile.jpg" controls></video> -->
+          <div class="player__controls">
+            <div class="player__progress-bar"></div>
+            <div class="player__buttons">
+              <span class="player__replay"><!-- bg-img: icon-video-replay.svg --></span>
+              <span class="player__subtitles"><!-- bg-img: icon-video-subtitles.svg --></span>
+              <span class="player__fullscreen"><!-- bg-img: icon-video-fullscreen.svg --></span>
             </div>
-            <div class="posts__likes">
-              <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
-              <span class="posts__likes-count">
-                254
-              </span>
-            </div>
-          </figcaption>
-        </figure>
-      </li>
-    </ul>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <!--                                                              -->
-    <!--                       PRESENTATION                           -->
-    <!--                                                              -->
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <div class="common-section common-section--presentation"> <!-- *FIXME*: common-section--presentation потом убрать -->
-      <div class="common-section__headline">
-        Все еще сомневаетесь?
-      </div>
-      <p>
-        Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
-      </p>
-      <div class="player">
-        <!-- <video class="player__screen" src="img/video-mobile.jpg" poster="img/video-mobile.jpg" controls></video> -->
-        <div class="player__controls">
-          <div class="player__progress-bar"></div>
-          <div class="player__buttons">
-            <span class="player__replay"><!-- bg-img: icon-video-replay.svg --></span>
-            <span class="player__subtitles"><!-- bg-img: icon-video-subtitles.svg --></span>
-            <span class="player__fullscreen"><!-- bg-img: icon-video-fullscreen.svg --></span>
           </div>
         </div>
       </div>
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                        PAGE FOOTER                           -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <footer class="page-footer">
+        <p class="page-footer__hashtag">
+          #visitsedona
+        </p>
+        <div class="page-footer__social">
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a class="social-link social-link--twitter" href="#">
+                <!-- bg-img: icon-twitter.svg -->
+                Twitter
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-link social-link--facebook" href="#">
+                <!-- bg-img: icon-facebook.svg -->
+                Facebook
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-link social-link--youtube" href="#">
+                <!-- bg-img: icon-youtube.svg -->
+                Youtube
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright">
+          <span class="page-footer__copyright-text">
+            Разработано
+          </span>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
+            <!-- bg-img: logo-htmlacademy.svg -->
+            HTML Academy
+          </a>
+        </div>
+      </footer>
     </div>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <!--                                                              -->
-    <!--                        PAGE FOOTER                           -->
-    <!--                                                              -->
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <footer class="page-footer">
-      <p class="page-footer__hashtag">
-        #visitsedona
-      </p>
-      <div class="page-footer__social">
-        <ul class="social-list">
-          <li class="social-list__item">
-            <a class="social-link social-link--twitter" href="#">
-              <!-- bg-img: icon-twitter.svg -->
-              Twitter
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-link social-link--facebook" href="#">
-              <!-- bg-img: icon-facebook.svg -->
-              Facebook
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-link social-link--youtube" href="#">
-              <!-- bg-img: icon-youtube.svg -->
-              Youtube
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright">
-        <span class="page-footer__copyright-text">
-          Разработано
-        </span>
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
-          <!-- bg-img: logo-htmlacademy.svg -->
-          HTML Academy
-        </a>
-      </div>
-    </footer>
   </body>
 </html>

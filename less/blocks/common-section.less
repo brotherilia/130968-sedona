@@ -1,11 +1,28 @@
 .common-section {
   .reset-spaces();
-  .container();
   &__headline {
-    .headline();
+    .title();
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger2);
+    }
   }
   &__headline--bigger {
-    .headline(@headline-bigger-font-size);
+    .title();
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger3);
+    }
+  }
+  &__headline--biggest {
+    .title(@font-size-bigger2);
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger3);
+    }
+  }
+  & p {
+    @media @tablet-widths {
+      width: 440px;
+      margin: 0 auto;
+    }
   }
   &__bottom {
 

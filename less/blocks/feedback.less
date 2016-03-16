@@ -1,12 +1,22 @@
 .feedback {
-  .container();
   &__form {
+    position: relative;
     .reset-spaces();
-    .container-form();
+    @media @tablet-widths {
+      margin: 0 60px;
+    }
+    @media @desktop-widths {
+      margin: 0 120px;
+    }
   }
   &__section {
     .reset-spaces();
+    box-sizing: border-box;
     border: none;
+    padding: 0 20px;
+    @media @tablet-widths {
+      .reset-spaces();
+    }
   }
   &__section:nth-of-type(1),
   &__section:nth-of-type(3) {
@@ -31,61 +41,141 @@
   &__section:nth-of-type(2),
   &__section:nth-of-type(4),
   &__section:nth-of-type(5) {
-    .container-form();
+    @media @tablet-widths {
+      width: 648px;
+    }
+    @media @desktop-widths {
+      width: 960px;
+    }
   }
   &__section:nth-of-type(4) {
     font-size: 0;
   }
   &__title {
     display: block;
-    font-size: @base-font-size;
+    margin-bottom: 25px;
+    .title(@fsz: @font-size-bigger1);
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger2);
+    }
+  }
+  &__title--intro::after {
+    content: ", пожалуйста:";
+    @media @tablet-widths {
+      content: ":";
+    }
+    @media @desktop-widths {
+      content: ", пожалуйста:";
+    }
   }
   &__item {
     display: block;
+    margin-bottom: 20px;
+    text-align: left;
   }
   &__item--phone {
     @media @desktop-widths {
+      .clearfix();
       float: left;
     }
   }
   &__item--email {
     @media @desktop-widths {
+      .clearfix();
       float: right;
     }
   }
+  &__item--rating,
+  &__item--sight {
+    position: relative;
+    text-align: left;
+    .title(@ttr: none);
+    line-height: 56px;
+    padding-left: 80px;
+    &::before {
+      .pseudo-common();
+      width: 56px;
+      height: 56px;
+      background-color: @darker1-bg-color;
+      left: 0;
+    }
+  }
   &__item--rating {
-
+    &::before {
+      border: 18px solid @darker1-bg-color;
+      border-radius: 50%;
+    }
   }
   &__item--sight {
-    font-size: @base-font-size;
+    box-sizing: border-box;
+    &::before {
+      border: none;
+      border-radius: 5px;
+    }
     @media @tablet-widths {
       display: inline-block;
       vertical-align: top;
-      width: 324px;
+      width: 230px;
     }
     @media @desktop-widths {
       width: 240px;
     }
   }
   &__input {
-
+    .reset-spaces();
+    .title(@ttr: none);
+    .set-colors(@dark-color, @darker1-bg-color);
+    box-sizing: border-box;
+    //width: 150px; // *FIXME*
+    height: 58px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    &[placeholder]               {text-overflow: ellipsis;}
+    &::-webkit-input-placeholder {color: @dark-color;}
+    &::-moz-placeholder          {color: @dark-color; text-overflow: ellipsis;}
+    &:-moz-placeholder           {color: @dark-color; text-overflow: ellipsis;}
+    &:-ms-input-placeholder      {color: @dark-color; text-overflow: ellipsis;}
+  }
+  &__input-wrapper--phone,
+  &__input-wrapper--email {
+    box-sizing: border-box;
+    display: block;
+    height: 58px;
+    background-color: @darker3-bg-color;
+    @media @desktop-widths {
+      float: right;
+    }
+  }
+  &__input-wrapper--phone {
+    background: @darker3-bg-color url("@{img-path}/icon-phone.svg") no-repeat right 50%;
+  }
+  &__input-wrapper--email {
+    background: @darker3-bg-color url("@{img-path}/icon-mail.svg") no-repeat right 50%;
   }
   &__input--phone {
-    display: block;
-    @media @desktop-widths {
-      display: inline;
-    }
-  }
-  &__input--email {
-    display: block;
-    @media @desktop-widths {
-      display: inline;
-    }
-  }
-  &__input--area {
 
   }
+  &__input--email {
+
+  }
+  &__input--area {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  &__flag {
+    display: none;
+    &:checked + .feedback__item--rating::before {
+      background-color: @base-text-color;
+    }
+    &:checked + .feedback__item--sight::before {
+      background: @darker1-bg-color url("@{img-path}/icon-tick.svg") no-repeat 50% 50%;
+      background-size: 24px 24px;
+    }
+  }
   &__warning {
+    color: @warning-color;
+    text-transform: none;
     @media @tablet-widths {
       float: right;
     }
