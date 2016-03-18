@@ -1,12 +1,35 @@
 .page-footer {
+  .reset-spaces();
+  @media @tablet-widths {
+    .clearfix();
+  }
   &__hashtag {
-
+    .title(@fsz: @font-size-bigger2);
+    @media @tablet-widths {
+      float: left;
+      width: 256px;
+    }
+    @media @desktop-widths {
+      width: 400px;
+    }
   }
   &__social {
-
+    @media @tablet-widths {
+      float: left;
+      width: 256px;
+    }
+    @media @desktop-widths {
+      width: 400px;
+    }
   }
   &__copyright {
-
+    @media @tablet-widths {
+      float: right;
+      width: 256px;
+    }
+    @media @desktop-widths {
+      width: 400px;
+    }
   }
   &__copyright-link {
 

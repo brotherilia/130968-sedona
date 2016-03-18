@@ -1,9 +1,24 @@
 .subadvantages {
+  .reset-list();
+  font-size: 0;
   &__item {
-
+    .set-colors();
+    font-size: @base-font-size;
+    line-height: @dense-line-height;
+    @media @tablet-widths {
+      display: inline-block;
+      vertical-align: top;
+      width: 256px;
+    }
+    @media @desktop-widths {
+      width: 400px;
+    }
   }
   &__title {
-
+    .title();
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger2);
+    }
   }
   &__title--house {
 

@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  .reset-spaces();
+  min-width: 320px;
+  color: @base-text-color;
+  background-color: @light-bg-color;
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  text-transform: uppercase;
+}
+
+p,
+h1,
+h2,
+h3 {
+  .reset-spaces();
+  font-size: @base-font-size;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  .container();
+}

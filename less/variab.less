@@ -1,0 +1,58 @@
+// paths
+@fonts-path: "../fonts";
+@img-path: "../img";
+
+// for media queries
+@mobile-widths: e("(max-width: 767px)");
+@tablet-widths: e("(min-width: 768px)");
+@desktop-widths: e("(min-width: 1280px)");
+
+// fonts
+@base-font-family: "PT Sans", Arial, sans-serif;
+@base-font-size: 14px;
+@font-size-bigger1: round(@base-font-size * 1.3);
+@font-size-bigger2: round(@base-font-size * 1.5);
+@font-size-bigger3: round(@base-font-size * 2.15);
+@base-line-height: round(@base-font-size * 1.85);
+@dense-line-height: round(@base-font-size * 1.5);
+
+// colors
+@alt-hsvhue: 203;
+@main-menu-act-hsvhue: 23;
+
+@dark-color: #000000;
+@light-color: #ffffff;
+@warning-color: #ff5c5c;
+@alt-color: hsl(@alt-hsvhue, 39%, 82%);
+
+@light-bg-color: @light-color;
+@darker1-bg-color: darken(@light-color, 5%);
+@darker2-bg-color: darken(@light-color, 7%);
+@darker3-bg-color: darken(@light-color, 10%);
+@alt-bg-color: @alt-color;
+@transparent-bg-color: fade(@dark-color, 30%);
+
+@base-text-color: lighten(@dark-color, 20%);
+@alt-text-color: @light-color;
+
+@main-menu-color: @dark-color;
+@main-menu-hvr-color: @alt-color;
+@main-menu-dwn-color: lighten(@dark-color, 70%);
+@main-menu-act-color: hsl(@main-menu-act-hsvhue, 26%, 46%);
+@main-menu-act-hvr-color: hsl(@main-menu-act-hsvhue, 30%, 38%);
+@main-menu-act-dwn-color: hsl(@main-menu-act-hsvhue, 5%, 84%);
+
+@btn-color: @light-color;
+@btn-hvr-color: @btn-color;
+@btn-dwn-color: fade(@light-color, 30%);
+@btn-dsbl-color: @btn-color;
+
+@btn-bg-color: @alt-color;
+@btn-bg-hvr-color: hsl(@alt-hsvhue, 47%, 75%);
+@btn-bg-dwn-from-color: hsl(@alt-hsvhue, 56%, 74%);
+@btn-bg-dwn-to-color: hsl(@alt-hsvhue, 64%, 68%);
+@btn-bg-dsbl-color: darken(@light-color, 10%);
+@btn-border-top-color: hsl(@alt-hsvhue, 30%, 86%);
+@btn-border-bottom-color: hsl(@alt-hsvhue, 39%, 66%);
+
+
