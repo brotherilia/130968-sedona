@@ -1,7 +1,16 @@
 .intro {
   .reset-spaces();
-  margin-top: -25px;
+  min-height: 158px;
+  @media @tablet-widths {
+    min-height: 290px;
+  }
+  @media @desktop-widths {
+    min-height: 301px;
+  }
   &--main-page {
-
+    min-height: 389px;
+    @media @tablet-widths {
+      min-height: 518px;
+    }
   }
 }

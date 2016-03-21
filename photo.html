@@ -18,9 +18,7 @@
         <!--                     MAIN NAVIGATION                          -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle--opened">
-            <!-- bg-img: img/icon-cross.svg; mod 'closed' - bg-img: img/icon-menu.svg -->
-          </button>
+          <button class="main-nav__toggle main-nav__toggle--opened"></button>
           <ul class="main-nav__items main-nav__items--opened">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">
@@ -42,12 +40,12 @@
                 HTML Academy
               </a>
             </li>
+            <li class="main-nav__item main-nav__item--logo"> <!-- *FIXME*: подумать, нужен ли модификатор -->
+              <a class="main-nav__logo" href="index.html">
+                <!-- <img src="img/logo-sedona-mobile.svg" alt=""> -->
+              </a>
+            </li>
           </ul>
-          <div class="main-nav__logo">
-            <a href="index.html"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-              <!-- <img src="img/logo-sedona-mobile.svg" alt=""> -->
-            </a>
-          </div>
         </nav>
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--                            INTRO                             -->
@@ -63,7 +61,7 @@
       <!--                         PAGE TITLE                           -->
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <div class="common-section">
+      <div class="common-section common-section--photo">
         <h1 class="common-section__headline common-section__headline--bigger">
           Фото и видео
         </h1>
@@ -92,7 +90,7 @@
                 </div>
               </div>
               <div class="posts__likes">
-                <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+                <i class="posts__likes-icon"></i>
                 <span class="posts__likes-count">
                   1350
                 </span>
@@ -115,7 +113,7 @@
                 </div>
               </div>
               <div class="posts__likes">
-                <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+                <i class="posts__likes-icon"></i>
                 <span class="posts__likes-count">
                   143
                 </span>
@@ -138,7 +136,7 @@
                 </div>
               </div>
               <div class="posts__likes">
-                <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+                <i class="posts__likes-icon"></i>
                 <span class="posts__likes-count">
                   96
                 </span>
@@ -161,7 +159,7 @@
                 </div>
               </div>
               <div class="posts__likes">
-                <i class="posts__likes-icon"><!-- bg-img: icon-like.svg --></i>
+                <i class="posts__likes-icon"></i>
                 <span class="posts__likes-count">
                   254
                 </span>
@@ -175,22 +173,22 @@
       <!--                       PRESENTATION                           -->
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <div class="common-section">
+      <div class="common-section common-section--presentation">
         <div class="common-section__headline common-section__headline--bigger">
           Все еще сомневаетесь?
         </div>
         <p>
           Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
         </p>
-        <div class="player">
-          <!-- <video class="player__screen" src="img/video-mobile.jpg" poster="img/video-mobile.jpg" controls></video> -->
-          <div class="player__controls">
-            <div class="player__progress-bar"></div>
-            <div class="player__buttons">
-              <span class="player__replay"><!-- bg-img: icon-video-replay.svg --></span>
-              <span class="player__subtitles"><!-- bg-img: icon-video-subtitles.svg --></span>
-              <span class="player__fullscreen"><!-- bg-img: icon-video-fullscreen.svg --></span>
-            </div>
+      </div>
+      <div class="player">
+        <!-- <video class="player__screen" src="img/video-mobile.jpg" poster="img/video-mobile.jpg" controls></video> -->
+        <div class="player__controls">
+          <div class="player__progress-bar"></div>
+          <div class="player__buttons">
+            <span class="player__replay"><!-- bg-img: icon-video-replay.svg --></span>
+            <span class="player__subtitles"><!-- bg-img: icon-video-subtitles.svg --></span>
+            <span class="player__fullscreen"><!-- bg-img: icon-video-fullscreen.svg --></span>
           </div>
         </div>
       </div>
@@ -207,19 +205,16 @@
           <ul class="social-list">
             <li class="social-list__item">
               <a class="social-link social-link--twitter" href="#">
-                <!-- bg-img: icon-twitter.svg -->
                 Twitter
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-link social-link--facebook" href="#">
-                <!-- bg-img: icon-facebook.svg -->
                 Facebook
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-link social-link--youtube" href="#">
-                <!-- bg-img: icon-youtube.svg -->
                 Youtube
               </a>
             </li>
@@ -230,7 +225,6 @@
             Разработано
           </span>
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
-            <!-- bg-img: logo-htmlacademy.svg -->
             HTML Academy
           </a>
         </div>

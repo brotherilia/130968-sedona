@@ -18,9 +18,7 @@
         <!--                     MAIN NAVIGATION                          -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle--opened">
-            <!-- bg-img: img/icon-cross.svg; mod 'closed' - bg-img: img/icon-menu.svg -->
-          </button>
+          <button class="main-nav__toggle main-nav__toggle--opened"></button>
           <ul class="main-nav__items main-nav__items--opened">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">
@@ -42,12 +40,12 @@
                 HTML Academy
               </a>
             </li>
+            <li class="main-nav__item main-nav__item--logo"> <!-- *FIXME*: подумать, нужен ли модификатор -->
+              <a class="main-nav__logo" href="index.html">
+                <!-- <img src="img/logo-sedona-mobile.svg" alt=""> --> <!-- *FIXME*: пройтись по пустым alt -->
+              </a>
+            </li>
           </ul>
-          <div class="main-nav__logo">
-            <a href="index.html"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-              <!-- <img src="img/logo-sedona-mobile.svg" alt=""> -->
-            </a>
-          </div>
         </nav>
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--                            INTRO                             -->
@@ -63,7 +61,7 @@
       <!--                         PAGE TITLE                           -->
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <div class="common-section">
+      <div class="common-section common-section--form">
         <div class="common-section__headline common-section__headline--bigger">
           Оставьте свой отзыв
         </div>
@@ -76,88 +74,152 @@
       <!--                      FEEDBACK FORM                           -->
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <div class="feedback">
-        <form class="feedback__form" action="/echo" method="post">
-          <fieldset class="feedback__section">
-            <legend class="feedback__title feedback__title--intro">Представьтесь</legend>
-            <label class="feedback__item">
-              Имя:<input class="feedback__input" type="text" name="firstname" id="firstname" placeholder="Петр" required>
-            </label>
-            <label class="feedback__item">
-              Фамилия:<input class="feedback__input" type="text" name="surname" id="surname" placeholder="Иванов">
-            </label>
-            <label class="feedback__item">
-              Отчество:<input class="feedback__input" type="text" name="midname" id="midname" placeholder="Александрович">
-            </label>
-          </fieldset>
-          <fieldset class="feedback__section">
-            <legend class="feedback__title">
-              Контактная информация:
-            </legend>
-            <label class="feedback__item feedback__item--phone">Контактный телефон:
-              <div class="feedback__input-wrapper feedback__input-wrapper--phone">
-                <input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон">
-              </div><!-- bg-img: icon-phone.svg -->
+      <form class="feedback" action="/echo" method="post">
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                      INTRO SECTION                           -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <legend class="feedback__section-title feedback__section-title--intro">
+            Представьтесь<span>, пожалуйста</span>:
+          </legend>
+          <div class="feedback__section-body feedback__section-body--intro">
+            <div class="feedback__item feedback__item--intro">
+              <label class="feedback__title feedback__title--intro" for="firstname">
+                Имя:
+              </label>
+              <input class="feedback__input" type="text" name="firstname" id="firstname" placeholder="Петр" required>
+            </div>
+            <div class="feedback__item feedback__item--intro">
+              <label class="feedback__title feedback__title--intro" for="surname">
+                Фамилия:
+              </label>
+              <input class="feedback__input" type="text" name="surname" id="surname" placeholder="Иванов">
+            </div>
+            <div class="feedback__item feedback__item--intro">
+              <label class="feedback__title feedback__title--intro" for="midname">
+                Отчество:
+              </label>
+              <input class="feedback__input" type="text" name="midname" id="midname" placeholder="Александрович">
+            </div>
+          </div>
+        </fieldset>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                      CONTACTS SECTION                        -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <legend class="feedback__section-title feedback__section-title--contacts">
+            Контактная информация:
+          </legend>
+          <div class="feedback__section-body feedback__section-body--contacts">
+            <div class="feedback__item feedback__item--contacts">
+              <label class="feedback__title feedback__title--phone" for="phone">
+                <span>Контактный</span> телефон:
+              </label>
+              <div class="feedback__item-inner">
+                <input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон"> <!-- *FIXME*: на десктопе placeholder="Введите номер" -->
+                <i class="feedback__icon feedback__icon--phone"></i>
+              </div>
               <span class="feedback__warning">
                 Ошибка, перепроверьте номер
               </span>
-            </label>
-            <label class="feedback__item feedback__item--email">Электронная почта:
-              <div class="feedback__input-wrapper feedback__input-wrapper--email">
+            </div>
+            <div class="feedback__item feedback__item--contacts">
+              <label class="feedback__title feedback__title--email" for="email">
+                Электронная почта:
+              </label>
+              <div class="feedback__item-inner">
                 <input class="feedback__input feedback__input--email" type="email" name="email" id="email" placeholder="Введите e-mail" required>
-              </div><!-- bg-img: icon-mail.svg -->
-              <span class="feedback__warning">
+                <i class="feedback__icon feedback__icon--email"></i>
+              </div>
+              <!-- <span class="feedback__warning">
                 Ошибка, перепроверьте адрес
-              </span>
-            </label>
-          </fieldset>
-          <fieldset class="feedback__section">
-            <legend class="feedback__title">
-              Ваше общее впечатление:
-            </legend>
-            <input class="feedback__flag" type="radio" name="rating" id="value1" checked>
-            <label class="feedback__item feedback__item--rating" for="value1">
-              Скорее положительное
-            </label>
-            <input class="feedback__flag" type="radio" name="rating" id="value2">
-            <label class="feedback__item feedback__item--rating" for="value2">
-              Скорее отрицательное
-            </label>
-            <input class="feedback__flag" type="radio" name="rating" id="value3">
-            <label class="feedback__item feedback__item--rating" for="value3">
-              Затрудняюсь ответить
-            </label>
-          </fieldset>
-          <fieldset class="feedback__section">
-            <legend class="feedback__title">
-              Посещенные достопримечательности:
-            </legend>
-            <input class="feedback__flag" type="checkbox" name="check1" id="check1" checked>
-            <label class="feedback__item feedback__item--sight" for="check1">
-              Мост Дьявола
-            </label>
-            <input class="feedback__flag" type="checkbox" name="check2" id="check2" checked>
-            <label class="feedback__item feedback__item--sight" for="check2">
-              Слайд-парк
-            </label>
-            <input class="feedback__flag" type="checkbox" name="check3" id="check3">
-            <label class="feedback__item feedback__item--sight" for="check3">
-              Гора-Колокол
-            </label>
-            <input class="feedback__flag" type="checkbox" name="check4" id="check4" checked>
-            <label class="feedback__item feedback__item--sight" for="check4">
-              Красные скалы
-            </label>
-          </fieldset>
-          <fieldset class="feedback__section">
-            <legend class="feedback__title">
-              Опишите свои эмоции:
-            </legend>
-            <textarea class="feedback__input feedback__input--area" name="overview" id="overview" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
-          </fieldset>
-          <input class="feedback__submit btn" type="submit" value="Отправить отзыв">
-        </form>
-      </div>
+              </span> --> <!-- *FIXME* -->
+            </div>
+          </div>
+        </fieldset>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                      RATING SECTION                          -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <legend class="feedback__section-title feedback__section-title--rating">
+            Ваше общее впечатление:
+          </legend>
+          <div class="feedback__section-body feedback__section-body--rating">
+            <div class="feedback__item feedback__item--rating">
+              <input class="feedback__flag" type="radio" name="rating" id="value1" checked>
+              <label class="feedback__title feedback__title--rating" for="value1">
+                Скорее положительное
+              </label>
+            </div>
+            <div class="feedback__item feedback__item--rating">
+              <input class="feedback__flag" type="radio" name="rating" id="value2">
+              <label class="feedback__title feedback__title--rating" for="value2">
+                Скорее отрицательное
+              </label>
+            </div>
+            <div class="feedback__item feedback__item--rating">
+              <input class="feedback__flag" type="radio" name="rating" id="value3">
+              <label class="feedback__title feedback__title--rating" for="value3">
+                Затрудняюсь ответить
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                       SIGHTS SECTION                         -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <legend class="feedback__section-title">
+            Посещенные достопримечательности:
+          </legend>
+          <div class="feedback__section-body feedback__section-body--sight">
+            <div class="feedback__item feedback__item--sight">
+              <input class="feedback__flag" type="checkbox" name="check1" id="check1" checked>
+              <label class="feedback__title feedback__title--sight" for="check1">
+                Мост Дьявола
+              </label>
+            </div>
+            <div class="feedback__item feedback__item--sight">
+              <input class="feedback__flag" type="checkbox" name="check2" id="check2" checked>
+              <label class="feedback__title feedback__title--sight" for="check2">
+                Слайд-парк
+              </label>
+            </div>
+            <div class="feedback__item feedback__item--sight">
+              <input class="feedback__flag" type="checkbox" name="check3" id="check3">
+              <label class="feedback__title feedback__title--sight" for="check3">
+                Гора-Колокол
+              </label>
+            </div>
+            <div class="feedback__item feedback__item--sight">
+              <input class="feedback__flag" type="checkbox" name="check4" id="check4" checked>
+              <label class="feedback__title feedback__title--sight" for="check4">
+                Красные скалы
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                    DESCRIPTION SECTION                       -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <legend class="feedback__section-title">
+            Опишите свои эмоции:
+          </legend>
+          <div class="feedback__section-body feedback__section-body--area">
+            <textarea class="feedback__input feedback__input--area" name="overview" id="overview" placeholder="Опишите подробно все свои восторги"></textarea>
+          </div>
+        </fieldset>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                        SEND BUTTON                           -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section feedback__section--send">
+          <div class="feedback__section-body feedback__section-body--send">
+            <input class="feedback__submit btn" type="submit" value="Отправить отзыв">
+            <span>* - обязательные поля</span>
+          </div>
+        </fieldset>
+      </form>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <!--                                                              -->
       <!--                        PAGE FOOTER                           -->
@@ -171,19 +233,16 @@
           <ul class="social-list">
             <li class="social-list__item">
               <a class="social-link social-link--twitter" href="#">
-                <!-- bg-img: icon-twitter.svg -->
                 Twitter
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-link social-link--facebook" href="#">
-                <!-- bg-img: icon-facebook.svg -->
                 Facebook
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-link social-link--youtube" href="#">
-                <!-- bg-img: icon-youtube.svg -->
                 Youtube
               </a>
             </li>
@@ -194,7 +253,6 @@
             Разработано
           </span>
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
-            <!-- bg-img: logo-htmlacademy.svg -->
             HTML Academy
           </a>
         </div>

@@ -1,37 +1,55 @@
 .page-footer {
   .reset-spaces();
+  .container-inner();
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  justify-content: flex-end;
   @media @tablet-widths {
-    .clearfix();
+    flex-direction: row;
+    padding-top: 40px;
+    min-height: auto;
   }
+
+  &__social {
+    margin: 0 auto;
+  }
+
+  &__hashtag,
+  &__social {
+    margin-bottom: 35px;
+  }
+
+  &__hashtag,
+  &__copyright {
+    @media @tablet-widths {
+      width: 33%;
+    }
+  }
+
   &__hashtag {
     .title(@fsz: @font-size-bigger2);
     @media @tablet-widths {
-      float: left;
-      width: 256px;
-    }
-    @media @desktop-widths {
-      width: 400px;
+      text-align: left;
+      padding-top: 10px;
     }
   }
-  &__social {
-    @media @tablet-widths {
-      float: left;
-      width: 256px;
-    }
-    @media @desktop-widths {
-      width: 400px;
-    }
-  }
+
   &__copyright {
+    display: flex;
+    justify-content: center;
     @media @tablet-widths {
-      float: right;
-      width: 256px;
+      justify-content: flex-end;
     }
-    @media @desktop-widths {
-      width: 400px;
-    }
+  }
+  &__copyright-text {
+    line-height: 48px;
   }
   &__copyright-link {
-
+    width: 40px;
+    display: block;
+    height: 48px;
+    text-indent: -5000px;
+    background: url("@{img-path}/logo-htmlacademy.svg") no-repeat right 50%;
   }
 }

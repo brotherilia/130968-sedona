@@ -1,21 +1,45 @@
 .main-nav {
   .reset-spaces();
-  &__toggle {
-    display: none; // *FIXME*: это временно
-  }
-  &__toggle--opened {
+  position: relative;
 
-  }
-  &__items {
-    .reset-list();
+  /////*** MOBILE MENU TOGGLE ***/////
+  &__toggle { // *FIXME*: цвет иконки
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 60px;
+    height: 55px;
+    border: none;
+    outline: none;
     @media @tablet-widths {
-      .clearfix();
+      display: none;
     }
   }
-  &__items--opened {
-
+  &__toggle {
+    background: url("@{img-path}/icon-menu.svg") no-repeat 50% 50%;
   }
+  &__toggle--opened {
+    background: url("@{img-path}/icon-cross.svg") no-repeat 50% 50%;
+  }
+
+  /////*** MENU ITEMS LIST ***/////
+  &__items {
+    .reset-list();
+    display: flex;
+    flex-direction: column;
+    @media @tablet-widths {
+      flex-direction: row;
+    }
+  }
+
+  /////*** MENU ITEM ***/////
   &__item {
+    display: none;
+    @media @tablet-widths {
+      display: block;
+      width: 20%;
+    }
     font-size: @font-size-bigger1;
     font-weight: bold;
     height: 55px;
@@ -25,7 +49,7 @@
     &:first-child {
       border-top: none;
     }
-    &:last-child {
+    &:nth-last-child(2) {
       border-bottom: none;
       position: relative;
       &::after {
@@ -40,17 +64,27 @@
       }
     }
     @media @tablet-widths {
-      float: left;
-      padding: 0 20px;
       border: none;
+      &:nth-child(1) {order: 1;} // *FIXME*: здесь нужен цикл
+      &:nth-child(2) {order: 2;}
+      &:nth-child(3) {order: 4;}
+      &:nth-child(4) {order: 5;}
+      &:nth-child(5) {order: 3;}
     }
   }
-  &__item:nth-child(3),
-  &__item:nth-child(4) {
+  &__item:last-child,
+  &__items--opened &__item {
+    display: block;
+  }
+  &__item:last-child {
+    height: 58px;
+    border-bottom: none;
     @media @tablet-widths {
-      float: right;
+      height: 55px;
     }
   }
+
+  /////*** MENU LINK ***/////
   &__link {
     display: block;
     .main-menu-colors();
@@ -59,11 +93,9 @@
     .main-menu-active-colors();
   }
   &__logo {
+    display: block;
     width: 102px;
     height: 83px;
     margin: 0 auto;
-    @media @tablet-widths {
-      margin-top: -55px;
-    }
   }
 }

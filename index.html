@@ -18,9 +18,7 @@
         <!--                     MAIN NAVIGATION                          -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle--opened">
-            <!-- bg-img: img/icon-cross.svg; mod 'closed' - bg-img: img/icon-menu.svg -->
-          </button>
+          <button class="main-nav__toggle main-nav__toggle--opened"></button>
           <ul class="main-nav__items main-nav__items--opened">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--active">
@@ -42,12 +40,12 @@
                 HTML Academy
               </a>
             </li>
+            <li class="main-nav__item main-nav__item--logo"> <!-- *FIXME*: подумать, нужен ли модификатор -->
+              <a class="main-nav__logo" href="index.html">
+                <!-- <img src="img/logo-sedona-mobile.svg" alt=""> -->
+              </a>
+            </li>
           </ul>
-          <div class="main-nav__logo">
-            <a href="index.html"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-              <!-- <img src="img/logo-sedona-mobile.svg" alt=""> -->
-            </a>
-          </div>
         </nav>
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--                            INTRO                             -->
@@ -63,9 +61,9 @@
       <!--                         PAGE TITLE                           -->
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <div class="common-section">
+      <div class="common-section common-section--first-page">
         <div class="common-section__headline">
-          Седона — небольшой городок в Аризоне, заслуживающий большего!
+          Седона — небольшой<br class="mobile-break-line"> городок в Аризоне, заслуживающий большего!
         </div>
         <p>
           Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!
@@ -80,69 +78,80 @@
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <section class="advantages">
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                         ADVANTAGE                            -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <div class="advantages__item">
-          <div class="advantages__wrapper">
-            <div class="advantages__text advantages__text--left">
-              <h2 class="advantages__title">
-                Настоящий городок
-              </h2>
-              <p class="advantages__number">
-                №1
-              </p>
-              <p>
-                Седона не атракцион для туристов, там течет своя жизнь
-              </p>
-            </div>
-            <div class="advantages__photo advantages__photo--right">
-              <!-- <img src="img/photo-city.jpg" alt=""> -->
-            </div>
+          <div class="advantages__text">
+            <h2 class="advantages__title">
+              Настоящий городок
+            </h2>
+            <p class="advantages__number">
+              №1
+            </p>
+            <p>
+              Седона не атракцион для туристов, там течет своя жизнь
+            </p>
           </div>
+          <div class="advantages__photo">
+            <!-- <img src="img/photo-city.jpg" alt=""> -->
+          </div>
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <!--                        SUBADVANTAGES                         -->
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
           <ul class="subadvantages">
             <li class="subadvantages__item">
-              <div class="subadvantages__title subadvantages__title--house">
-                <!-- bg-img: icon-house.svg -->
-                Жилье
+              <i class="subadvantages__icon subadvantages__icon--house"></i>
+              <div class="subadvantages__text">
+                <div class="subadvantages__title">
+                  Жилье
+                </div>
+                <p>
+                  Рекомендуем пожить в настоящем мотеле, все как в кино!
+                </p>
               </div>
-              <p>
-                Рекомендуем пожить в настоящем мотеле, все как в кино!
-              </p>
             </li>
             <li class="subadvantages__item">
-              <div class="subadvantages__title subadvantages__title--food">
-                <!-- bg-img: icon-burger.svg -->
-                Еда
+              <i class="subadvantages__icon subadvantages__icon--gift"></i>
+              <div class="subadvantages__text">
+                <div class="subadvantages__title">
+                  Сувениры
+                </div>
+                <p>
+                  Не только китайского, но и местного производства!
+                </p>
               </div>
-              <p>
-                Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-              </p>
             </li>
             <li class="subadvantages__item">
-              <div class="subadvantages__title subadvantages__title--gift">
-                <!-- bg-img: icon-gift.svg -->
-                Сувениры
+              <i class="subadvantages__icon subadvantages__icon--food"></i>
+              <div class="subadvantages__text">
+                <div class="subadvantages__title">
+                  Еда
+                </div>
+                <p>
+                  Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                </p>
               </div>
-              <p>
-                Не только китайского, но и местного производства!
-              </p>
             </li>
           </ul>
         </div>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                         ADVANTAGE                            -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <div class="advantages__item">
-          <div class="advantages__wrapper">
-            <div class="advantages__text advantages__text--right">
-              <h2 class="advantages__title">
-                Там есть Мост Дьявола
-              </h2>
-              <p class="advantages__number">
-                №2
-              </p>
-              <p>
-                Да, по нему можно пройти! Если конечно вы осмелитесь
-              </p>
-            </div>
-            <div class="advantages__photo advantages__photo--left">
-              <!-- <img src="img/photo-bridge.jpg" alt=""> -->
-            </div>
+          <div class="advantages__text">
+            <h2 class="advantages__title">
+              Там есть Мост Дьявола
+            </h2>
+            <p class="advantages__number">
+              №2
+            </p>
+            <p>
+              Да, по нему можно пройти! Если конечно вы осмелитесь
+            </p>
+          </div>
+          <div class="advantages__photo">
+            <!-- <img src="img/photo-bridge.jpg" alt=""> -->
           </div>
         </div>
         <div class="advantages__item advantages__item--brief">
@@ -158,6 +167,9 @@
             </p>
           </div>
         </div>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                         ADVANTAGE                            -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <div class="advantages__item advantages__item--brief">
           <div class="advantages__text">
             <h2 class="advantages__title">
@@ -171,6 +183,9 @@
             </p>
           </div>
         </div>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                         ADVANTAGE                            -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <div class="advantages__item advantages__item--brief">
           <div class="advantages__text">
             <h2 class="advantages__title">
@@ -190,14 +205,14 @@
       <!--                            BOOKING                           -->
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <div class="common-section">
+      <div class="common-section common-section--booking">
         <div class="common-section__headline common-section__headline--biggest">
           Заинтересовались?
         </div>
         <p>
           Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <a class="btn" href="#">
+        <a class="common-section__button btn" href="#">
           Найти гостиницу
         </a>
       </div>
@@ -223,19 +238,16 @@
           <ul class="social-list">
             <li class="social-list__item">
               <a class="social-link social-link--twitter" href="#">
-                <!-- bg-img: icon-twitter.svg -->
                 Twitter
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-link social-link--facebook" href="#">
-                <!-- bg-img: icon-facebook.svg -->
                 Facebook
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-link social-link--youtube" href="#">
-                <!-- bg-img: icon-youtube.svg -->
                 Youtube
               </a>
             </li>
@@ -246,7 +258,6 @@
             Разработано
           </span>
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
-            <!-- bg-img: logo-htmlacademy.svg -->
             HTML Academy
           </a>
         </div>

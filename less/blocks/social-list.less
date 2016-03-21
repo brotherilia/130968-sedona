@@ -1,9 +1,10 @@
 .social-list {
   .reset-list();
-  font-size: 0;
+  display: flex;
   &__item {
-    font-size: @base-font-size;
-    display: inline-block;
-    vertical-align: top;
+    margin-right: 6px;
+  }
+  &__item:last-child {
+    margin-right: 0;
   }
 }

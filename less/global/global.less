@@ -1,13 +1,16 @@
 html {
   box-sizing: border-box;
 }
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
 html,
 body {
   .reset-spaces();
   min-width: 320px;
   color: @base-text-color;
-  background-color: @light-bg-color;
+  background-color: @light-color;
   font-family: @base-font-family;
   font-size: @base-font-size;
   line-height: @base-line-height;
@@ -29,4 +32,10 @@ a {
 
 .wrapper {
   .container();
+}
+
+.mobile-break-line {
+  @media @tablet-widths {
+    display: none;
+  }
 }
