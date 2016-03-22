@@ -18,8 +18,9 @@
         <!--                     MAIN NAVIGATION                          -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle--opened"></button>
-          <ul class="main-nav__items main-nav__items--opened">
+          <input class="main-nav__toggle" type="checkbox" name="toggle" id="toggle" checked> <!-- *FIXME*: убрать checked -->
+          <label class="main-nav__icon" for="toggle"></label>
+          <ul class="main-nav__items">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">
                 Главная
@@ -40,7 +41,7 @@
                 HTML Academy
               </a>
             </li>
-            <li class="main-nav__item main-nav__item--logo"> <!-- *FIXME*: подумать, нужен ли модификатор -->
+            <li class="main-nav__item main-nav__item--logo">
               <a class="main-nav__logo" href="index.html">
                 <!-- <img src="img/logo-sedona-mobile.svg" alt=""> --> <!-- *FIXME*: пройтись по пустым alt -->
               </a>
@@ -87,19 +88,19 @@
               <label class="feedback__title feedback__title--intro" for="firstname">
                 Имя:
               </label>
-              <input class="feedback__input" type="text" name="firstname" id="firstname" placeholder="Петр" required>
+              <input class="feedback__input feedback__input--intro" type="text" name="firstname" id="firstname" placeholder="Петр" required>
             </div>
             <div class="feedback__item feedback__item--intro">
               <label class="feedback__title feedback__title--intro" for="surname">
                 Фамилия:
               </label>
-              <input class="feedback__input" type="text" name="surname" id="surname" placeholder="Иванов">
+              <input class="feedback__input feedback__input--intro" type="text" name="surname" id="surname" placeholder="Иванов">
             </div>
             <div class="feedback__item feedback__item--intro">
               <label class="feedback__title feedback__title--intro" for="midname">
                 Отчество:
               </label>
-              <input class="feedback__input" type="text" name="midname" id="midname" placeholder="Александрович">
+              <input class="feedback__input feedback__input--intro" type="text" name="midname" id="midname" placeholder="Александрович">
             </div>
           </div>
         </fieldset>
@@ -116,7 +117,7 @@
                 <span>Контактный</span> телефон:
               </label>
               <div class="feedback__item-inner">
-                <input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон"> <!-- *FIXME*: на десктопе placeholder="Введите номер" -->
+                <input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон">
                 <i class="feedback__icon feedback__icon--phone"></i>
               </div>
               <span class="feedback__warning">
@@ -132,8 +133,8 @@
                 <i class="feedback__icon feedback__icon--email"></i>
               </div>
               <span class="feedback__warning">
-                     Ошибка, перепроверьте адрес
-                   </span> <!-- *FIXME* -->
+                Ошибка, перепроверьте адрес
+              </span>
             </div>
           </div>
         </fieldset>
@@ -287,6 +288,5 @@
         </div>
       </footer>
     </div>
-    <script src="js/script.js"></script>
   </body>
 </html>

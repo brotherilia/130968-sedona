@@ -282,7 +282,6 @@
 
   /////*** INPUT ***/////
   &__input {
-    width: 100%;
     .reset-spaces();
     .title(@ttr: none);
     .set-colors(@dark-color, @darker1-color);
@@ -296,6 +295,9 @@
     &::-moz-placeholder          {color: @dark-color; text-overflow: ellipsis;}
     &:-moz-placeholder           {color: @dark-color; text-overflow: ellipsis;}
     &:-ms-input-placeholder      {color: @dark-color; text-overflow: ellipsis;}
+  }
+  &__input--intro {
+    width: 50%;
   }
   &__input--phone,
   &__input--email {

@@ -18,8 +18,9 @@
         <!--                     MAIN NAVIGATION                          -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle--opened"></button>
-          <ul class="main-nav__items main-nav__items--opened">
+          <input class="main-nav__toggle" type="checkbox" name="toggle" id="toggle" checked> <!-- *FIXME*: убрать checked -->
+          <label class="main-nav__icon" for="toggle"></label>
+          <ul class="main-nav__items">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">
                 Главная
@@ -40,9 +41,9 @@
                 HTML Academy
               </a>
             </li>
-            <li class="main-nav__item main-nav__item--logo"> <!-- *FIXME*: подумать, нужен ли модификатор -->
+            <li class="main-nav__item main-nav__item--logo">
               <a class="main-nav__logo" href="index.html">
-                <!-- <img src="img/logo-sedona-mobile.svg" alt=""> -->
+                <!-- <img src="img/logo-sedona-mobile.svg" alt=""> --> <!-- *FIXME*: пройтись по пустым alt -->
               </a>
             </li>
           </ul>
@@ -259,6 +260,5 @@
         </div>
       </footer>
     </div>
-    <script src="js/script.js"></script>
   </body>
 </html>

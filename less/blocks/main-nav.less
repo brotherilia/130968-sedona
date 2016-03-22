@@ -2,27 +2,6 @@
   .reset-spaces();
   position: relative;
 
-  /////*** MOBILE MENU TOGGLE ***/////
-  &__toggle { // *FIXME*: цвет иконки
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    width: 60px;
-    height: 55px;
-    border: none;
-    outline: none;
-    @media @tablet-widths {
-      display: none;
-    }
-  }
-  &__toggle {
-    background: url("@{img-path}/icon-menu.svg") no-repeat 50% 50%;
-  }
-  &__toggle--opened {
-    background: url("@{img-path}/icon-cross.svg") no-repeat 50% 50%;
-  }
-
   /////*** MENU ITEMS LIST ***/////
   &__items {
     .reset-list();
@@ -72,15 +51,37 @@
       &:nth-child(5) {order: 3;}
     }
   }
-  &__item:last-child,
-  &__items--opened &__item {
-    display: block;
-  }
   &__item:last-child {
+    display: block;
     height: 58px;
     border-bottom: none;
     @media @tablet-widths {
       height: 55px;
+    }
+  }
+
+  /////*** MOBILE MENU TOGGLE ***/////
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 60px;
+    height: 55px;
+    border: none;
+    outline: none;
+    background: url("@{img-path}/icon-menu.svg") no-repeat 50% 50%;
+    @media @tablet-widths {
+      display: none;
+    }
+  }
+  &__toggle {
+    display: none;
+    &:checked + .main-nav__icon {
+      background: url("@{img-path}/icon-cross.svg") no-repeat 50% 50%;
+    }
+    &:checked ~ .main-nav__items .main-nav__item {
+      display: block;
     }
   }
 
