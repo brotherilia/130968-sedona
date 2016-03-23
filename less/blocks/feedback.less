@@ -9,7 +9,7 @@
     .container-inner();
     width: 100%;
     border: none;
-    padding-bottom: 5px; // *FIXME*
+    padding-bottom: 5px;
     border-bottom: 1px solid @darker3-color;
     @media @tablet-widths {
       border-bottom: none;
@@ -68,7 +68,7 @@
       margin-bottom: 30px;
     }
     @media @desktop-widths {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       flex-direction: row;
       justify-content: space-between;
     }
@@ -161,7 +161,6 @@
   &__section-title--sight {
     width: 100%;
     @media @tablet-widths {
-      width: auto;
       line-height: 25px;
       padding-left: 60px;
       padding-right: 60px;
@@ -259,6 +258,7 @@
     @media @desktop-widths {
       line-height: 58px;
       margin-left: 0;
+      margin-bottom: 0;
     }
   }
   &__title--email {
@@ -272,6 +272,7 @@
     @media @desktop-widths {
       line-height: 58px;
       margin-left: 0;
+      margin-bottom: 0;
     }
   }
   &__title--rating {
@@ -328,7 +329,7 @@
     &:-moz-placeholder           {color: @dark-color; text-overflow: ellipsis;}
     &:-ms-input-placeholder      {color: @dark-color; text-overflow: ellipsis;}
   }
-  &__input--area {
+  &__input--description {
     width: 100%;
     min-height: 160px;
     padding-top: 10px;
@@ -364,7 +365,6 @@
     }
     &:checked + .feedback__title--sight::before {
       background: @darker1-color url("@{img-path}/icon-tick.svg") no-repeat 50% 50%;
-      background-size: 24px 24px;
     }
   }
 
@@ -399,6 +399,40 @@
       width: 50%;
       margin-top: 20px;
       margin-bottom: 35px;
+    }
+  }
+
+// *FIXME* (если сможешь): адский костыль для центрирования <legend> в Firefox для сохранения border-top у <fieldset>
+
+  @media screen and (-moz-images-in-menus: 0) {
+    @media @tablet-widths {
+      &__section {
+        position: relative;
+      }
+      &__section-title--contacts,
+      &__section-title--sight,
+      &__section-title--description {
+        position: absolute;
+        left: 50%;
+        top: -45px;
+        background: white;
+        transform: translate(-50%, 0);
+        width: 400px;
+      }
+      &__section-body--rating {
+        padding-bottom: 40px;
+      }
+      &__section-body--contacts {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      &__section-body--sight {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      &__section-body--description {
+        padding-top: 40px;
+      }
     }
   }
 }
