@@ -4,41 +4,41 @@
   display: flex;
   flex-direction: column;
   min-height: 230px;
-  justify-content: flex-end;
+  padding-top: 40px;
+  align-items: center;
   @media @tablet-widths {
     flex-direction: row;
-    padding-top: 40px;
+    justify-content: space-between;
+    align-items: center;
     min-height: auto;
+    padding-top: 40px;
   }
 
-  &__social {
-    margin: 0 auto;
-  }
-
-  &__hashtag,
-  &__social {
-    margin-bottom: 35px;
-  }
-
-  &__hashtag,
-  &__copyright {
-    @media @tablet-widths {
-      width: 33%;
-    }
-  }
-
+  /////*** HASHTAG ***/////
   &__hashtag {
     .title(@fsz: @font-size-bigger2);
+    margin-bottom: 35px;
     @media @tablet-widths {
+      width: 33%;
       text-align: left;
-      padding-top: 10px;
+      margin-bottom: 0;
     }
   }
 
+  /////*** SOCIAL BLOCK ***/////
+  &__social {
+    margin-bottom: 35px;
+    @media @tablet-widths {
+      margin-bottom: 0;
+    }
+  }
+
+  /////*** COPYRIGHT BLOCK ***/////
   &__copyright {
     display: flex;
     justify-content: center;
     @media @tablet-widths {
+      width: 33%;
       justify-content: flex-end;
     }
   }

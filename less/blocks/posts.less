@@ -8,6 +8,7 @@
     margin: 0;
   }
 
+  /////*** POSTS ITEM ***/////
   &__item {
     width: 100%;
     font-size: @base-font-size;
@@ -27,19 +28,11 @@
       width: 100%;
     }
   }
-
   &__content {
     .reset-spaces();
-    @media @tablet-widths {
-
-    }
-  }
-  &__item:first-child &__content{
-    @media @tablet-widths {
-
-    }
   }
 
+  /////*** POST PHOTO ***/////
   &__photo {
     display: block;
     min-height: 280px;
@@ -56,6 +49,7 @@
     }
   }
 
+  /////*** POST TEXT ***/////
   &__text {
     display: flex;
     justify-content: space-between;
@@ -71,25 +65,23 @@
       .set-colors(@light-color, @transparent-color);
     }
   }
-
   &__description {
     @media @tablet-widths {
       margin-top: 15px;
       margin-left: 20px;
     }
   }
-
   &__title {
     .title(@fsz: @base-font-size);
     @media @desktop-widths {
       color: @light-color;
     }
   }
-
   &__author {
     text-transform: none;
   }
 
+  /////*** LIKES BLOCK ***/////
   &__likes {
     display: flex;
     align-items: flex-end;
