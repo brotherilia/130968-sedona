@@ -10,10 +10,10 @@
     width: 100%;
     border: none;
     padding-bottom: 5px;
-    border-bottom: 1px solid @darker3-color;
+    border-bottom: 1px solid @darker-10pct-color;
     @media @tablet-widths {
       border-bottom: none;
-      border-top: 1px solid @darker3-color;
+      border-top: 1px solid @darker-10pct-color;
       &:nth-child(3) {order: 1;}
       &:nth-child(1) {order: 2;}
       &:nth-child(2) {order: 3;}
@@ -35,49 +35,6 @@
   &__section:nth-last-child(1),
   &__section:nth-last-child(2) {
     border-bottom: none;
-  }
-
-  /////*** SECTION BODY ***/////
-  &__section-body--intro {
-    margin-bottom: 20px;
-    @media @tablet-widths {
-      margin-bottom: 40px;
-      margin-left: 60px;
-      margin-right: 60px;
-    }
-    @media @desktop-widths {
-      margin-left: 80px;
-      margin-right: 120px;
-    }
-  }
-  &__section-body--contacts {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    @media @tablet-widths {
-      margin-bottom: 30px;
-    }
-    @media @desktop-widths {
-        flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-  &__section-body--description {
-    margin-bottom: 20px;
-  }
-  &__section-body--send {
-    margin-bottom: 20px;
-    display: flex;
-  }
-  &__section-body--send span {
-    display: none;
-    @media @tablet-widths {
-      display: block;
-      flex-grow: 1;
-      text-align: right;
-      margin-top: 20px;
-      line-height: 58px;
-    }
   }
 
   /////*** SECTION TITLE ***/////
@@ -114,7 +71,7 @@
       text-align: left;
     }
     @media @desktop-widths {
-      padding-left: 200px;
+      padding-left: 195px;
     }
   }
   &__section-title--contacts {
@@ -156,180 +113,43 @@
     }
   }
 
-  /////*** ITEM ***/////
-  &__item--intro {
-    display: flex;
+  /////*** SECTION BODY ***/////
+  &__section-body {
     margin-bottom: 20px;
   }
-  &__item--contacts {
-    position: relative;
+  &__section-body--intro {
+    @media @tablet-widths {
+      margin-bottom: 40px;
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+    @media @desktop-widths {
+      margin-left: 80px;
+      margin-right: 120px;
+    }
+  }
+  &__section-body--contacts {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-bottom: 45px;
-    &:last-child {
-      margin-bottom: 5px;
-    }
     @media @tablet-widths {
       margin-bottom: 30px;
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
     @media @desktop-widths {
       flex-direction: row;
-      width: auto;
-      margin-top: 50px;
-      margin-bottom: 0;
+      justify-content: space-between;
     }
   }
-
-  /////*** ITEM INNER ***/////
-  &__item-inner {
-    width: 100%;
+  &__section-body--send {
     display: flex;
-    @media @desktop-widths {
-      width: 312px;
-    }
   }
-
-  /////*** ITEM TITLE ***/////
-  &__title {
-    display: block;
-  }
-  &__title--intro {
-    line-height: 58px;
-    padding-right: 20px;
-  }
-  &__title--phone {
-    text-align: left;
-    margin-left: 20px;
-    margin-bottom: 5px;
+  &__section-body--send span {
+    display: none;
     @media @tablet-widths {
-      line-height: 25px;
-      padding-right: 23px;
-    }
-    @media @desktop-widths {
+      display: block;
+      flex-grow: 1;
+      text-align: right;
+      margin-top: 20px;
       line-height: 58px;
-      margin-left: 0;
-      margin-bottom: 0;
-    }
-  }
-  &__title--email {
-    text-align: left;
-    margin-left: 20px;
-    margin-bottom: 5px;
-    @media @tablet-widths {
-      line-height: 25px;
-      padding-right: 20px;
-    }
-    @media @desktop-widths {
-      line-height: 58px;
-      margin-left: 0;
-      margin-bottom: 0;
-    }
-  }
-  &__title--phone span {
-    @media @desktop-widths {
-      display: none;
-    }
-  }
-
-  /////*** INPUT ***/////
-  &__input {
-    .reset-spaces();
-    .title(@ttr: none);
-    .set-colors(@dark-color, @darker1-color);
-    height: 58px;
-    width: 1%;
-    flex-grow: 1;
-    border: none;
-    outline: none;
-    &[placeholder]               {text-overflow: ellipsis;}
-    &::-webkit-input-placeholder {color: @dark-color;}
-    &::-moz-placeholder          {color: @dark-color; text-overflow: ellipsis;} // *FIXME*: не работает
-    &:-moz-placeholder           {color: @dark-color; text-overflow: ellipsis;}
-    &:-ms-input-placeholder      {color: @dark-color; text-overflow: ellipsis;}
-  }
-  &__input--description {
-    width: 100%;
-    min-height: 160px;
-    padding-top: 10px;
-    padding-left: 20px;
-    @media @tablet-widths {
-      margin-top: 35px;
-    }
-  }
-  &__input-spacer {
-    width: 20px;
-    background-color: @darker1-color;
-  }
-
-  /////*** INPUT ICON ***/////
-  &__icon {
-    display: block;
-    width: 58px;
-    height: 58px;
-    background-color: @darker3-color;
-  }
-  &__icon--phone {
-    background: @darker3-color url("@{img-path}/icon-phone.svg") no-repeat 50% 50%;
-  }
-  &__icon--email {
-    background: @darker3-color url("@{img-path}/icon-mail.svg") no-repeat 50% 50%;
-  }
-
-  /////*** WARNING MESSAGE ***/////
-  &__warning {
-    display: block;
-    position: absolute;
-    top: 95px;
-    left: 20px;
-    color: @warning-color;
-    text-transform: none;
-    @media @tablet-widths {
-      top: 0;
-      right: 0;
-      left: auto;
-    }
-    @media @desktop-widths {
-      top: -35px;
-      right: auto;
-      left: 105px;
-    }
-  }
-
-// *FIXME* (если сможешь): адский костыль для центрирования <legend> в Firefox для сохранения border-top у <fieldset>
-
-  @media screen and (-moz-images-in-menus: 0) {
-    @media @tablet-widths {
-      &__section {
-        position: relative;
-      }
-      &__section-title--contacts,
-      &__section-title--sight,
-      &__section-title--description {
-        position: absolute;
-        left: 50%;
-        top: -45px;
-        background: white;
-        transform: translate(-50%, 0);
-        width: 400px;
-      }
-      &__section-body--rating {
-        padding-bottom: 40px;
-      }
-      &__section-body--contacts {
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
-      &__section-body--sight {
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
-      &__section-body--description {
-        padding-top: 40px;
-      }
     }
   }
 }

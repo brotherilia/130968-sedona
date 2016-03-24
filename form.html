@@ -84,26 +84,26 @@
             Представьтесь<span>, пожалуйста</span>:
           </legend>
           <div class="feedback__section-body feedback__section-body--intro">
-            <div class="feedback__item feedback__item--intro">
-              <label class="feedback__title feedback__title--intro" for="firstname">
+            <div class="textbox textbox--feedback-intro">
+              <label class="textbox__title textbox__title--feedback-intro" for="firstname">
                 Имя:
               </label>
-              <div class="feedback__input-spacer"></div>
-              <input class="feedback__input feedback__input--intro" type="text" name="firstname" id="firstname" placeholder="Петр" required>
+              <div class="textbox__input-spacer"></div>
+              <input class="textbox__input" type="text" name="firstname" id="firstname" placeholder="Петр" required>
             </div>
-            <div class="feedback__item feedback__item--intro">
-              <label class="feedback__title feedback__title--intro" for="surname">
+            <div class="textbox textbox--feedback-intro">
+              <label class="textbox__title textbox__title--feedback-intro" for="surname">
                 Фамилия:
               </label>
-              <div class="feedback__input-spacer"></div>
-              <input class="feedback__input feedback__input--intro" type="text" name="surname" id="surname" placeholder="Иванов">
+              <div class="textbox__input-spacer"></div>
+              <input class="textbox__input" type="text" name="surname" id="surname" placeholder="Иванов">
             </div>
-            <div class="feedback__item feedback__item--intro">
-              <label class="feedback__title feedback__title--intro" for="midname">
+            <div class="textbox textbox--feedback-intro">
+              <label class="textbox__title textbox__title--feedback-intro" for="midname">
                 Отчество:
               </label>
-              <div class="feedback__input-spacer"></div>
-              <input class="feedback__input feedback__input--intro" type="text" name="midname" id="midname" placeholder="Александрович">
+              <div class="textbox__input-spacer"></div>
+              <input class="textbox__input" type="text" name="midname" id="midname" placeholder="Александрович">
             </div>
           </div>
         </fieldset>
@@ -115,29 +115,29 @@
             Контактная информация:
           </legend>
           <div class="feedback__section-body feedback__section-body--contacts">
-            <div class="feedback__item feedback__item--contacts">
-              <label class="feedback__title feedback__title--phone" for="phone">
+            <div class="textbox textbox--feedback-contacts">
+              <label class="textbox__title textbox__title--feedback-phone" for="phone">
                 <span>Контактный</span> телефон:
               </label>
-              <div class="feedback__item-inner">
-                <div class="feedback__input-spacer"></div>
-                <input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон">
-                <i class="feedback__icon feedback__icon--phone"></i>
+              <div class="textbox__inner">
+                <div class="textbox__input-spacer"></div>
+                <input class="textbox__input" type="tel" name="phone" id="phone" placeholder="Введите телефон">
+                <i class="textbox__icon textbox__icon--phone"></i>
               </div>
-              <span class="feedback__warning">
+              <span class="textbox__warning">
                 Ошибка, перепроверьте номер
               </span>
             </div>
-            <div class="feedback__item feedback__item--contacts">
-              <label class="feedback__title feedback__title--email" for="email">
+            <div class="textbox textbox--feedback-contacts">
+              <label class="textbox__title textbox__title--feedback-email" for="email">
                 Электронная почта:
               </label>
-              <div class="feedback__item-inner">
-                <div class="feedback__input-spacer"></div>
-                <input class="feedback__input feedback__input--email" type="email" name="email" id="email" placeholder="Введите e-mail" required>
-                <i class="feedback__icon feedback__icon--email"></i>
+              <div class="textbox__inner">
+                <div class="textbox__input-spacer"></div>
+                <input class="textbox__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+                <i class="textbox__icon textbox__icon--email"></i>
               </div>
-              <span class="feedback__warning">
+              <span class="textbox__warning">
                 Ошибка, перепроверьте адрес
               </span>
             </div>
@@ -150,7 +150,7 @@
           <legend class="feedback__section-title feedback__section-title--rating">
             Ваше общее впечатление:
           </legend>
-          <div class="toggle-set">
+          <div class="toggle-set toggle-set--feedback">
             <div class="toggle-set__item">
               <input class="toggle-set__input" type="radio" name="rating" id="value1" checked>
               <label class="toggle-set__title" for="value1">
@@ -178,7 +178,7 @@
           <legend class="feedback__section-title feedback__section-title--sight">
             Посещенные достопримечательности:
           </legend>
-          <div class="checkbox-set">
+          <div class="checkbox-set checkbox-set--feedback">
             <div class="checkbox-set__item">
               <input class="checkbox-set__input" type="checkbox" name="check1" id="check1" checked>
               <label class="checkbox-set__title" for="check1">
@@ -212,14 +212,14 @@
           <legend class="feedback__section-title feedback__section-title--description">
             Опишите свои эмоции:
           </legend>
-          <div class="feedback__section-body feedback__section-body--description">
-            <textarea class="feedback__input feedback__input--description" name="overview" id="overview" placeholder="Опишите подробно все свои восторги"></textarea>
+          <div class="textbox textbox--feedback-description">
+            <textarea class="textbox__input textbox__input--feedback-description" name="overview" id="overview" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
         </fieldset>
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--                        SEND BUTTON                           -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <fieldset class="feedback__section feedback__section--send">
+        <fieldset class="feedback__section">
           <div class="feedback__section-body feedback__section-body--send">
             <input class="btn btn--feedback" type="submit" value="Отправить отзыв">
             <span>* - обязательные поля</span>
