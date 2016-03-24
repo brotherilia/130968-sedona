@@ -22,14 +22,17 @@
 
 @dark-color: #000000;
 @light-color: #ffffff;
-@darker1-color: darken(@light-color, 5%);
-@darker2-color: darken(@light-color, 7%);
-@darker3-color: darken(@light-color, 10%);
+@darker-5pct-color: darken(@light-color, 5%);
+@darker-7pct-color: darken(@light-color, 7%);
+@darker-10pct-color: darken(@light-color, 10%);
+@darker-16pct-color: darken(@light-color, 16%);
+@darker-20pct-color: darken(@light-color, 20%);
+@darker-36pct-color: darken(@light-color, 36%);
 @warning-color: #ff5c5c;
 @alt-color: hsl(@alt-hsvhue, 39%, 82%);
 @transparent-color: fade(@dark-color, 30%);
 
-@base-text-color: lighten(@dark-color, 20%);
+@base-text-color: @darker-20pct-color;
 @alt-text-color: @light-color;
 
 @main-menu-color: @dark-color;

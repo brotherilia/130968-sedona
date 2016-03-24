@@ -47,14 +47,26 @@
       height: 56px;
       border: none;
       border-radius: 5px;
-      background-color: @darker1-color;
+      background-color: @darker-5pct-color;
       left: 0;
+    }
+    &:hover::before {
+      background-color: @darker-10pct-color;
+    }
+    &:active::before {
+      background-color: @darker-16pct-color;
     }
   }
   &__input {
     display: none;
     &:checked + .checkbox-set__title::before {
-      background: @darker1-color url("@{img-path}/icon-tick.svg") no-repeat 50% 50%;
+      background: @darker-5pct-color url("@{img-path}/icon-tick.svg") no-repeat 50% 50%;
+    }
+    &:checked + .checkbox-set__title:hover::before {
+      background-color: @darker-10pct-color;
+    }
+    &:checked + .checkbox-set__title:active::before {
+      background-color: @darker-16pct-color;
     }
   }
 }
