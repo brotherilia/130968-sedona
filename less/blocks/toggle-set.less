@@ -1,0 +1,39 @@
+.toggle-set {
+  margin-bottom: 20px;
+  @media @tablet-widths {
+    margin-left: 60px;
+  }
+  @media @desktop-widths {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+  &__item {
+    margin-bottom: 13px;
+    @media @tablet-widths {
+      margin-bottom: 23px;
+    }
+  }
+  &__title {
+    display: block;
+    position: relative;
+    text-align: left;
+    .title(@ttr: none);
+    line-height: 56px;
+    padding-left: 80px;
+    &::before {
+      .pseudo-common();
+      width: 56px;
+      height: 56px;
+      border: 18px solid @darker1-color;
+      border-radius: 50%;
+      background-color: @darker1-color;
+      left: 0;
+    }
+  }
+  &__input {
+    display: none;
+    &:checked + .toggle-set__title::before {
+      background-color: @base-text-color;
+    }
+  }
+}
