@@ -70,12 +70,16 @@
   }
   &:active {
     color: @btn-dwn-color;
-    background-color: @btn-bg-dwn-from-color;
+    animation: flash 1s infinite;
   }
 }
 
 .main-menu-colors() {
   .btn-colors();
+  &:active {
+    animation: none;
+    background-color: @btn-bg-dwn-from-color;
+  }
   @media @tablet-widths {
     font-size: @base-font-size;
     color: @main-menu-color;
@@ -133,9 +137,9 @@
 .common-section {.outl(yellow);}
 .feedback {.outl(red);}
 .feedback__section {.outl(green);}
-.feedback__section-body {.outl(yellow);}
-.feedback__item {.outl(magenta);}
-.feedback__item-inner {.outl(blue);}
+.feedback__section-body, .toggle-set, .checkbox-set {.outl(yellow);}
+.toggle-set__item, .checkbox-set__item, .textbox {.outl(magenta);}
+.textbox__inner {.outl(blue);}
 .feedback__section-title {.outl(pink);}
 .page-footer {.outl(pink);}
 .page-footer__hashtag {.outl(yellow);}
@@ -146,9 +150,9 @@
 .advantages {.outl(yellow);}
 .advantages__item {.outl(red);}
 .advantages__photo {.outl(magenta);}
-.subadvantages {.outl(cyan);}
-.subadvantages__item {.outl(green);}
-.subadvantages__icon {.outl(yellow);}
+.features {.outl(cyan);}
+.features__item {.outl(green);}
+.features__icon {.outl(yellow);}
 .posts {.outl(yellow);}
 .posts__item {.outl(red);}
 .posts__photo {.outl(green);}
@@ -156,11 +160,11 @@
 .posts__likes {.outl(green);}
 .posts__likes-icon {.outl(pink);}
 .posts__likes-count {.outl(magenta);}
-.player {.outl(red);} */
-
+.player {.outl(red);}
+ */
 /* Переключение фона-подложки */
-@page: "index";
-//@page: "photo";
+//@page: "index";
+@page: "photo";
 //@page: "form";
 
 .body-dummy-bg(@page) {
