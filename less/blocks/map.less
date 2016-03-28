@@ -1,5 +1,30 @@
 .map {
   .reset-spaces();
-  display: block;
   min-height: 350px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% top;
+  background-size: 320px 350px;
+  background-image: url("@{img-path}/bg-map-mobile.jpg");
+  @media @tablet-widths {
+    background-size: 768px 350px;
+    background-image: url("@{img-path}/bg-map-tablet.jpg");
+  }
+  @media @desktop-widths {
+    background-size: 1200px 350px;
+    background-image: url("@{img-path}/bg-map-desktop.jpg");
+  }
+  & iframe {
+    .reset-spaces();
+    border: none;
+    outline: none;
+    width: 320px;
+    height: 350px;
+    @media @tablet-widths {
+      width: 768px;
+    }
+    @media @desktop-widths {
+      width: 1200px;
+    }
+  }
 }

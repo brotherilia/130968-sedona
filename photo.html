@@ -18,7 +18,7 @@
         <!--                     MAIN NAVIGATION                          -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <nav class="main-nav">
-          <input class="main-nav__toggle" type="checkbox" name="toggle" id="toggle" checked> <!-- *FIXME*: убрать checked -->
+          <input class="main-nav__toggle" type="checkbox" name="toggle" id="toggle" checked> <!-- *FIXME* -->
           <label class="main-nav__icon" for="toggle"></label>
           <ul class="main-nav__items">
             <li class="main-nav__item">
@@ -42,9 +42,7 @@
               </a>
             </li>
             <li class="main-nav__item main-nav__item--logo">
-              <a class="main-nav__logo" href="index.html">
-                <!-- <img src="img/logo-sedona-mobile.svg" alt=""> --> <!-- *FIXME*: пройтись по пустым alt -->
-              </a>
+              <a class="main-nav__logo" href="index.html"></a>
             </li>
           </ul>
         </nav>
@@ -52,9 +50,7 @@
         <!--                            INTRO                             -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <div class="intro">
-          <!-- <img src="img/text-sedona-index.svg" alt=""> -->
-          <!-- bg1-img: bg-back-mobile.jpg -->
-          <!-- bg2-img: bg-intro-triangle-mobile.svg -->
+          <img class="intro__banner" src="img/text-sedona.svg" alt="">
         </div>
       </header>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -78,8 +74,22 @@
       <ul class="posts">
         <li class="posts__item">
           <figure class="posts__content">
-            <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-              <!-- <img src="img/photo-1-mobile.jpg" alt=""> -->
+            <a class="posts__photo" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/photo-1-mobile.jpg 1x,
+                          img/photo-1-mobile@2x.jpg 2x">
+                <source
+                  media="(max-width: 1279px)"
+                  srcset="img/photo-1-tablet.jpg 1x,
+                          img/photo-1-tablet@2x.jpg 2x">
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="img/photo-1-desktop.jpg 1x,
+                          img/photo-1-desktop@2x.jpg 2x">
+                <img src="img/photo-1-tablet.jpg">
+              </picture>
             </a>
             <figcaption class="posts__text">
               <div class="posts__description">
@@ -87,7 +97,7 @@
                   Неродные просторы
                 </div>
                 <div class="posts__author">
-                  Автор фото: <span>Борис</span>
+                  Автор фото: <span class="posts__author-name">Борис</span>
                 </div>
               </div>
               <div class="posts__likes">
@@ -100,9 +110,23 @@
           </figure>
         </li>
         <li class="posts__item">
-          <figure class="posts__content"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-            <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-              <!-- <img src="img/photo-2-mobile.jpg" alt=""> -->
+          <figure class="posts__content">
+            <a class="posts__photo" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/photo-2-mobile.jpg 1x,
+                          img/photo-2-mobile@2x.jpg 2x">
+                <source
+                  media="(max-width: 1279px)"
+                  srcset="img/photo-2-tablet.jpg 1x,
+                          img/photo-2-tablet@2x.jpg 2x">
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="img/photo-2-desktop.jpg 1x,
+                          img/photo-2-desktop@2x.jpg 2x">
+                <img src="img/photo-2-tablet.jpg">
+              </picture>
             </a>
             <figcaption class="posts__text">
               <div class="posts__description">
@@ -110,7 +134,7 @@
                   Местная растительность
                 </div>
                 <div class="posts__author">
-                  Автор фото: <span>Сергей</span>
+                  Автор фото: <span class="posts__author-name">Сергей</span>
                 </div>
               </div>
               <div class="posts__likes">
@@ -124,8 +148,22 @@
         </li>
         <li class="posts__item">
           <figure class="posts__content">
-            <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-              <!-- <img src="img/photo-3-mobile.jpg" alt=""> -->
+            <a class="posts__photo" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/photo-3-mobile.jpg 1x,
+                          img/photo-3-mobile@2x.jpg 2x">
+                <source
+                  media="(max-width: 1279px)"
+                  srcset="img/photo-3-tablet.jpg 1x,
+                          img/photo-3-tablet@2x.jpg 2x">
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="img/photo-3-desktop.jpg 1x,
+                          img/photo-3-desktop@2x.jpg 2x">
+                <img src="img/photo-3-tablet.jpg">
+              </picture>
             </a>
             <figcaption class="posts__text">
               <div class="posts__description">
@@ -133,7 +171,7 @@
                   Дорога на север
                 </div>
                 <div class="posts__author">
-                  Автор фото: <span>Петр</span>
+                  Автор фото: <span class="posts__author-name">Петр</span>
                 </div>
               </div>
               <div class="posts__likes">
@@ -147,8 +185,22 @@
         </li>
         <li class="posts__item">
           <figure class="posts__content">
-            <a class="posts__photo" href="#"> <!-- *FIXME*: посмотреть потом, нужен ли класс -->
-              <!-- <img src="img/photo-4-mobile.jpg" alt=""> -->
+            <a class="posts__photo" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/photo-4-mobile.jpg 1x,
+                          img/photo-4-mobile@2x.jpg 2x">
+                <source
+                  media="(max-width: 1279px)"
+                  srcset="img/photo-4-tablet.jpg 1x,
+                          img/photo-4-tablet@2x.jpg 2x">
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="img/photo-4-desktop.jpg 1x,
+                          img/photo-4-desktop@2x.jpg 2x">
+                <img src="img/photo-4-tablet.jpg">
+              </picture>
             </a>
             <figcaption class="posts__text">
               <div class="posts__description">
@@ -156,7 +208,7 @@
                   Мост дьявола
                 </div>
                 <div class="posts__author">
-                  Автор фото: <span>Антон</span>
+                  Автор фото: <span class="posts__author-name">Антон</span>
                 </div>
               </div>
               <div class="posts__likes">
@@ -183,14 +235,24 @@
         </p>
       </div>
       <div class="player">
-        <!-- <video class="player__screen" src="img/video-mobile.jpg" poster="img/video-mobile.jpg" controls></video> -->
+        <div class="player__screen">
+          <!-- <video
+            width="320" height="201"
+            preload="auto">
+            <source src="video/sedona.mp4" type="video/mp4">
+          </video> -->
+        </div>
         <div class="player__controls">
+          <button class="player__button">
+            <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20"><path d="M8 4V0L3 5l5 5V6c3.315 0 6 2.686 6 6s-2.685 6-6 6-6-2.686-6-6H0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+          </button>
           <div class="player__progress-bar"></div>
-          <div class="player__buttons">
-            <span class="player__replay"><!-- bg-img: icon-video-replay.svg --></span>
-            <span class="player__subtitles"><!-- bg-img: icon-video-subtitles.svg --></span>
-            <span class="player__fullscreen"><!-- bg-img: icon-video-fullscreen.svg --></span>
-          </div>
+          <button class="player__button">
+            <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20"><path d="M29 0H3C1.35 0 0 1.35 0 3v14c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM14.403 15.854c-.545.108-1.104.164-1.678.164-.694 0-1.354-.107-1.976-.323-.624-.214-1.173-.562-1.647-1.04s-.852-1.104-1.133-1.87c-.28-.765-.42-1.694-.42-2.785 0-1.134.158-2.085.472-2.85.315-.77.723-1.385 1.224-1.855.502-.468 1.062-.804 1.68-1.008.615-.204 1.232-.307 1.85-.307.66 0 1.22.045 1.68.134.456.087.834.192 1.132.313l-.448 1.92c-.254-.12-.555-.21-.902-.265C13.89 6.027 13.47 6 12.973 6c-.915 0-1.65.325-2.206.977-.558.65-.836 1.663-.836 3.03 0 .6.068 1.143.2 1.633.132.493.334.913.603 1.26.27.35.607.62 1.01.812.402.193.867.29 1.396.29.495 0 .914-.05 1.256-.148.342-.1.64-.227.893-.38l.462 1.84c-.354.25-.803.43-1.35.54zm8.698 0c-.544.108-1.104.164-1.677.164-.694 0-1.354-.107-1.976-.323-.623-.214-1.172-.562-1.646-1.04s-.85-1.104-1.132-1.87c-.28-.766-.42-1.694-.42-2.785 0-1.134.156-2.085.47-2.85.314-.77.723-1.385 1.223-1.855.503-.468 1.063-.804 1.68-1.008.617-.204 1.234-.307 1.852-.307.66 0 1.22.045 1.678.134.458.087.836.192 1.133.313l-.446 1.918c-.253-.12-.554-.21-.9-.265-.35-.053-.77-.08-1.267-.08-.915 0-1.65.325-2.206.977-.558.65-.836 1.663-.836 3.03 0 .6.067 1.143.2 1.633.13.493.333.913.602 1.26.27.35.606.62 1.01.812.4.193.867.29 1.395.29.497 0 .915-.05 1.257-.148.342-.1.64-.227.894-.38l.463 1.84c-.354.25-.804.43-1.35.54z"/></svg>
+          </button>
+          <button class="player__button">
+            <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 0v6h3V3h3V0H3M3 14H0v6h6v-3H3M17 0h-3v3h3v3h3V0M17 17h-3v3h6v-6h-3"/></svg>
+          </button>
         </div>
       </div>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -206,38 +268,17 @@
           <ul class="social-list">
             <li class="social-list__item">
               <a class="social-list__link" href="#">
-                <svg class="social-list__logo" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-                  <g id="W6EeEF_1_">
-                    <g>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15
-                        c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86
-                        c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0
-                        c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881
-                        c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461
-                        c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
-                    </g>
-                  </g>
-                </svg>
+                <svg class="social-list__logo" version="1" xmlns="http://www.w3.org/2000/svg" width="17.5" height="14.663" viewBox="0 0 17.5 14.663"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.283.153c1.736-.484 3.074.264 3.685 1.15.694-.225 1.372-.47 2.072-.69-.004.84-.538 1.478-.883 1.728.704.166 1.343-.48 1.343-.48-.175.977-1.035 1.746-1.61 1.977-.24 6.592-3.273 10.956-10.383 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.34.192 4.01-.412 4.835-1.15-.99-.293-2.76-.464-3.07-2.88.362.104.583.222 1.228.116C1.757 8.067.385 7.366.46 5.218c.295.32 1.1.523 1.382.46C1.117 5.445-.188 2.4.922.844c1.872 1.812 3.847 3.52 7.368 3.685.216-2.24 1.17-3.74 2.993-4.375z"/></svg>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link" href="#">
-                <svg class="social-list__logo" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
-                  <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114
-                    H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787
-                    C5.765,5.069,5.75,3.709,6.275,3.356z"/>
-                </svg>
+                <svg class="social-list__logo" version="1" xmlns="http://www.w3.org/2000/svg" width="8.672" height="18.944" viewBox="0 0 8.672 18.944"><path d="M6.275 3.356h2.398V0H5.795C2.655.18 1.54 2.387 1.948 6.114H0v3.518h1.96v9.312h3.836V9.632h2.857V6.114H5.787c-.022-1.045-.037-2.405.488-2.758z"/></svg>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link" href="#">
-                <svg class="social-list__logo" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
-                  <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835
-                    C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
-                </svg>
+                <svg class="social-list__logo" version="1" xmlns="http://www.w3.org/2000/svg" width="19.979" height="14.015" viewBox="0 0 19.979 14.015"><path d="M17.145 0H2.835C1.275 0 0 1.275 0 2.835v8.345c0 1.56 1.275 2.835 2.835 2.835h14.31c1.56 0 2.835-1.275 2.835-2.835V2.835C19.98 1.275 18.704 0 17.145 0zM7.035 10.392v-6.77l6.77 3.385-6.77 3.385z"/></svg>
               </a>
             </li>
           </ul>
@@ -247,15 +288,7 @@
             Разработано
           </span>
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
-            <svg class="page-footer__copyright-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334
-                L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5
-                l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787
-                l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65
-                l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021
-                L13.472,31.85L1.925,24.979V15.127z"/>
-            </svg>
+            <svg class="page-footer__copyright-logo" xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09"><path d="M13.62.017L13.472 0 0 1.412v24.66l13.473 8.018 13.43-7.99.042-.025V1.412L13.62.017zm11.4 12.11L13.494 5.334V5.23l-.088.05-.088-.056v.11L1.924 12.117v-8.97l11.548-1.213L25.02 3.147v8.98zm-11.615-5.34L24.923 13.5l-4.48 2.64-7.092-4.22-.013 1.414 5.904 3.513-.86.507-5.03-2.992-.013 1.415 3.827 2.275-.782.523-3.03-1.787-.015 1.413 1.853 1.092-1.8 1.08-11.356-6.75 11.37-6.835zm-11.48 8.34l11.41 6.79.017 1.045-7.942-4.728-.015 1.416 7.98 4.795.017 1.076-7.973-4.74-.014 1.415 8.02 4.822.047.025 8.143-4.872-.01-5.177 3.414-2.036v10.02L13.472 31.85 1.925 24.98v-9.853z"/></svg>
           </a>
         </div>
       </footer>

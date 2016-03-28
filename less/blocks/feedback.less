@@ -1,12 +1,13 @@
 .feedback {
   .reset-spaces();
+  .container-inner();
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   /////*** SECTION ***/////
   &__section {
     .reset-spaces();
-    .container-inner();
     width: 100%;
     border: none;
     padding-bottom: 5px;
@@ -20,9 +21,13 @@
       &:nth-child(4) {order: 4;}
       &:nth-child(5) {order: 5;}
       &:nth-child(6) {order: 6;}
-      &:nth-child(1), &:nth-child(3) {
+      &:nth-child(1) {
         .reset-spaces();
-        width: 50%;
+        width: 42%;
+      }
+      &:nth-child(3) {
+        .reset-spaces();
+        width: 45%;
       }
       &:nth-child(1), &:nth-child(3), &:nth-child(6) {
         border-top: none;
@@ -40,6 +45,7 @@
   /////*** SECTION TITLE ***/////
   &__section-title {
     display: block;
+    width: 100%;
     text-align: center;
     .title(@fsz: @font-size-bigger1);
     min-height: 65px;
@@ -49,33 +55,23 @@
     }
   }
   &__section-title--intro {
-    width: 100%;
     @media @tablet-widths {
-      width: auto;
       padding-top: 5px;
       padding-bottom: 60px;
-      padding-left: 60px;
       text-align: left;
-    }
-    @media @desktop-widths {
-      padding-left: 80px;
     }
   }
   &__section-title--rating {
-    width: 100%;
     @media @tablet-widths {
-      width: auto;
       padding-top: 5px;
       padding-bottom: 60px;
-      padding-left: 60px;
       text-align: left;
-    }
-    @media @desktop-widths {
-      padding-left: 195px;
+      @media @desktop-widths {
+        padding-left: 75px;
+      }
     }
   }
   &__section-title--contacts {
-    width: 100%;
     @media @tablet-widths {
       width: auto;
       line-height: 45px;
@@ -85,7 +81,6 @@
     }
   }
   &__section-title--description {
-    width: 100%;
     @media @tablet-widths {
       width: auto;
       line-height: 45px;
@@ -95,7 +90,6 @@
     }
   }
   &__section-title--sight {
-    width: 100%;
     @media @tablet-widths {
       line-height: 25px;
       padding-left: 60px;
@@ -104,7 +98,7 @@
       margin: 0 auto;
     }
   }
-  &__section-title--intro span {
+  &__intro-optional-text {
     @media @tablet-widths {
       display: none;
     }
@@ -120,12 +114,6 @@
   &__section-body--intro {
     @media @tablet-widths {
       margin-bottom: 40px;
-      margin-left: 60px;
-      margin-right: 60px;
-    }
-    @media @desktop-widths {
-      margin-left: 80px;
-      margin-right: 120px;
     }
   }
   &__section-body--contacts {
@@ -142,7 +130,7 @@
   &__section-body--send {
     display: flex;
   }
-  &__section-body--send span {
+  &__send-optional-text {
     display: none;
     @media @tablet-widths {
       display: block;

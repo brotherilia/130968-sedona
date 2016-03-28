@@ -11,6 +11,17 @@
     .set-colors(@clr: @light-color, @bgclr: @alt-color);
     width: 100%;
   }
+  &__item:first-child {
+    padding-top: 18px;
+    background-repeat: no-repeat;
+    background-position: 50% top;
+    background-image: url("@{img-path}/bg-triangle.svg");
+    background-size: 320px 18px;
+    @media @tablet-widths {
+      padding-top: 0;
+      background-image: none;
+    }
+  }
   &__item--brief {
     .set-colors(@bgclr: @darker-7pct-color);
     padding-top: 25px;
@@ -27,9 +38,11 @@
   /////*** TEXT ***/////
   &__text {
     line-height: @dense-line-height;
-    padding: 40px 32px;
+    margin: 0 20px;
+    padding: 40px 12px;
     @media @tablet-widths {
       width: 256px;
+      margin: 0;
       padding: 45px 35px;
     }
     @media @desktop-widths {
@@ -55,10 +68,9 @@
   &__photo {
     flex-grow: 1;
     width: 100%;
-    min-height: 260px;
+    line-height: 0;
     @media @tablet-widths {
-      width: auto;
-      min-height: 256px;
+      width: 512px;
     }
   }
 

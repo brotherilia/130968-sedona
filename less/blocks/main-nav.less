@@ -14,6 +14,7 @@
 
   /////*** MENU ITEM ***/////
   &__item {
+    user-select: none;
     display: none;
     @media @tablet-widths {
       display: block;
@@ -55,7 +56,7 @@
   &__item:last-child {
     display: block;
     height: 58px;
-    border-bottom: none;
+    border: none;
     @media @tablet-widths {
       height: 55px;
     }
@@ -100,5 +101,15 @@
     width: 102px;
     height: 83px;
     margin: 0 auto;
+    background: url("@{img-path}/logo-sedona-mobile.svg") no-repeat 50% 0;
+    background-size: 102px 83px;
+    @media @tablet-widths {
+      background: url("@{img-path}/logo-sedona-tablet.svg") no-repeat 50% 0;
+    }
+    @media @desktop-widths {
+      width: 188px;
+      height: 96px;
+      background: url("@{img-path}/logo-sedona-desktop.svg") no-repeat 50% 0;
+    }
   }
 }

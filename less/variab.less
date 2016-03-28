@@ -17,21 +17,21 @@
 @dense-line-height: round(@base-font-size * 1.5);
 
 /////*** COLORS ***/////
-@alt-hsvhue: 203;
-@main-menu-act-hsvhue: 23;
 
 @dark-color: #000000;
 @light-color: #ffffff;
 @darker-5pct-color: darken(@light-color, 5%);
 @darker-7pct-color: darken(@light-color, 7%);
 @darker-10pct-color: darken(@light-color, 10%);
+@darker-14pct-color: darken(@light-color, 14%);
 @darker-16pct-color: darken(@light-color, 16%);
 @darker-20pct-color: darken(@light-color, 20%);
 @darker-36pct-color: darken(@light-color, 36%);
 @darker-80pct-color: darken(@light-color, 80%);
 @warning-color: #ff5c5c;
-@alt-color: hsl(@alt-hsvhue, 39%, 82%);
-@transparent-color: fade(@dark-color, 30%);
+@alt-color: #81b3d2;
+@transparent-dark-color: fade(@dark-color, 50%);
+@transparent-light-color: fade(@light-color, 30%);
 
 @base-text-color: @darker-80pct-color;
 @alt-text-color: @light-color;
@@ -39,9 +39,9 @@
 @main-menu-color: @dark-color;
 @main-menu-hvr-color: @alt-color;
 @main-menu-dwn-color: lighten(@dark-color, 70%);
-@main-menu-act-color: hsl(@main-menu-act-hsvhue, 26%, 46%);
-@main-menu-act-hvr-color: hsl(@main-menu-act-hsvhue, 30%, 38%);
-@main-menu-act-dwn-color: hsl(@main-menu-act-hsvhue, 5%, 84%);
+@main-menu-act-color: #766357;
+@main-menu-act-hvr-color: #604e43;
+@main-menu-act-dwn-color: #d6d0cc;
 
 @btn-color: @light-color;
 @btn-hvr-color: @btn-color;
@@ -49,9 +49,9 @@
 @btn-dsbl-color: @btn-color;
 
 @btn-bg-color: @alt-color;
-@btn-bg-hvr-color: hsl(@alt-hsvhue, 47%, 75%);
-@btn-bg-dwn-from-color: hsl(@alt-hsvhue, 56%, 74%);
-@btn-bg-dwn-to-color: hsl(@alt-hsvhue, 64%, 68%);
+@btn-bg-hvr-color: #669ec0;
+@btn-bg-dwn-from-color: #5496bd;
+@btn-bg-dwn-to-color: #3e84ae;
 @btn-bg-dsbl-color: darken(@light-color, 10%);
-@btn-border-top-color: hsl(@alt-hsvhue, 30%, 86%);
-@btn-border-bottom-color: hsl(@alt-hsvhue, 39%, 66%);
+@btn-border-top-color: #9ac2db;
+@btn-border-bottom-color: #678fa8;
