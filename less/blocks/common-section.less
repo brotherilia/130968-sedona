@@ -1,29 +1,95 @@
 .common-section {
   .reset-spaces();
-  &__headline {
-    .title();
+  padding-top: 40px;
+  padding-bottom: 15px;
+  @media @tablet-widths {
+    max-width: 460px;
+  }
+  &--first-page {
+    min-height: 240px;
+    margin: 0 30px;
     @media @tablet-widths {
+      margin: 0 auto;
+      padding-top: 50px;
+      min-height: 205px;
+    }
+  }
+  &--booking {
+    padding-top: 25px;
+    margin: 0 20px;
+    @media @tablet-widths {
+      margin: 0 auto;
+      min-height: 318px;
+      padding-top: 60px;
+    }
+    @media @desktop-widths {
+      min-height: 330px;
+    }
+  }
+  &--photo {
+    padding-bottom: 25px;
+    margin: 0 20px;
+    border-bottom: 1px solid @darker-10pct-color;
+    @media @tablet-widths {
+      margin: 0 auto;
+      border: none;
+      padding-top: 75px;
+      min-height: 248px;
+    }
+    @media @desktop-widths {
+      padding-top: 115px;
+      min-height: 288px;
+    }
+  }
+  &--presentation {
+    padding: 35px 0;
+    margin: 0 25px;
+    @media @tablet-widths {
+      margin: 0 auto;
+      padding-top: 65px;
+      min-height: 245px;
+    }
+  }
+  &--form {
+    border-bottom: 1px solid @darker-10pct-color;
+    @media @tablet-widths {
+      margin: 0 auto;
+      border: none;
+      padding-top: 75px;
+      min-height: 248px;
+    }
+    @media @desktop-widths {
+      padding-top: 115px;
+      min-height: 270px;
+    }
+  }
+
+  /////*** TITLE ***/////
+  &__title {
+    .title();
+    margin-bottom: 25px;
+    @media @tablet-widths {
+      margin-bottom: 30px;
       .title(@fsz: @font-size-bigger2);
     }
   }
-  &__headline--bigger {
+  &__title--bigger {
     .title();
     @media @tablet-widths {
       .title(@fsz: @font-size-bigger3);
     }
   }
-  &__headline--biggest {
+  &__title--biggest {
     .title(@font-size-bigger2);
     @media @tablet-widths {
       .title(@fsz: @font-size-bigger3);
     }
   }
-  & p {
-    @media @tablet-widths {
-      width: 440px;
-      margin: 0 auto;
-    }
+  &--first-page &__title {
+     margin-bottom: 33px;
   }
+
+  /////*** BOTTOM ***/////
   &__bottom {
 
   }

@@ -1,31 +1,35 @@
 .main-nav {
   .reset-spaces();
-  &__toggle {
-    display: none; // *FIXME*: это временно
-  }
-  &__toggle--opened {
+  position: relative;
 
-  }
+  /////*** MENU ITEMS LIST ***/////
   &__items {
     .reset-list();
+    display: flex;
+    flex-direction: column;
     @media @tablet-widths {
-      .clearfix();
+      flex-direction: row;
     }
   }
-  &__items--opened {
 
-  }
+  /////*** MENU ITEM ***/////
   &__item {
+    display: none;
+    @media @tablet-widths {
+      display: block;
+      width: 20%;
+    }
     font-size: @font-size-bigger1;
     font-weight: bold;
     height: 55px;
-    line-height: 55px;
+    line-height: 53px;
     border-top: 1px solid @btn-border-top-color;
     border-bottom: 1px solid @btn-border-bottom-color;
     &:first-child {
       border-top: none;
+      line-height: 54px;
     }
-    &:last-child {
+    &:nth-last-child(2) {
       border-bottom: none;
       position: relative;
       &::after {
@@ -40,17 +44,48 @@
       }
     }
     @media @tablet-widths {
-      float: left;
-      padding: 0 20px;
       border: none;
+      &:nth-child(1) {order: 1;}
+      &:nth-child(2) {order: 2;}
+      &:nth-child(3) {order: 4;}
+      &:nth-child(4) {order: 5;}
+      &:nth-child(5) {order: 3;}
     }
   }
-  &__item:nth-child(3),
-  &__item:nth-child(4) {
+  &__item:last-child {
+    display: block;
+    height: 58px;
+    border-bottom: none;
     @media @tablet-widths {
-      float: right;
+      height: 55px;
     }
   }
+
+  /////*** MOBILE MENU TOGGLE ***/////
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url("@{img-path}/icon-menu.svg") no-repeat 50% 50%;
+    background-size: 23px 22px;
+    @media @tablet-widths {
+      display: none;
+    }
+  }
+  &__toggle {
+    display: none;
+    &:checked + .main-nav__icon {
+      background: url("@{img-path}/icon-cross.svg") no-repeat 50% 50%;
+    }
+    &:checked ~ .main-nav__items .main-nav__item {
+      display: block;
+    }
+  }
+
+  /////*** MENU LINK ***/////
   &__link {
     display: block;
     .main-menu-colors();
@@ -58,12 +93,12 @@
   &__link--active {
     .main-menu-active-colors();
   }
+
+  /////*** SITE LOGO ***/////
   &__logo {
+    display: block;
     width: 102px;
     height: 83px;
     margin: 0 auto;
-    @media @tablet-widths {
-      margin-top: -55px;
-    }
   }
 }

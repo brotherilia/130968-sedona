@@ -1,13 +1,16 @@
 html {
   box-sizing: border-box;
 }
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
 html,
 body {
   .reset-spaces();
   min-width: 320px;
   color: @base-text-color;
-  background-color: @light-bg-color;
+  background-color: @light-color;
   font-family: @base-font-family;
   font-size: @base-font-size;
   line-height: @base-line-height;
@@ -25,6 +28,11 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .wrapper {
