@@ -82,8 +82,11 @@
   /////*** MOBILE MENU JS SWITCHER ***/////
   &__items--closed &__item {
     display: none;
+    @media @tablet-widths {
+      display: block;
+    }
   }
-  &__items--closed &__item--logo {
+  &__items--closed  &__item--logo {
     display: block;
   }
   &__icon--closed {
