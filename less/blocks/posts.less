@@ -10,20 +10,22 @@
 
   /////*** POSTS ITEM ***/////
   &__item {
+    position: relative;
     width: 100%;
     font-size: @base-font-size;
     padding: 23px 0;
-    border-bottom: 1px solid @darker-10pct-color;
+    .divider-bottom();
     @media @tablet-widths {
+      position: static;
       padding: 0;
       width: 50%;
-      border: none;
     }
     @media @desktop-widths {
       width: 33.333%;
     }
   }
   &__item:first-child {
+    .divider-top();
     @media @tablet-widths {
       width: 100%;
     }

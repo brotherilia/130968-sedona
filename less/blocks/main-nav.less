@@ -15,7 +15,6 @@
   /////*** MENU ITEM ***/////
   &__item {
     user-select: none;
-    display: none;
     @media @tablet-widths {
       display: block;
       width: 20%;
@@ -53,16 +52,17 @@
       &:nth-child(5) {order: 3;}
     }
   }
-  &__item:last-child {
+  &__item--logo {
     display: block;
     height: 58px;
+    line-height: 0;
     border: none;
     @media @tablet-widths {
       height: 55px;
     }
   }
 
-  /////*** MOBILE MENU TOGGLE ***/////
+  /////*** MOBILE MENU ICON ***/////
   &__icon {
     position: absolute;
     top: 0;
@@ -70,12 +70,28 @@
     display: block;
     width: 60px;
     height: 60px;
-    background: url("@{img-path}/icon-menu.svg") no-repeat 50% 50%;
+    border: none;
+    outline: none;
+    background: url("@{img-path}/icon-cross.svg") no-repeat 50% 50%;
     background-size: 23px 22px;
     @media @tablet-widths {
       display: none;
     }
   }
+
+  /////*** MOBILE MENU JS SWITCHER ***/////
+  &__items--closed &__item {
+    display: none;
+  }
+  &__items--closed &__item--logo {
+    display: block;
+  }
+  &__icon--closed {
+    background: url("@{img-path}/icon-menu.svg") no-repeat 50% 50%;
+  }
+
+  /////*** MOBILE MENU CSS SWITCHER ***/////
+  /*
   &__toggle {
     display: none;
     &:checked + .main-nav__icon {
@@ -85,6 +101,7 @@
       display: block;
     }
   }
+ */
 
   /////*** MENU LINK ***/////
   &__link {
@@ -101,15 +118,9 @@
     width: 102px;
     height: 83px;
     margin: 0 auto;
-    background: url("@{img-path}/logo-sedona-mobile.svg") no-repeat 50% 0;
-    background-size: 102px 83px;
-    @media @tablet-widths {
-      background: url("@{img-path}/logo-sedona-tablet.svg") no-repeat 50% 0;
-    }
     @media @desktop-widths {
       width: 188px;
       height: 96px;
-      background: url("@{img-path}/logo-sedona-desktop.svg") no-repeat 50% 0;
     }
   }
 }

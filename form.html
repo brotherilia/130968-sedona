@@ -18,8 +18,11 @@
         <!--                     MAIN NAVIGATION                          -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <nav class="main-nav">
-          <input class="main-nav__toggle" type="checkbox" name="toggle" id="toggle" checked> <!-- *FIXME* -->
+          <!-- CSS mobile menu switcher
+          <input class="main-nav__toggle" type="checkbox" name="toggle" id="toggle" checked>
           <label class="main-nav__icon" for="toggle"></label>
+          -->
+          <button class="main-nav__icon"></button>
           <ul class="main-nav__items">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">
@@ -42,7 +45,20 @@
               </a>
             </li>
             <li class="main-nav__item main-nav__item--logo">
-              <a class="main-nav__logo" href="index.html"></a>
+              <a class="main-nav__logo" href="index.html">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="img/logo-sedona-mobile.svg">
+                  <source
+                    media="(max-width: 1279px)"
+                    srcset="img/logo-sedona-tablet.svg">
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="img/logo-sedona-desktop.svg">
+                  <img src="img/logo-sedona-mobile.svg" alt="">
+                </picture>
+              </a>
             </li>
           </ul>
         </nav>
@@ -259,5 +275,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
