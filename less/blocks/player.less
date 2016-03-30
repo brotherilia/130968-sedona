@@ -54,16 +54,18 @@
     border: none;
     outline: none;
     background: none;
+    min-height: 66px;
     line-height: 0;
     width: 70px;
     @media @tablet-widths {
       width: 90px;
+      min-height: 93px;
     }
     &:nth-last-child(2) {
       width: 40px;
       margin-left: auto;
     }
-    & svg {
+    & svg {                           /* *FIXME* */
       fill: #5c6870;
       height: 20px;
       @media @tablet-widths {
