@@ -7,24 +7,23 @@
   @media @desktop-widths {
     margin: 0;
   }
+}
 
-  /////*** POSTS ITEM ***/////
-  &__item {
-    position: relative;
-    width: 100%;
-    font-size: @base-font-size;
-    padding: 23px 0;
-    .divider-bottom();
-    @media @tablet-widths {
-      position: static;
-      padding: 0;
-      width: 50%;
-    }
-    @media @desktop-widths {
-      width: 33.333%;
-    }
+.post {
+  position: relative;
+  width: 100%;
+  font-size: @base-font-size;
+  padding: 23px 0;
+  .divider-bottom();
+  @media @tablet-widths {
+    position: static;
+    padding: 0;
+    width: 50%;
   }
-  &__item:first-child {
+  @media @desktop-widths {
+    width: 33.333%;
+  }
+  &:first-child {
     .divider-top();
     @media @tablet-widths {
       width: 100%;
@@ -46,7 +45,7 @@
       min-height: 267px;
     }
   }
-  &__item:first-child &__photo {
+  &:first-child &__photo {
     @media @tablet-widths {
       min-height: 400px;
     }
