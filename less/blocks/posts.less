@@ -96,14 +96,16 @@
       align-items: center;
     }
   }
-  &__likes-icon {
+  &__likes-icon-wrapper {
     display: block;
-    width: 23px;
-    height: 23px;
-    background: url("@{img-path}/icon-like.svg") no-repeat 50% 50%;
-    background-size: 23px 23px;
+    width: 22px;
+    height: 20px;
+    line-height: 0;
+  }
+  &__likes-icon {
+    fill: #b2b2b2;
     @media @desktop-widths {
-      background-image: url("@{img-path}/icon-like-white.svg");
+      fill: #ffffff;
     }
   }
   &__likes-count {

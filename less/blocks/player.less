@@ -65,23 +65,18 @@
       width: 40px;
       margin-left: auto;
     }
-    & svg {                           /* *FIXME* */
-      fill: #5c6870;
-      height: 20px;
-      @media @tablet-widths {
-        fill: #ffffff;
-      }
+  }
+  &__icon {
+    fill: #5c6870;
+    @media @tablet-widths {
+      fill: #ffffff;
     }
-    &:hover {
-      & svg {
-       fill: #333333;
-      }
-    }
-    &:active {
-      & svg {
-       fill: #c1c1c1;
-      }
-    }
+  }
+  &__button:hover &__icon {
+    fill: #333333;
+  }
+  &__button:active &__icon {
+    fill: #c1c1c1;
   }
   &__progress-bar {
     position: absolute;

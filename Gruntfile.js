@@ -53,8 +53,39 @@ module.exports = function(grunt) {
       options: {
         spawn: false
       }
+    },
+
+    svgstore: {
+      options: {
+        svg: {
+          style: "display: none"
+        }
+      },
+      sprite: {
+        files: {
+          "img/sprite.svg": ["img/sprite/*.svg"]
+        }
+      }
+    },
+
+    svgmin: {
+      all: {
+        files: [{
+          expand: true,
+          src: ["img/**/*.svg"]
+        }]
+      },
+      sprite: {
+        files: [{
+          expand: true,
+          src: ["img/sprite/*.svg"]
+        }]
+      }
     }
+
   });
 
+  grunt.registerTask("svgminall", "svgmin:all");
+  grunt.registerTask("sprite", ["svgmin:sprite", "svgstore"]);
   grunt.registerTask("serve", ["browserSync", "watch"]);
 };

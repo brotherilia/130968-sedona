@@ -1,7 +1,1 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="216.469 0 768 57" enable-background="new 216.469 0 768 57" xml:space="preserve">
-<g>
-	<polygon fill="#ffffff" points="249.566,23.71 216.469,20.565 216.469,57 599.955,57 249.566,0 	"/>
-	<polygon fill="#ffffff" points="950.346,23.71 950.346,0 599.955,57 984.469,57 984.469,20.468 	"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="216.469 0 768 57"><g fill="#fff"><path d="M249.566 23.71l-33.097-3.145V57h383.486L249.566 0zM950.346 23.71V0L599.955 57h384.514V20.468z"/></g></svg>
