@@ -55,7 +55,8 @@
       background-color: @darker-10pct-color;
     }
     &:active::before {
-      background-color: @darker-16pct-color;
+      background-color: @darker-40pct-color;
+      opacity: .45;
     }
   }
   &__input {
@@ -67,7 +68,8 @@
       background-color: @darker-10pct-color;
     }
     &:checked + .checkbox-set__title:active::before {
-      background: @darker-16pct-color url("@{img-path}/icon-tick-down.svg") no-repeat 50% 50%;
+      background-color: @darker-40pct-color;
+      opacity: .45;
     }
   }
 }
