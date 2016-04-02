@@ -16,10 +16,12 @@
     "autoprefixer": "6.3.3",
     "editorconfig-tools": "0.1.1",
     "grunt": "0.4.5",
-    "grunt-contrib-less": "1.2.0",
     "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-less": "1.2.0",
     "grunt-contrib-watch": "0.6.1",
     "grunt-postcss": "0.7.2",
+    "grunt-svgmin": "^3.1.2",
+    "grunt-svgstore": "^1.0.0",
     "load-grunt-tasks": "3.4.1"
   },
   "scripts": {

@@ -14,7 +14,7 @@
 
   /////*** MENU ITEM ***/////
   &__item {
-    display: none;
+    user-select: none;
     @media @tablet-widths {
       display: block;
       width: 20%;
@@ -52,16 +52,17 @@
       &:nth-child(5) {order: 3;}
     }
   }
-  &__item:last-child {
+  &__item--logo {
     display: block;
     height: 58px;
-    border-bottom: none;
+    line-height: 0;
+    border: none;
     @media @tablet-widths {
       height: 55px;
     }
   }
 
-  /////*** MOBILE MENU TOGGLE ***/////
+  /////*** MOBILE MENU ICON ***/////
   &__icon {
     position: absolute;
     top: 0;
@@ -69,12 +70,32 @@
     display: block;
     width: 60px;
     height: 60px;
-    background: url("@{img-path}/icon-menu.svg") no-repeat 50% 50%;
+    border: none;
+    outline: none;
+    background: url("@{img-path}/icon-cross.svg") no-repeat 50% 50%;
     background-size: 23px 22px;
     @media @tablet-widths {
       display: none;
     }
   }
+
+  /////*** MOBILE MENU JS SWITCHER ***/////
+  &__items--closed &__item {
+    display: none;
+    @media @tablet-widths {
+      display: block;
+    }
+  }
+  &__items--closed  &__item--logo {
+    display: block;
+  }
+  &__icon--closed {
+    background: url("@{img-path}/icon-menu.svg") no-repeat 50% 50%;
+    background-size: 23px 22px;
+  }
+
+  /////*** MOBILE MENU CSS SWITCHER ***/////
+  /*
   &__toggle {
     display: none;
     &:checked + .main-nav__icon {
@@ -84,6 +105,7 @@
       display: block;
     }
   }
+ */
 
   /////*** MENU LINK ***/////
   &__link {
@@ -100,5 +122,9 @@
     width: 102px;
     height: 83px;
     margin: 0 auto;
+    @media @desktop-widths {
+      width: 188px;
+      height: 96px;
+    }
   }
 }

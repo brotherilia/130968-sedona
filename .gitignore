@@ -7,3 +7,6 @@ Thumbs.db
 *.psd
 *.ai
 css/*.css
+build/
+img/trash/
+img/temp/
