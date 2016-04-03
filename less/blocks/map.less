@@ -1,10 +1,12 @@
 .map {
   .reset-spaces();
-  min-height: 350px;
   width: 100%;
+  min-height: 350px;
+  line-height: 0;
   background-repeat: no-repeat;
   background-position: 50% top;
   background-size: 320px 350px;
+  background-color: #cbe0a3;
   background-image: url("@{img-path}/bg-map-mobile.jpg");
   @media @tablet-widths {
     background-size: 768px 350px;
@@ -14,7 +16,7 @@
     background-size: 1200px 350px;
     background-image: url("@{img-path}/bg-map-desktop.jpg");
   }
-  & iframe {
+  &__source {
     .reset-spaces();
     border: none;
     outline: none;

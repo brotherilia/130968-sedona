@@ -38,27 +38,13 @@
 }
 
 .divider() {
-  .pseudo-common();
-  left: -20px;
-  width: 320px;
-  height: 1px;
-  background-color: @darker-10pct-color;
-}
-
-.divider-top() {
-  &::before {
-    .divider();
-    top: 0;
-    @media @tablet-widths {
-      display: none;
-    }
-  }
-}
-
-.divider-bottom() {
   &::after {
-    .divider();
+    .pseudo-common();
+    left: -20px;
     bottom: 0;
+    width: 320px;
+    height: 1px;
+    background-color: @darker-10pct-color;
     @media @tablet-widths {
       display: none;
     }
@@ -88,6 +74,9 @@
   &:active {
     color: @btn-dwn-color;
     animation: flash 1s infinite;
+  }
+  &:disabled {
+    background-color: @btn-bg-dsbl-color;
   }
 }
 
@@ -186,14 +175,14 @@
 //@page: "form";
 
 .body-dummy-bg(@page) {
-  background: url("@{img-path}/temp/sedona-@{page}-mobile.jpg") no-repeat center top;
+  background: url("@{img-path}/trash/sedona-@{page}-mobile.jpg") no-repeat center top;
   min-height: 3650px;
   @media @tablet-widths {
-    background: url("@{img-path}/temp/sedona-@{page}-tablet.jpg") no-repeat center top;
+    background: url("@{img-path}/trash/sedona-@{page}-tablet.jpg") no-repeat center top;
     min-height: 2680px;
   }
   @media @desktop-widths {
-    background: url("@{img-path}/temp/sedona-@{page}-desktop.jpg") no-repeat center top;
+    background: url("@{img-path}/trash/sedona-@{page}-desktop.jpg") no-repeat center top;
     min-height: 2700px;
   }
 }

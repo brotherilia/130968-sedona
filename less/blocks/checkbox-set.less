@@ -71,5 +71,11 @@
       background-color: @darker-40pct-color;
       opacity: .45;
     }
+    &:disabled + .checkbox-set__title::before,
+    &:disabled + .checkbox-set__title:hover::before,
+    &:disabled + .checkbox-set__title:active::before {
+      background-color: @darker-20pct-color;
+      opacity: .1;
+    }
   }
 }
