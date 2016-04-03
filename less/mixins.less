@@ -51,6 +51,12 @@
   }
 }
 
+.common-section-divider() {
+  .divider();
+  position: relative;
+  margin: 0 20px;
+}
+
 .set-colors(@clr: @base-text-color, @bgclr: @light-color) {
   color: @clr;
   background-color: @bgclr;
@@ -123,80 +129,3 @@
     }
   }
 }
-
-
-// *FIXME*: temp (потом убрать эту секцию)
-
-.outl(@color) {
-  outline: 1px solid @color;
-}
-
-/* .wrapper {.outl(blue);}
-.container-inner {.outl(cyan);}
-.page-header {.outl(red);}
-.main-nav {.outl(green);}
-.main-nav__items {.outl(yellow);}
-.main-nav__item {.outl(cyan);}
-.main-nav__link {.outl(magenta);}
-.main-nav__logo {.outl(pink);}
-.main-nav__toggle {.outl(red);}
-.intro {.outl(orange);}
-.common-section {.outl(yellow);}
-.feedback {.outl(red);}
-.feedback__section {.outl(green);}
-.feedback__section-body, .toggle-set, .checkbox-set {.outl(yellow);}
-.toggle-set__item, .checkbox-set__item, .textbox {.outl(magenta);}
-.textbox__inner {.outl(blue);}
-.feedback__section-title {.outl(pink);}
-.page-footer {.outl(pink);}
-.page-footer__hashtag {.outl(yellow);}
-.page-footer__social {.outl(yellow);}
-.page-footer__copyright {.outl(yellow);}
-.page-footer__copyright-text {.outl(red);}
-.page-footer__copyright-link {.outl(red);}
-.advantages {.outl(yellow);}
-.advantages__item {.outl(red);}
-.advantages__photo {.outl(magenta);}
-.features {.outl(cyan);}
-.features__item {.outl(green);}
-.features__icon {.outl(yellow);}
-.posts {.outl(yellow);}
-.posts__item {.outl(red);}
-.posts__photo {.outl(green);}
-.posts__text {.outl(cyan);}
-.posts__likes {.outl(green);}
-.posts__likes-icon-wrapper {.outl(pink);}
-.posts__likes-count {.outl(magenta);}
-.player {.outl(red);} */
-
-/* Переключение фона-подложки */
-@page: "index";
-//@page: "photo";
-//@page: "form";
-
-.body-dummy-bg(@page) {
-  background: url("@{img-path}/trash/sedona-@{page}-mobile.jpg") no-repeat center top;
-  min-height: 3650px;
-  @media @tablet-widths {
-    background: url("@{img-path}/trash/sedona-@{page}-tablet.jpg") no-repeat center top;
-    min-height: 2680px;
-  }
-  @media @desktop-widths {
-    background: url("@{img-path}/trash/sedona-@{page}-desktop.jpg") no-repeat center top;
-    min-height: 2700px;
-  }
-}
-
-/* body::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: .3;
-  .body-dummy-bg(@page);
-} */
-
-// end of temp

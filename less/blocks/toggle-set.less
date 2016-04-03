@@ -48,12 +48,14 @@
     &:checked + .toggle-set__title:active::before {
       background-color: @darker-36pct-color;
     }
-    &:disabled + .toggle-set__title::before,
-    &:disabled + .toggle-set__title:hover::before,
-    &:disabled + .toggle-set__title:active::before {
-      background-color: @darker-20pct-color;
-      border-color: @darker-20pct-color;
-      opacity: .1;
+    &:disabled + .toggle-set__title,
+    &:disabled + .toggle-set__title:hover,
+    &:disabled + .toggle-set__title:active {
+      &::before {
+        background-color: @darker-20pct-color;
+        border-color: @darker-20pct-color;
+        opacity: .1;
+      }
     }
   }
 }
