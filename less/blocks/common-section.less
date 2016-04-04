@@ -1,67 +1,18 @@
 .common-section {
   .reset-spaces();
-  padding-top: 40px;
-  padding-bottom: 15px;
+  padding: 40px 6%;
   @media @tablet-widths {
-    max-width: 460px;
+    padding: 50px 12%;
   }
-  &--first-page {
-    min-height: 222px;
-    margin: 0 30px;
-    @media @tablet-widths {
-      max-width: 485px;
-      min-height: 205px;
-      margin: 0 auto;
-      padding-top: 50px;
-    }
+
+  &--divided {
+    position: relative;
+    .divider();
+    .section-bottom-adaptive();
   }
-  &--booking {
-    padding-top: 25px;
-    margin: 0 20px;
-    @media @tablet-widths {
-      min-height: 318px;
-      margin: 0 auto;
-      padding-top: 60px;
-    }
-    @media @desktop-widths {
-      min-height: 330px;
-    }
-  }
-  &--photo {
-    .common-section-divider();
-    padding-bottom: 25px;
-    @media @tablet-widths {
-      position: static;
-      margin: 0 auto;
-      padding-top: 75px;
-      min-height: 248px;
-    }
-    @media @desktop-widths {
-      padding-top: 115px;
-      min-height: 288px;
-    }
-  }
-  &--presentation {
-    padding: 35px 0;
-    margin: 0 25px;
-    @media @tablet-widths {
-      margin: 0 auto;
-      padding-top: 70px;
-      min-height: 245px;
-    }
-  }
-  &--form {
-    .common-section-divider();
-    @media @tablet-widths {
-      position: static;
-      margin: 0 auto;
-      padding-top: 75px;
-      min-height: 248px;
-    }
-    @media @desktop-widths {
-      padding-top: 115px;
-      min-height: 270px;
-    }
+
+  &--triangle {
+    .section-bottom-adaptive();
   }
 
   /////*** TITLE ***/////
@@ -69,23 +20,22 @@
     .title();
     margin-bottom: 25px;
     @media @tablet-widths {
-      margin-bottom: 30px;
       .title(@fsz: @font-size-bigger2);
+      margin-bottom: 35px;
     }
   }
+
   &__title--bigger {
     .title();
     @media @tablet-widths {
       .title(@fsz: @font-size-bigger3);
     }
   }
+
   &__title--biggest {
     .title(@font-size-bigger2);
     @media @tablet-widths {
       .title(@fsz: @font-size-bigger3);
     }
-  }
-  &--first-page &__title {
-     margin-bottom: 33px;
   }
 }

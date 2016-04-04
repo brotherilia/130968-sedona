@@ -5,26 +5,28 @@
 }
 
 .advantage {
+  /* outline: 1px solid red; */
   display: flex;
+  width: 100%;
+  padding-top: 25px;
   flex-wrap: wrap;
   .reset-spaces();
   .set-colors(@clr: @light-color, @bgclr: @alt-color);
-  width: 100%;
 
   &:first-child {
-    padding-top: 18px;
+    padding-top: 36px;
     background-repeat: no-repeat;
     background-position: 50% top;
     background-image: url("@{img-path}/bg-triangle.svg");
-    background-size: 320px 18px;
+    background-size: 768px 36px;
     @media @tablet-widths {
       padding-top: 0;
       background-image: none;
     }
   }
+
   &--brief {
     .set-colors(@bgclr: @darker-7pct-color);
-    padding-top: 25px;
     @media @tablet-widths {
       width: 256px;
       min-height: 256px;
@@ -37,9 +39,11 @@
 
   /////*** TEXT ***/////
   &__text {
+    /* outline: 1px solid blue; */
+    flex-grow: 1;
     line-height: @dense-line-height;
+    width: auto;
     margin: 0 20px;
-    padding: 40px 12px;
     @media @tablet-widths {
       width: 256px;
       margin: 0;

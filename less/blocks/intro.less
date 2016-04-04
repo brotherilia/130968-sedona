@@ -5,48 +5,39 @@
   background-color: #e4f1f9;
   background-repeat: no-repeat;
   background-position: 50% bottom;
-  background-size: 320px 26px, auto;
-  background-image: url("@{img-path}/bg-intro-triangle-mobile.svg"), url("@{img-path}/bg-back-mobile.jpg");
-  @media (min-resolution: 2dppx) {
-    background-size: 320px 26px, 768px 389px;
-    background-image: url("@{img-path}/bg-intro-triangle-mobile.svg"), url("@{img-path}/bg-back-mobile@2x.jpg");
-  }
+  background-size: auto, auto;
+  background-image: url("@{img-path}/bg-intro-triangle-desktop.svg"), url("@{img-path}/bg-back-mobile.jpg");
   @media @tablet-widths {
     min-height: 290px;
-    padding-top: 95px;
-    background-size: 768px 57px, 1200px 518px;
-    background-image: url("@{img-path}/bg-intro-triangle-tablet.svg"), url("@{img-path}/bg-back-desktop.jpg");
-    @media (min-resolution: 2dppx) {
-      background-image: url("@{img-path}/bg-intro-triangle-tablet.svg"), url("@{img-path}/bg-back-desktop@2x.jpg");
-    }
-  }
-  @media @desktop-widths {
-    min-height: 301px;
-    padding-top: 102px;
-    background-size: 1202px 57px, 1200px 518px;
+    padding-top: 100px;
+    background-size: auto, 1200px 518px;
     background-image: url("@{img-path}/bg-intro-triangle-desktop.svg"), url("@{img-path}/bg-back-desktop.jpg");
-    @media (min-resolution: 2dppx) {
+  }
+  @media (min-resolution: 2dppx) {
+    background-size: auto, 768px 389px;
+    background-image: url("@{img-path}/bg-intro-triangle-desktop.svg"), url("@{img-path}/bg-back-mobile@2x.jpg");
+    @media @tablet-widths {
+      background-size: auto, 1200px 518px;
       background-image: url("@{img-path}/bg-intro-triangle-desktop.svg"), url("@{img-path}/bg-back-desktop@2x.jpg");
     }
   }
+
   &--first-page {
     min-height: 389px;
     padding-top: 90px;
     @media @tablet-widths {
-      min-height: 518px; /* FIXME: css-mqpacker не понимает, что эти правила распространяются и на @desktop-widths */
-      padding-top: 78px;
-    }
-    @media @desktop-widths {
       min-height: 518px;
       padding-top: 78px;
     }
   }
+
   &__banner {
     width: 230px;
     @media @tablet-widths {
       width: 460px;
     }
   }
+
   &--first-page &__banner {
     width: 280px;
     @media @tablet-widths {
