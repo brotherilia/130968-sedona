@@ -2,6 +2,7 @@
   .reset-spaces();
   min-height: 158px;
   padding-top: 52px;
+  background-color: #e4f1f9;
   background-repeat: no-repeat;
   background-position: 50% bottom;
   background-size: 320px 26px, auto;
@@ -32,6 +33,10 @@
     min-height: 389px;
     padding-top: 90px;
     @media @tablet-widths {
+      min-height: 518px; /* FIXME: css-mqpacker не понимает, что эти правила распространяются и на @desktop-widths */
+      padding-top: 78px;
+    }
+    @media @desktop-widths {
       min-height: 518px;
       padding-top: 78px;
     }

@@ -9,6 +9,7 @@
     min-height: 222px;
     margin: 0 30px;
     @media @tablet-widths {
+      max-width: 485px;
       min-height: 205px;
       margin: 0 auto;
       padding-top: 50px;
@@ -27,9 +28,10 @@
     }
   }
   &--photo {
+    .common-section-divider();
     padding-bottom: 25px;
-    margin: 0 20px;
     @media @tablet-widths {
+      position: static;
       margin: 0 auto;
       padding-top: 75px;
       min-height: 248px;
@@ -49,7 +51,9 @@
     }
   }
   &--form {
+    .common-section-divider();
     @media @tablet-widths {
+      position: static;
       margin: 0 auto;
       padding-top: 75px;
       min-height: 248px;
