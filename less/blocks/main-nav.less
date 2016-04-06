@@ -7,6 +7,7 @@
     .reset-list();
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     @media @tablet-widths {
       flex-direction: row;
     }
@@ -15,41 +16,49 @@
   /////*** MENU ITEM ***/////
   &__item {
     user-select: none;
-    @media @tablet-widths {
-      display: block;
-      width: 20%;
-    }
     font-size: @font-size-bigger1;
     font-weight: bold;
-    height: 55px;
+    min-height: 55px;
     line-height: 53px;
     border-top: 1px solid @btn-border-top-color;
     border-bottom: 1px solid @btn-border-bottom-color;
-    &:first-child {
-      border-top: none;
-      line-height: 54px;
-    }
-    &:nth-last-child(2) {
-      border-bottom: none;
-      position: relative;
-      &::after {
-        .pseudo-common();
-        bottom: 0;
-        width: 100%;
-        height: 20px;
-        background: linear-gradient(to top, @btn-border-bottom-color 0px, transparent 5px);
-        @media @tablet-widths {
-          display: none;
-        }
-      }
-    }
+    order: 100;
     @media @tablet-widths {
+      display: block;
+      width: 20%;
       border: none;
-      &:nth-child(1) {order: 1;}
-      &:nth-child(2) {order: 2;}
-      &:nth-child(3) {order: 4;}
-      &:nth-child(4) {order: 5;}
-      &:nth-child(5) {order: 3;}
+      margin-top: 28px;
+    }
+    @media @desktop-widths {
+     margin-top: 45px;
+    }
+  }
+
+  &__item--1st {
+    border-top: none;
+    line-height: 54px;
+    @media @tablet-widths {
+      order: 1;
+      line-height: 53px;
+      margin-top: 0;
+    }
+  }
+  &__item--2nd {
+    @media @tablet-widths {
+      order: 2;
+      margin-top: 0;
+    }
+  }
+  &__item--3rd {
+    @media @tablet-widths {
+      order: 4;
+      margin-top: 0;
+    }
+  }
+  &__item--4th {
+    @media @tablet-widths {
+      order: 5;
+      margin-top: 0;
     }
   }
   &__item--logo {
@@ -59,6 +68,21 @@
     border: none;
     @media @tablet-widths {
       height: 55px;
+      order: 3;
+      margin-top: 0;
+    }
+  }
+  &__item:nth-last-child(2) {
+    position: relative;
+    &::after {
+      .pseudo-common();
+      bottom: 0;
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(to top, @btn-border-bottom-color 0px, transparent 5px);
+      @media @tablet-widths {
+        display: none;
+      }
     }
   }
 
@@ -110,6 +134,7 @@
   /////*** MENU LINK ***/////
   &__link {
     display: block;
+    white-space: nowrap;
     .main-menu-colors();
   }
   &__link--active {
