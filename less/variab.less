@@ -31,8 +31,8 @@
 @darker-80pct-color: #333333;
 @warning-color: #ff5c5c;
 @alt-color: #81b3d2;
-@transparent-dark-color: fade(@dark-color, 50%);
-@transparent-light-color: fade(@light-color, 30%);
+@transparent-dark-color: rgba(0, 0, 0, .5);
+@transparent-light-color: rgba(255, 255, 255, .3);
 
 @base-text-color: @darker-80pct-color;
 @alt-text-color: @light-color;
@@ -46,7 +46,7 @@
 
 @btn-color: @light-color;
 @btn-hvr-color: @btn-color;
-@btn-dwn-color: fade(@light-color, 30%);
+@btn-dwn-color: @transparent-light-color;
 @btn-dsbl-color: @btn-color;
 
 @btn-bg-color: @alt-color;
