@@ -511,8 +511,7 @@ img {
   height: 58px;
   margin: 0;
   padding: 0;
-  padding-right: 75px;
-  padding-left: 20px;
+  padding: 0 20px;
 
   font-weight: bold;
   font-size: 18px;
@@ -553,9 +552,13 @@ img {
   box-shadow: inset 0 0 0 4px #cccccc;
 }
 .textbox__input--phone {
+  padding-right: 75px;
+
   background-image: url("../img/icon-phone.png");
 }
 .textbox__input--email {
+  padding-right: 75px;
+
   background-image: url("../img/icon-mail.png");
 }
 .textbox__input--feedback-description {
@@ -1548,23 +1551,22 @@ img {
 
     border: none;
   }
+  .main-nav__item:nth-child(-n+4) {
+    margin-top: 0;
+  }
   .main-nav__item:nth-child(1) {
     order: 1;
-    margin-top: 0;
 
     line-height: 53px;
   }
   .main-nav__item:nth-child(2) {
     order: 2;
-    margin-top: 0;
   }
   .main-nav__item:nth-child(3) {
     order: 4;
-    margin-top: 0;
   }
   .main-nav__item:nth-child(4) {
     order: 5;
-    margin-top: 0;
   }
   .main-nav__item:nth-last-child(2)::after {
     display: none;
@@ -1848,8 +1850,8 @@ img {
 }
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
   .intro {
-    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg") !important;
-    background-size: auto, 1200px 518px !important;
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+    background-size: auto, 1200px 518px;
   }
 }
 @media screen and (-moz-images-in-menus: 0) and (min-width: 768px) {
@@ -1948,6 +1950,9 @@ img {
   .main-nav__item {
     margin-top: 45px;
   }
+  .main-nav__item--logo {
+    margin-top: 0;
+  }
   .main-nav__logo {
     width: 188px;
     height: 96px;
@@ -2016,6 +2021,8 @@ img {
   .player__screen {
     background-image: url("../img/video-mobile@2x.jpg");
   }
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 2dppx) and (max-width: 767px) {
   .intro {
     background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-mobile@2x.jpg");
     background-size: auto, 768px 389px;
@@ -2026,7 +2033,7 @@ img {
     padding-bottom: 0;
   }
 }
-@media screen and (-moz-images-in-menus: 0) {
+@media screen and (-moz-images-in-menus: 0) and (max-width: 767px) {
   .feedback__section-title {
     width: 100%;
   }
