@@ -299,7 +299,7 @@
       <div class="map">
         <iframe class="map__source js-hide" src="https://www.google.com/maps/d/embed?mid=zgoB38dwcy1c.kicKgWgtcwcc"></iframe>
       </div>
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <!--                                                              -->
       <!--                        PAGE FOOTER                           -->
       <!--                                                              -->
@@ -345,12 +345,8 @@
         </div>
       </footer>
     </div>
-    <script>
-      var mapSource = document.querySelector('.map__source');
-      if (mapSource.classList.contains('js-hide')) {
-          mapSource.classList.remove('js-hide')
-      }
-    </script>
-    <script src="js/script.min.js"></script>
+    <!-- build:js js/script.min.js -->
+    <script src="js/script.js"></script>
+    <!-- /build -->
   </body>
 </html>
