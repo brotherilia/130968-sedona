@@ -230,8 +230,7 @@ module.exports = function(grunt) {
     //*** Отправка сборки в удаленную ветку "gh-pages" ***//
     "gh-pages": {
       options: {
-        base: "build",
-        clone: "gh-pages"
+        base: "build"
       },
       src: "**/*"
     }

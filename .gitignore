@@ -1,5 +1,8 @@
+.grunt/
 node_modules/
-gh-pages/
+build/
+src/img/trash/
+src/txt/typo/
 .DS_Store
 Thumbs.db
 .idea
@@ -7,6 +10,3 @@ Thumbs.db
 *.log
 *.psd
 *.ai
-build/
-src/img/trash/
-src/txt/typo/
