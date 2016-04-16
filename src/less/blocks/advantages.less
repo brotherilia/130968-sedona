@@ -1,0 +1,134 @@
+.advantages {
+  .reset-spaces();
+  .flex-switch();
+  flex-wrap: wrap;
+}
+
+.advantage {
+  .reset-spaces();
+  .set-colors(@clr: @light-color, @bgclr: @alt-color);
+  .flex-switch();
+  flex-wrap: wrap;
+
+  &:first-child {
+    padding-top: 36px;
+    background-repeat: no-repeat;
+    background-position: 50% top;
+    background-image: url("@{img-path}/bg-triangle.svg");
+    background-size: 768px 36px;
+    @media @tablet-widths {
+      padding-top: 0;
+      background-image: none;
+    }
+  }
+
+  &--brief {
+    position: relative;
+    .set-colors(@bgclr: @darker-7pct-color);
+    .divider();
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+    @media @tablet-widths {
+      width: 33.333%;
+    }
+  }
+
+  &__inner {
+    .flex-switch();
+    align-items: center;
+    padding-bottom: 20px;
+    @media @mobile-min-width {
+      padding-bottom: 0;
+    }
+    @media @tablet-widths {
+      padding-bottom: 0;
+    }
+  }
+
+  &--brief &__inner {
+    padding-bottom: 0;
+    @media @tablet-widths {
+      align-items: flex-start;
+    }
+  }
+
+  /////*** TEXT ***/////
+  &__text {
+    line-height: @dense-line-height;
+    flex-grow: 1;
+    width: 320px;
+    padding: 40px 20px;
+    @media @tablet-widths {
+      width: auto;
+    }
+    @media @desktop-widths {
+      padding: 30px 40px;
+    }
+  }
+
+  &--brief &__text {
+    @media @tablet-widths {
+      padding-top: 50px;
+      min-height: 256px;
+    }
+  }
+
+  &--brief:last-child &__text {
+    border-bottom: none;
+  }
+
+  &:nth-child(even) &__text {
+    @media @tablet-widths {
+      order: 1;
+    }
+  }
+
+  /////*** PHOTO ***/////
+  &__photo {
+    flex-shrink: 0;
+    width: 320px;
+    height: 260px;
+    line-height: 0;
+    background-color: #aab7a5;
+    @media @tablet-widths {
+      width: 512px;
+      height: 256px;
+    }
+    @media @desktop-widths {
+      width: 800px;
+      height: 256px;
+    }
+  }
+
+  /////*** TITLE ***/////
+  &__title {
+    .title(@fsz: @font-size-bigger1, @clr: @light-color);
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger2, @clr: @light-color);
+    }
+  }
+
+  &--brief &__title {
+    .title(@clr: @dark-color);
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger2);
+    }
+  }
+
+  /////*** NUMBER ***/////
+  &__number {
+    margin: 12px 0;
+    @media @tablet-widths {
+      margin: 20px 0;
+    }
+    &::before {
+      content: "- ";
+    }
+    &::after {
+      content: " -";
+    }
+  }
+}

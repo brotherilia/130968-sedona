@@ -1,0 +1,42 @@
+/////*** "Костыль" для центрирования <legend> в Firefox для сохранения border-top у <fieldset> ***/////
+
+@media screen and (-moz-images-in-menus: 0) {
+  @media @mobile-widths {
+    .feedback__section-title {
+      width: 100%;
+    }
+  }
+  @media @tablet-widths {
+    .feedback__section {
+      position: relative;
+    }
+    .feedback__section-title {
+      position: absolute;
+      left: 50%;
+      top: -40px;
+      background: @light-color;
+      transform: translate(-50%, 0);
+      width: 400px;
+      line-height: 20px;
+    }
+    .feedback__section-title--left {
+      position: static;
+      transform: none;
+      width: 100%;
+    }
+    .toggle-set {
+      padding-bottom: 25px;
+    }
+    .feedback__section-body--contacts {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .checkbox-set {
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+    .textbox__input--feedback-description {
+      margin-top: 50px;
+    }
+  }
+}

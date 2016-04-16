@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTML Academy: Седона - Форма отзыва</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/picturefill.min.js" async></script>
+  </head>
+  <body>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--                                                              -->
+    <!--                         SVG SPRITE                           -->
+    <!--                                                              -->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!-- build:include ../src/img/sprite.svg --><!-- /build -->
+    <div class="wrapper">
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                        PAGE HEADER                           -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <header class="page-header">
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                     MAIN NAVIGATION                          -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <nav class="main-nav">
+          <!-- build:remove -->
+          <!-- CSS mobile menu switcher
+          <input class="main-nav__toggle" type="checkbox" name="toggle" id="toggle" checked>
+          <label class="main-nav__icon" for="toggle"></label>
+          -->
+          <!-- /build -->
+          <button class="main-nav__icon"></button>
+          <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">
+                Фото и видео
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active">
+                Форма отзыва
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru">
+                HTML Academy
+              </a>
+            </li>
+            <!-- build:remove -->
+            <!-- Гипотетическое расширение меню начинается отсюда. -->
+            <!--
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">
+                Пункт меню
+              </a>
+            </li>
+            -->
+            <!-- /build -->
+            <li class="main-nav__item main-nav__item--logo">
+              <a class="main-nav__logo" href="index.html">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="img/logo-sedona-mobile.svg">
+                  <source
+                    media="(max-width: 1279px)"
+                    srcset="img/logo-sedona-tablet.svg">
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="img/logo-sedona-desktop.svg">
+                  <img src="img/logo-sedona-desktop.png" alt="Седона" width="188" height="98">
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                            INTRO                             -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="intro">
+          <img class="intro__banner" src="img/text-sedona.svg" alt="" width="460" height="80">
+        </div>
+      </header>
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                         PAGE TITLE                           -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div class="common-section common-section--divided">
+        <div class="common-section__title common-section__title--bigger">
+          Оставьте свой отзыв
+        </div>
+        <p>
+          <!-- build:include ../src/txt/typo/form01.typo.txt --><!-- /build -->
+        </p>
+      </div>
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                      FEEDBACK FORM                           -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <form class="feedback" action="/echo" method="post">
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                      INTRO SECTION                           -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <legend class="feedback__section-title feedback__section-title--left">
+            Представьтесь<span class="feedback__intro-mark">, пожалуйста</span>:
+          </legend>
+          <div class="textbox">
+            <label class="textbox__title" for="firstname">
+              Имя:
+            </label>
+            <div class="textbox__inner">
+              <input class="textbox__input" type="text" name="firstname" id="firstname" placeholder="Петр" required>
+            </div>
+          </div>
+          <div class="textbox">
+            <label class="textbox__title" for="surname">
+              Фамилия:
+            </label>
+            <div class="textbox__inner">
+              <input class="textbox__input" type="text" name="surname" id="surname" placeholder="Иванов">
+            </div>
+          </div>
+          <div class="textbox">
+            <label class="textbox__title" for="midname">
+              Отчество:
+            </label>
+            <div class="textbox__inner">
+              <input class="textbox__input" type="text" name="midname" id="midname" placeholder="Александрович">
+            </div>
+          </div>
+        </fieldset>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                      CONTACTS SECTION                        -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <legend class="feedback__section-title">
+            Контактная информация:
+          </legend>
+          <div class="feedback__section-body feedback__section-body--contacts">
+            <div class="textbox textbox--feedback-contacts">
+              <label class="textbox__title textbox__title--feedback-contacts" for="phone">
+                <span class="textbox__contacts-mark">Контактный</span> телефон:
+              </label>
+              <div class="textbox__inner">
+                <input class="textbox__input textbox__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}">
+              </div>
+              <span class="textbox__warning textbox__warning--phone">
+                Ошибка, перепроверьте номер
+              </span>
+            </div>
+            <div class="textbox textbox--feedback-contacts">
+              <label class="textbox__title textbox__title--feedback-contacts" for="email">
+                Электронная почта:
+              </label>
+              <div class="textbox__inner">
+                <input class="textbox__input textbox__input--email" type="email" name="email" id="email" placeholder="Введите e-mail" pattern="[a-zA-Z]{2,}@[a-zA-Z]{2,}.[a-zA-Z]{2,}" required>
+              </div>
+              <span class="textbox__warning textbox__warning--email">
+                Ошибка, перепроверьте адрес
+              </span>
+            </div>
+          </div>
+        </fieldset>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                      RATING SECTION                          -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <legend class="feedback__section-title feedback__section-title--left">
+            Ваше общее впечатление:
+          </legend>
+          <div class="toggle-set toggle-set--feedback">
+            <div class="toggle-set__item">
+              <input class="toggle-set__input" type="radio" name="rating" id="value1" checked>
+              <label class="toggle-set__title" for="value1">
+                Скорее положительное
+              </label>
+            </div>
+            <div class="toggle-set__item">
+              <input class="toggle-set__input" type="radio" name="rating" id="value2">
+              <label class="toggle-set__title" for="value2">
+                Скорее отрицательное
+              </label>
+            </div>
+            <div class="toggle-set__item">
+              <input class="toggle-set__input" type="radio" name="rating" id="value3">
+              <label class="toggle-set__title" for="value3">
+                Затрудняюсь ответить
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                       SIGHTS SECTION                         -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <legend class="feedback__section-title">
+            Посещенные достопримечательности:
+          </legend>
+          <div class="checkbox-set checkbox-set--feedback">
+            <div class="checkbox-set__item">
+              <input class="checkbox-set__input" type="checkbox" name="check1" id="check1" checked>
+              <label class="checkbox-set__title" for="check1">
+                Мост Дьявола
+              </label>
+            </div>
+            <div class="checkbox-set__item">
+              <input class="checkbox-set__input" type="checkbox" name="check2" id="check2" checked>
+              <label class="checkbox-set__title" for="check2">
+                Слайд-парк
+              </label>
+            </div>
+            <div class="checkbox-set__item">
+              <input class="checkbox-set__input" type="checkbox" name="check3" id="check3">
+              <label class="checkbox-set__title" for="check3">
+                Гора-Колокол
+              </label>
+            </div>
+            <div class="checkbox-set__item">
+              <input class="checkbox-set__input" type="checkbox" name="check4" id="check4" checked>
+              <label class="checkbox-set__title" for="check4">
+                Красные скалы
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                    DESCRIPTION SECTION                       -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <legend class="feedback__section-title">
+            Опишите свои эмоции:
+          </legend>
+          <div class="textbox">
+            <textarea class="textbox__input textbox__input--feedback-description" name="overview" id="overview" placeholder="Опишите подробно все свои восторги"></textarea>
+          </div>
+        </fieldset>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                        SEND BUTTON                           -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <fieldset class="feedback__section">
+          <div class="feedback__section-body">
+            <input class="btn" type="submit" value="Отправить отзыв">
+            <span class="feedback__send-mark">* &mdash; обязательные поля</span>
+          </div>
+        </fieldset>
+      </form>
+<!-- build:include ../src/templates/footer.html --><!-- /build -->

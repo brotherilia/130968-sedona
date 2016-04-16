@@ -1,0 +1,132 @@
+.posts {
+  .flex-switch();
+  .reset-list();
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: left;
+  @media @tablet-widths {
+    width: 648px;
+    margin: 0 auto;
+  }
+  @media @desktop-widths {
+    width: auto;
+  }
+}
+
+.post {
+  position: relative;
+  font-size: @base-font-size;
+  padding: 23px 0;
+  .divider();
+  @media @tablet-widths {
+    position: static;
+    padding: 0;
+  }
+
+  &__content {
+    .reset-spaces();
+    @media @desktop-widths {
+      position: relative;
+    }
+  }
+
+  /////*** POST PHOTO ***/////
+  &__photo {
+    display: block;
+    width: 280px;
+    height: 280px;
+    line-height: 0;
+    background-color: #aab7a5;
+    @media @tablet-widths {
+      width: 324px;
+      height: 267px;
+    }
+    @media @desktop-widths {
+      width: 400px;
+    }
+  }
+
+  &:first-child &__photo {
+    @media @tablet-widths {
+      width: 648px;
+      height: 400px;
+    }
+    @media @desktop-widths {
+      width: 1200px;
+    }
+  }
+
+  /////*** POST TEXT ***/////
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 15px;
+    @media @tablet-widths {
+      .set-colors(@bgclr: @darker-5pct-color);
+      flex-direction: row;
+      margin-top: 0;
+      min-height: 80px;
+    }
+    @media @desktop-widths {
+      .set-colors(@clr: @light-color, @bgclr: @transparent-dark-color);
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  &__description {
+    @media @tablet-widths {
+      margin-top: 15px;
+      margin-left: 20px;
+    }
+  }
+
+  &__title {
+    .title(@fsz: @base-font-size);
+    @media @desktop-widths {
+      color: @light-color;
+    }
+  }
+
+  &__author {
+    text-transform: none;
+  }
+
+  /////*** LIKES BLOCK ***/////
+  &__likes {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 5px;
+    @media @tablet-widths {
+      margin-top: 0;
+      width: 85px;
+      align-items: center;
+    }
+  }
+
+  &__likes-icon-wrapper {
+    display: block;
+    width: 22px;
+    height: 20px;
+    line-height: 0;
+  }
+
+  &__likes-icon {
+    fill: #b2b2b2;
+    @media @desktop-widths {
+      fill: #ffffff;
+    }
+  }
+
+  &__likes-count {
+    display: block;
+    height: 14px;
+    padding-left: 10px;
+    .title(@fsz: @base-font-size, @lh: 14px);
+    @media @desktop-widths {
+      color: @light-color;
+    }
+  }
+}

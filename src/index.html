@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/picturefill.min.js" async></script>
+  </head>
+  <body>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--                                                              -->
+    <!--                         SVG SPRITE                           -->
+    <!--                                                              -->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!-- build:include ../src/img/sprite.svg --><!-- /build -->
+    <div class="wrapper">
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                        PAGE HEADER                           -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <header class="page-header">
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                     MAIN NAVIGATION                          -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <nav class="main-nav">
+          <!-- build:remove -->
+          <!-- CSS mobile menu switcher
+          <input class="main-nav__toggle" type="checkbox" name="toggle" id="toggle" checked>
+          <label class="main-nav__icon" for="toggle"></label>
+          -->
+          <!-- /build -->
+          <button class="main-nav__icon"></button>
+          <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">
+                Фото и видео
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">
+                Форма отзыва
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru">
+                HTML Academy
+              </a>
+            </li>
+            <!-- build:remove -->
+            <!-- Гипотетическое расширение меню начинается отсюда. -->
+            <!--
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">
+                Пункт меню
+              </a>
+            </li>
+            -->
+            <!-- /build -->
+            <li class="main-nav__item main-nav__item--logo">
+              <a class="main-nav__logo" href="index.html">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="img/logo-sedona-mobile.svg">
+                  <source
+                    media="(max-width: 1279px)"
+                    srcset="img/logo-sedona-tablet.svg">
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="img/logo-sedona-desktop.svg">
+                  <img src="img/logo-sedona-desktop.png" alt="Седона" width="188" height="98">
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                            INTRO                             -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="intro intro--first-page">
+          <img class="intro__banner" src="img/text-sedona-index.svg" alt="" width="460" height="350">
+        </div>
+      </header>
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                         PAGE TITLE                           -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div class="common-section common-section--triangle">
+        <div class="common-section__title">
+          <!-- build:include ../src/txt/typo/index01.typo.txt --><!-- /build -->
+        </div>
+        <p>
+          <!-- build:include ../src/txt/typo/index02.typo.txt --><!-- /build -->
+        </p>
+      </div>
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                          ADVANTAGES                          -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <section class="advantages">
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                         ADVANTAGE                            -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="advantage">
+          <div class="advantage__inner">
+            <div class="advantage__text">
+              <h2 class="advantage__title">
+                Настоящий городок
+              </h2>
+              <p class="advantage__number">
+                №1
+              </p>
+              <p>
+                <!-- build:include ../src/txt/typo/index03.typo.txt --><!-- /build -->
+              </p>
+            </div>
+            <div class="advantage__photo">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/photo-city-mobile.jpg 1x,
+                          img/photo-city-mobile@2x.jpg 2x">
+                <source
+                  media="(max-width: 1279px)"
+                  srcset="img/photo-city.jpg 1x,
+                          img/photo-city@2x.jpg 2x">
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="img/photo-city-desktop.jpg 1x,
+                          img/photo-city-desktop@2x.jpg 2x">
+                <img src="img/photo-city.jpg" alt="" width="800" height="400">
+              </picture>
+            </div>
+          </div>
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <!--                           FEATURES                           -->
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <ul class="features">
+            <li class="feature">
+              <i class="feature__icon-wrapper">
+                <svg class="feature__icon" width="37" height="37">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-house"></use>
+                </svg>
+              </i>
+              <div class="feature__text">
+                <div class="feature__title">
+                  Жилье
+                </div>
+                <p>
+                  <!-- build:include ../src/txt/typo/index04.typo.txt --><!-- /build -->
+                </p>
+              </div>
+            </li>
+            <li class="feature">
+              <i class="feature__icon-wrapper">
+                <svg class="feature__icon" width="37" height="37">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-gift"></use>
+                </svg>
+              </i>
+              <div class="feature__text">
+                <div class="feature__title">
+                  Сувениры
+                </div>
+                <p>
+                  <!-- build:include ../src/txt/typo/index05.typo.txt --><!-- /build -->
+                </p>
+              </div>
+            </li>
+            <li class="feature">
+              <i class="feature__icon-wrapper">
+                <svg class="feature__icon" width="37" height="37">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-burger"></use>
+                </svg>
+              </i>
+              <div class="feature__text">
+                <div class="feature__title">
+                  Еда
+                </div>
+                <p>
+                  <!-- build:include ../src/txt/typo/index06.typo.txt --><!-- /build -->
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                         ADVANTAGE                            -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="advantage">
+          <div class="advantage__inner">
+            <div class="advantage__text">
+              <h2 class="advantage__title">
+                Там есть Мост Дьявола
+              </h2>
+              <p class="advantage__number">
+                №2
+              </p>
+              <p>
+                <!-- build:include ../src/txt/typo/index07.typo.txt --><!-- /build -->
+              </p>
+            </div>
+            <div class="advantage__photo">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/photo-bridge-mobile.jpg 1x,
+                          img/photo-bridge-mobile@2x.jpg 2x">
+                <source
+                  media="(max-width: 1279px)"
+                  srcset="img/photo-bridge.jpg 1x,
+                          img/photo-bridge@2x.jpg 2x">
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="img/photo-bridge-desktop.jpg 1x,
+                          img/photo-bridge-desktop@2x.jpg 2x">
+                <img src="img/photo-bridge.jpg" alt="" width="800" height="400">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="advantage advantage--brief">
+          <div class="advantage__inner">
+            <div class="advantage__text">
+              <h2 class="advantage__title">
+                Небольшая площадь
+              </h2>
+              <p class="advantage__number">
+                №3
+              </p>
+              <p>
+                <!-- build:include ../src/txt/typo/index08.typo.txt --><!-- /build -->
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                         ADVANTAGE                            -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="advantage advantage--brief">
+          <div class="advantage__inner">
+            <div class="advantage__text">
+              <h2 class="advantage__title">
+                Красивая дорога
+              </h2>
+              <p class="advantage__number">
+                №4
+              </p>
+              <p>
+                <!-- build:include ../src/txt/typo/index09.typo.txt --><!-- /build -->
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                         ADVANTAGE                            -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="advantage advantage--brief">
+          <div class="advantage__inner">
+            <div class="advantage__text">
+              <h2 class="advantage__title">
+                Мало туристов
+              </h2>
+              <p class="advantage__number">
+                №5
+              </p>
+              <p>
+                <!-- build:include ../src/txt/typo/index10.typo.txt --><!-- /build -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                            BOOKING                           -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div class="common-section">
+        <div class="common-section__title common-section__title--biggest">
+          Заинтересовались?
+        </div>
+        <p>
+          <!-- build:include ../src/txt/typo/index11.typo.txt --><!-- /build -->
+        </p>
+        <a class="btn" href="#">
+          Найти гостиницу
+        </a>
+      </div>
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                       INTERACTIVE MAP                        -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div class="map">
+        <iframe class="map__source js-hide" src="https://www.google.com/maps/d/embed?mid=zgoB38dwcy1c.kicKgWgtcwcc"></iframe>
+      </div>
+<!-- build:include ../src/templates/footer.html --><!-- /build -->
