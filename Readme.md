@@ -1,3 +1,13 @@
+####В этой ветке сохранено состояние исходников проекта на момент финальной его приемки в HTML Academy.
+
+Дальнейшую разработку можно посмотреть в ветке [master](https://github.com/brotherilia/130968-sedona/tree/master).
+
+Cборку из исходников в master можно посмотреть в ветке [gh-pages](https://github.com/brotherilia/130968-sedona/tree/gh-pages).
+
+Посмотреть сборку из gh-pages в работе можно по [этой ссылке](http://brotherilia.github.io/130968-sedona/).
+
+---
+
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Илья Меньшиков](https://up.htmlacademy.ru/adaptive/6/user/130968).
