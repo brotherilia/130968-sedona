@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона - Форма отзыва</title>
-    <link rel="stylesheet" href="css/style.min.css"/>
-    <script src="js/picturefill.min.js"></script>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -24,12 +24,7 @@
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--                     MAIN NAVIGATION                          -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <nav class="main-nav">
-          <!-- CSS mobile menu switcher
-          <input class="main-nav__toggle" type="checkbox" name="toggle" id="toggle" checked>
-          <label class="main-nav__icon" for="toggle"></label>
-          -->
-          <button class="main-nav__icon"></button>
+        <nav class="main-nav">          <button class="main-nav__icon"></button>
           <ul class="main-nav__items">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">
@@ -50,16 +45,7 @@
               <a class="main-nav__link" href="https://htmlacademy.ru">
                 HTML Academy
               </a>
-            </li>
-            <!-- Гипотетическое расширение меню начинается отсюда. -->
-            <!--
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">
-                Пункт меню
-              </a>
-            </li>
-            -->
-            <li class="main-nav__item main-nav__item--logo">
+            </li>            <li class="main-nav__item main-nav__item--logo">
               <a class="main-nav__logo" href="index.html">
                 <picture>
                   <source
@@ -94,7 +80,7 @@
           Оставьте свой отзыв
         </div>
         <p>
-          Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях.
+          Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях.
         </p>
       </div>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -250,7 +236,7 @@
           </div>
         </fieldset>
       </form>
-            <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <!--                                                              -->
       <!--                        PAGE FOOTER                           -->
       <!--                                                              -->
@@ -296,8 +282,6 @@
         </div>
       </footer>
     </div>
-    <!-- build:js js/script.min.js -->
-    <script src="js/script.js"></script>
-    <!-- /build -->
+    <script src="js/script.min.js"></script>
   </body>
 </html>
